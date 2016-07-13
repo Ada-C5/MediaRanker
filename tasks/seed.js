@@ -21,7 +21,7 @@ for (var movie of moviesParsedJSON) {
 };
 
 
-for (var books of booksParsedJSON) {
+for (var book of booksParsedJSON) {
 	// console.log(customer.name, customer.registered_at,  )
 	// db.video_store.saveSync({name: customer.name, customer.registered_at, })
 	db.books.saveSync(book);
