@@ -1,0 +1,22 @@
+
+<table class="table table-striped" class="table table-hover">
+  <thead>
+    <tr>
+      <th>Ranking</th>
+      <th>Name</th>
+      <th>Upvote</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <% @albums.each do |album| %>
+      <tr>
+        <td><%= album.rating %></td>
+        <td><%= link_to album.name , album_path(album.id)%></td>
+        <td>button here please</td>
+
+
+      </tr>
+      <% end %>
+    </tbody>
+  </table>

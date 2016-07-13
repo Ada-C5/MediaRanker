@@ -1,5 +1,4 @@
 <div class='container'>
-  '<h1> Meeeeeeeedia </h1>
 
   <div class="col-md-4">
     <h2>Albums</h2>
@@ -7,6 +6,8 @@
     <h3><%= album.name %></h3>
     Ranking:<%= album.rating %>
     <% end %>
+    <br>
+    <%= link_to "View all albums", albums_path %>
   </div>
 
   <div class="col-md-4">

@@ -5,6 +5,7 @@ class AlbumsController < ApplicationController
   end
 
   def show
+    @album = Album.find(params[:id])
   end
 
   def delete
@@ -18,7 +19,16 @@ class AlbumsController < ApplicationController
   end
 
   def update
+    @album = Album.find(params[:id])
+    rating = @album.rating
+    @album.update(rating: rating += 1)
+    redirect_to album_path(@album.id)
   end
+
+  private
+  def album_update_params
+		params.permit(album: [:name, :description, :artist, :rating])
+	end
 end
 
 
