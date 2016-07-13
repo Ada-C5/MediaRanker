@@ -4,7 +4,25 @@
   "description": "In this project we will focus on build a simple rails app that has three data models (Movie, Album, Book). We will be focusing on rails request cycle comprehension and introducing testing to our rails applications. To maximize the focus on comprehension, students will implement features based off of an existing website (http://media-ranker.herokuapp.com).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./bin/www",
+    "db:drop": "dropdb media_ranker_db",
+    "db:create": "createdb media_ranker_db",
+    "db:schema": "node tasks/load_schema.js media_ranker_db",
+    "db:seed": "node tasks/seed.js media_ranker_db",
+    "reset": "npm run db:drop; npm run db:create; npm run db:schema; npm run db:seed;"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "jade": "~1.11.0",
+    "massive": "^2.3.0",
+    "morgan": "~1.6.1",
+    "prompt": "^1.0.0",
+    "nodemon": "^1.9.2",
+    "serve-favicon": "~2.3.0",
+    "request": "^2.72.0"
   },
   "repository": {
     "type": "git",
@@ -17,3 +35,4 @@
   },
   "homepage": "https://github.com/leahnp/MediaRanker#readme"
 }
+
