@@ -1,0 +1,27 @@
+<div class='container'>
+  '<h1> Meeeeeeeedia </h1>
+
+  <div class="col-md-4">
+    <h2>Albums</h2>
+    <% @albums.each do |album| %><br>
+    <h3><%= album.name %></h3>
+    Ranking:<%= album.rating %>
+    <% end %>
+  </div>
+
+  <div class="col-md-4">
+    <h2>Books</h2>
+    <% @books.each do |book| %><br>
+    <h3><%= book.name %></h3>
+    Ranking:<%= book.rating %>
+    <% end %>
+  </div>
+
+  <div class="col-md-4">
+    <h2>Movies</h2>
+    <% @movies.each do |movie| %><br>
+    <h3><%= movie.name %></h3>
+    Ranking:<%= movie.rating %>
+    <% end %>
+  </div>
+</div>
