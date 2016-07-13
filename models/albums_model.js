@@ -1,22 +1,25 @@
 var app = require("../app");
 var db = app.get("db");
 
-var Movie = function(id) {
+var Album = function(id, title) {
   this.id = id;
+  this.title = title;
+  this.ranking = 0;
 }
 
-Movie.all = function(callback) {
-  db.movies.find(function(error, movies) {
-  //   if (error|| !customers) {
-  //     callback(error || new Error("Could not retrieve customers"), undefined);
-  //   } else {
-  //     callback(null, customers.map(function(customer) {
-  //       return new Customer(customer.id);
-  //     }))
-  //   };
+Album.all = function(callback) {
+  db.albums.find(function(error, albums) {
+      console.log("abloohaloo")
+    if (error|| !albums) {
+      callback(error || new Error("Could not retrieve albums"), undefined);
+    } else {
+      callback(null, albums.map(function(album) {
+        return new Album(album.id, album.title);
+      }))
+    };
   })
 };
 
 
 
-module.exports = Movie;
+module.exports = Album;

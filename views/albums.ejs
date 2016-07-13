@@ -8,6 +8,18 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
-
+    <table>
+    	<tr>
+    		<th>Ranking</th>
+    		<th>Name</th>
+    		<th>Upvote</th>
+    	</tr>
+        <% for (var album of albums) { %>
+  			<tr>
+      		<td>Ranked: <%= album.ranking %></td>
+        	<td><%= album.title %></td>
+				</tr>
+        <% } %>
+    </table>
   </body>
 </html>
