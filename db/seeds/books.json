@@ -1,0 +1,20 @@
+[
+  {
+    "name": "book1",
+    "author": "book1",
+    "description": "book1",
+    "votes": 0
+  },
+  {
+    "name": "book2",
+    "author": "book2",
+    "description": "book2",
+    "votes": 1
+  },
+  {
+    "name": "book3",
+    "author": "book3",
+    "description": "book3",
+    "votes": 2
+  }
+]

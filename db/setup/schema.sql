@@ -11,7 +11,7 @@ DROP TABLE IF EXISTS albums;
 CREATE TABLE albums(
   id serial PRIMARY KEY,
   name text,
-  author text,
+  artist text,
   description text,
   votes integer
 );
@@ -20,7 +20,7 @@ DROP TABLE IF EXISTS books;
 CREATE TABLE books(
   id serial PRIMARY KEY,
   name text,
-  artist text,
+  author text,
   description text,
   votes integer
 );
