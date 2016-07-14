@@ -1,0 +1,8 @@
+<h1><%= @movie.name %></h1>
+<h2>Directed By: <%= @movie.director %></h2>
+<h3>Ranked: <%= @movie.rating %> </h3>
+<%= @movie.description %>
+<%= button_to "Upvote", update_movie_path(@movie.id), method: :patch, class: "btn btn-primary" %>
+<%= button_to "Edit", edit_movie_path(@movie.id), method: :get, class: "btn btn-primary" %>
+<%= button_to "View all movies", movies_path, method: :get, class: "btn btn-primary" %>
+<%= button_to "View all media", root_path, method: :get, class: "btn btn-primary" %>

@@ -4,21 +4,24 @@ Rails.application.routes.draw do
 
   get     'movies'            => 'movies#index'
   get     'movies/:id'        => 'movies#show',    as: :movie
-  delete  'movies/:id'        => 'movies#delete'
-  get     'movies/:id/edit'   => 'movies#edit',   as: :edit_movie
-  patch   'movies/:id/update' => 'movies#update', as: :update_movie
+  delete  'movies/:id'        => 'movies#delete',  as: :delete_movie
+  get     'movies/:id/edit'   => 'movies#edit',    as: :edit_movie
+  patch   'movies/:id/upvote' => 'movies#upvote',  as: :upvote_movie
+  patch   'movies/:id/update' => 'movies#update',  as: :update_movie
 
-  get     'books'            => 'books#index'
-  get     'books/:id'        => 'books#show',    as: :book
-  delete  'books/:id'        => 'books#delete'
-  get     'books/:id/edit'   => 'books#edit',   as: :edit_book
-  patch   'books/:id/update' => 'books#update', as: :update_book
+  get     'books'             => 'books#index'
+  get     'books/:id'         => 'books#show',     as: :book
+  delete  'books/:id'         => 'books#delete',   as: :delete_book
+  get     'books/:id/edit'    => 'books#edit',     as: :edit_book
+  patch   'books/:id/upvote'  => 'books#upvote',   as: :upvote_book
+  patch   'books/:id/update'  => 'books#update',   as: :update_book
 
   get     'albums'            => 'albums#index'
   get     'albums/:id'        => 'albums#show',    as: :album
-  delete  'albums/:id'        => 'albums#delete'
-  get     'albums/:id/edit'   => 'albums#edit',   as: :edit_album
-  patch   'albums/:id/update' => 'albums#update', as: :update_album
+  delete  'albums/:id'        => 'albums#delete',  as: :delete_album
+  get     'albums/:id/edit'   => 'albums#edit',    as: :edit_album
+  patch   'albums/:id/upvote' => 'albums#upvote',  as: :upvote_album
+  patch   'albums/:id/update' => 'albums#update',  as: :update_album
 
 
 end

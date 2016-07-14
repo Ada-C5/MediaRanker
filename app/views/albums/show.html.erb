@@ -2,4 +2,8 @@
 <h2>Recorded By: <%= @album.artist %></h2>
 <h3>Ranked: <%= @album.rating %> </h3>
 <%= @album.description %>
-<%= button_to "Upvote", update_album_path(@album.id), method: :patch, class: "btn btn-primary" %>
+<%= button_to "Upvote", upvote_album_path(@album.id), method: :patch, class: "btn btn-primary" %>
+<%= button_to "Edit", edit_album_path(@album.id), method: :get, class: "btn btn-primary" %>
+<%= button_to "Delete", delete_album_path(@album.id), method: :delete, class: "btn btn-danger" %>
+<%= button_to "View all albums", albums_path, method: :get, class: "btn btn-primary" %>
+<%= button_to "View all media", root_path, method: :get, class: "btn btn-primary" %>

@@ -1,0 +1,24 @@
+<table class="table table-striped" class="table table-hover">
+  <thead>
+    <tr>
+      <th>Ranking</th>
+      <th>Name</th>
+      <th>Upvote</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <% @movies.each do |movie| %>
+      <tr>
+        <td><%= movie.rating %></td>
+        <td><%= link_to movie.name , movie_path(movie.id)%></td>
+        <td><%= button_to "Upvote", update_movie_path(movie.id), method: :patch, class: "btn btn-primary" %>
+</td>
+
+
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <%= button_to "View all media", root_path, method: :get, class: "btn btn-primary" %>
