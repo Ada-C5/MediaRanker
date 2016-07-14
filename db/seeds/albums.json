@@ -1,0 +1,71 @@
+[
+  {
+    "name": "Dancing Queen",
+    "artist": "ABBA",
+    "description": "she dances like a queen",
+    "votes": 0
+  },
+
+  {
+    "name": "Howling for You",
+    "artist": "The Black Keys",
+    "description": "yep..",
+    "votes": 10
+  },
+
+  {
+    "name": "Timber",
+    "artist": "Kesha",
+    "description": "It's going down",
+    "votes": 10
+  },
+
+  {
+    "name": "Yellow Submarine",
+    "artist": "The Beatles",
+    "description": "We all live here",
+    "votes": 4
+  },
+  {
+    "name": "American Idiot",
+    "artist": "Greenday",
+    "description": "Don't wanna be",
+    "votes": 4
+  },
+  {
+    "name": "Beautiful Soul",
+    "artist": "Jesse McCartney",
+    "description": "I just want you",
+    "votes": 1
+  },
+  {
+    "name": "Perfect",
+    "artist": "One Direction",
+    "description": "I might never be",
+    "votes": 10
+  },
+  {
+    "name": "Blank Space",
+    "artist": "Taylor Swift",
+    "description": "She cray cray",
+    "votes": 9
+  },
+  {
+    "name": "The Luckiest",
+    "artist": "Ben Folds",
+    "description": "You are",
+    "votes": 7
+  },
+  {
+    "name": "I don't understand what albums are",
+    "artist": "someone",
+    "description": "lolz",
+    "votes": 0
+  },
+  {
+    "name": "Cello Suite",
+    "artist": "Bach",
+    "description": "music",
+    "votes": 5
+  }
+]

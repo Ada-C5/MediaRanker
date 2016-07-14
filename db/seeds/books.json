@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Space X",
+    "author": "Some dude",
+    "description": "Elon Musk zomg",
+    "votes": 20
+  },
+
+  {
+    "name": "Bible",
+    "author": "People",
+    "description": "life and stories and stuff",
+    "votes": 0
+  }
+]
