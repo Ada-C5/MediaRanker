@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root 'ranker#index'
 
   get     'movies'            => 'movies#index'
+  get     'movies/new'        => 'movies#new',     as: :new_movie
+  post    'movies'            => 'movies#create',  as: :create_movie
   get     'movies/:id'        => 'movies#show',    as: :movie
   delete  'movies/:id'        => 'movies#delete',  as: :delete_movie
   get     'movies/:id/edit'   => 'movies#edit',    as: :edit_movie
@@ -10,6 +12,8 @@ Rails.application.routes.draw do
   patch   'movies/:id/update' => 'movies#update',  as: :update_movie
 
   get     'books'             => 'books#index'
+  get     'books/new'         => 'books#new',      as: :new_book
+  post    'books'             => 'books#create',   as: :create_book
   get     'books/:id'         => 'books#show',     as: :book
   delete  'books/:id'         => 'books#delete',   as: :delete_book
   get     'books/:id/edit'    => 'books#edit',     as: :edit_book
@@ -17,6 +21,8 @@ Rails.application.routes.draw do
   patch   'books/:id/update'  => 'books#update',   as: :update_book
 
   get     'albums'            => 'albums#index'
+  get     'albums/new'        => 'albums#new',     as: :new_album
+  post    'albums'            => 'albums#create',  as: :create_album
   get     'albums/:id'        => 'albums#show',    as: :album
   delete  'albums/:id'        => 'albums#delete',  as: :delete_album
   get     'albums/:id/edit'   => 'albums#edit',    as: :edit_album

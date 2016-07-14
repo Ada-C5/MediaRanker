@@ -1,27 +1,6 @@
 <h1> Edit Album</h1>
 
 <%= form_for @album, method: :patch, url: update_album_path(@album.id), :html => { :class => "form-horizontal center" } do |f| %>
-  <div class="form-group">
-	  <%= f.label :name, class: "col-xs-4 control-label" %>
-    <div class="col-xs-4">
-    <%= f.text_field :name, class: "form-control" %>
-    </div>
-  </div>
-
-  <div class="form-group">
-​	    <%= f.label :artist, class: "col-xs-4 control-label" %>
-     <div class="col-xs-4">
-	     <%= f.text_field :artist, class: "form-control" %>
-	   </div>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :description, class: "col-xs-4 control-label"  %>
-    <div class="col-xs-4">
-      <%= f.text_field :description, class: "form-control" %>
-    </div>
-  </div>
-
-​	<br>
+  <%= render partial: 'form' , :locals => { :f => f } %>
   <%= f.submit class: 'btn btn-success'  %>
 <% end %>

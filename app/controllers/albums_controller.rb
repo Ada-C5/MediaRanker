@@ -8,6 +8,20 @@ class AlbumsController < ApplicationController
     @album = Album.find(params[:id])
   end
 
+  def new
+    @album = Album.new
+  end
+
+  def create
+    @album = Album.new(album_update_params[:album])
+    @album.rating = 0
+		if @album.save
+    	redirect_to album_path(@album.id)
+  	else
+  		render :new
+  	end
+  end
+
   def delete
     @album = Album.find_by(id: params[:id])
     @album.delete
@@ -29,21 +43,12 @@ class AlbumsController < ApplicationController
 
   def update
     @album = Album.find(params[:id])
-    # @album.update(album_update_params)
     @album.update_attributes(album_update_params[:album])
     redirect_to album_path(@album.id)
   end
-
 
   private
   def album_update_params
 		params.permit(album: [:name, :description, :artist, :rating])
 	end
 end
-
-
-# get     'albums'            => 'albums#index'
-# get     'albums/:id'        => 'albums#show',    as: :album
-# delete  'albums/:id'        => 'albums#delete'
-# get     'albums/:id/edit'   => 'albums#edit',   as: :edit_album
-# patch   'albums/:id/update' => 'albums#update', as: :update_album

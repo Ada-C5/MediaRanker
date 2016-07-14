@@ -2,7 +2,10 @@
 <h2>Written By: <%= @book.author %></h2>
 <h3>Ranked: <%= @book.rating %> </h3>
 <%= @book.description %>
-<%= button_to "Upvote", update_book_path(@book.id), method: :patch, class: "btn btn-primary" %>
-<%= button_to "Edit", edit_book_path(@book.id), method: :get, class: "btn btn-primary" %>
-<%= button_to "View all books", books_path, method: :get, class: "btn btn-primary" %>
-<%= button_to "View all media", root_path, method: :get, class: "btn btn-primary" %>
+<br>
+<br>
+<%= link_to "Upvote", upvote_book_path(@book.id), method: :patch, class: "btn btn-default" %>
+<%= link_to "Edit", edit_book_path(@book.id), method: :get, class: "btn btn-primary" %>
+<%= link_to "Delete", delete_book_path(@book.id), method: :delete, class: "btn btn-danger" %>
+<%= link_to "View all books", books_path, method: :get, class: "btn btn-default" %>
+<%= link_to "View all media", root_path, method: :get, class: "btn btn-default" %>
