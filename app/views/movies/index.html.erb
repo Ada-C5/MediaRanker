@@ -9,8 +9,8 @@
     <% @movies.each do |m| %>
       <tr>
         <td><%= m.upvotes %></td>
-        <td><%= m.title %></td>
-        <td><%= button_tag "Upvote!" %></td>
+        <td><%= link_to m.title, movie_path(m.id) %></td>
+        <td><button type="button" class="btn btn-default">Upvote</button></td>
       </tr>
     <% end %>
   </table>
