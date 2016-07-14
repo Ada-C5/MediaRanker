@@ -4,8 +4,7 @@ CREATE TABLE movies(
   title text,
   overview text,
   director text,
-  upvote integer,
-  ranking integer
+  upvotes int
 );
 
 DROP TABLE IF EXISTS books;
@@ -14,8 +13,7 @@ CREATE TABLE books(
   title text,
   overview text,
   author text,
-  upvote int,
-  ranking int
+  upvotes int
 );
 
 DROP TABLE IF EXISTS albums;
@@ -24,6 +22,5 @@ CREATE TABLE albums(
   title text,
   artist text,
   overview text,
-  upvote int,
-  ranking int
+  upvotes int
 );
