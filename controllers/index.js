@@ -4,6 +4,10 @@ var Movie = require("../models/movie")
 
 var IndexController = {
 
+  index: function (req, res, next) {
+
+  }
+
 }
 
 module.exports = IndexController
