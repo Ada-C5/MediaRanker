@@ -4,7 +4,15 @@ album_list = [
   { name: "Crazy In Love", artist: "Beyonce", description: "She's really in love.", votes: 10 },
   { name: "Purple Rain", artist: "Prince", description: "80s power ballads.", votes: 1 },
   { name: "Thriller", artist: "Michael Jackson", description: "", votes: 3 },
-  { name: "Channel Orange", artist: "Frank Ocean", description: "lovesit.", votes: 0 }
+  { name: "Channel Orange", artist: "Frank Ocean", description: "lovesit.", votes: 0 },
+  { name: "Whatever", artist: "Beyonce", description: "She's really in love.", votes: 10 },
+  { name: "OK", artist: "Prince", description: "80s power ballads.", votes: 1 },
+  { name: "Hi There", artist: "Michael Jackson", description: "", votes: 3 },
+  { name: "Music is Neat", artist: "Frank Ocean", description: "lovesit.", votes: 0 },
+  { name: "It's fine", artist: "Beyonce", description: "She's really in love.", votes: 10 },
+  { name: "Sample Album", artist: "Prince", description: "80s power ballads.", votes: 1 },
+  { name: "Runnings out of ideas", artist: "Michael Jackson", description: "", votes: 3 },
+  { name: "Seedz", artist: "Frank Ocean", description: "lovesit.", votes: 0 }
 ]
 
 album_list.each do |album|
