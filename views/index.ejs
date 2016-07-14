@@ -13,6 +13,15 @@
 
       <div class="col">
         <h1>Top Movies</h1>
+        <div>
+          <% for (var movie in movies) { %>
+            <ul>
+              <li><%= movies[movie].title %></li>
+              <li>Ranking: <%= (parseInt(movie)+1) %></li>
+              <li>Upvotes: <%= movies[movie].upvotes %></li>
+            </ul>
+          <% } %>
+        </div>
       </div>
 
       <div class="col">
@@ -30,6 +39,15 @@
 
       <div class="col">
         <h1>Top Albums</h1>
+        <div>
+          <% for (var album in albums) { %>
+            <ul>
+              <li><%= albums[album].title %></li>
+              <li>Ranking: <%= (parseInt(album)+1) %></li>
+              <li>Upvotes: <%= albums[album].upvotes %></li>
+            </ul>
+          <% } %>
+        </div>
       </div>
 
     </div>

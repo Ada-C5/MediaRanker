@@ -23,7 +23,6 @@ Book.topTen = function(callback) {
   db.run("SELECT * FROM books ORDER BY upvotes DESC", 
     function(error, books) {
     if (error|| !books) {
-  console.log("tired")
       callback(error || new Error("Could not retrieve books"), undefined);
     } else {
       callback(null, books.map(function(book) {
