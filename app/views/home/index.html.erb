@@ -1,7 +1,7 @@
 <div class="col-md-4">
   <h1>Top Movies</h1>
 
-  <% @movies.each do |movie| %>
+  <% @top_movies.each do |movie| %>
     <h2>
       <%= movie.name %> Ranked: <%= movie.votes %><br>
     </h2>
@@ -11,7 +11,7 @@
 <div class="col-md-4">
   <h1>Top Books</h1>
 
-  <% @books.each do |book| %>
+  <% @top_books.each do |book| %>
     <h2>
       <%= book.name %> Ranked: <%= book.votes %><br>
     </h2>
@@ -21,7 +21,7 @@
 <div class="col-md-4">
   <h1>Top Albums</h1>
 
-  <% @albums.each do |album| %>
+  <% @top_albums.each do |album| %>
     <h2>
       <%= album.name %> Ranked: <%= album.votes %><br>
     </h2>
