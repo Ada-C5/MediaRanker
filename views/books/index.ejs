@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+    <header>
+      <% include ../partials/header %>
+    </header>
+
+    <h2>Books</h2>
+
+    <% for (let book of locals.books) { %>
+      <p><%= book %></p>
+    <% } %>
+
+    <footer>
+      <% include ../partials/footer %>
+    </footer>
+  </body>
+</html>
