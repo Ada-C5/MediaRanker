@@ -11,11 +11,14 @@ var Controller = require('../controllers/docs')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.status(200).json({index: 'index'})
+  res.render('index', { title: 'Scrabble Express' });
 });
 
-router.get('/zomg', function(req, res, next) {
-  res.status(200).json({whatevs: 'it works!!!!'})
-});
 
 module.exports = router;
+
+
+// 	{ 
+// 	title: 'Movies List',
+// 	movies: movies
+// }
