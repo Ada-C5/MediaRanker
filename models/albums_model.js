@@ -20,6 +20,18 @@ Album.all = function(callback) {
   })
 };
 
+Album.topTen = function(callback) {
+  db.run("SELECT * FROM albums ORDER BY upvotes DESC", 
+    function(error, albums) {
+    if (error|| !albums) {
+      callback(error || new Error("Could not retrieve albums"), undefined);
+    } else {
+      callback(null, albums.map(function(album) {
+        return new Album(album.id, album.title, album.upvotes);
+      }))
+    }
+  })
+}
 
 
 module.exports = Album;

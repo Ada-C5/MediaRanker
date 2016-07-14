@@ -2,12 +2,6 @@ var Movies = require("../models/movies_model");
 
 
 var MoviesController = {
-// 	getMovies: function(req, res) {
-// 		res.render('movies', { title: 'Movie List' });
-// 	}
-// }
-
-
 	getMovies: function(req, res) {
 		Movies.all(function(error, movies) {
 			if(error=="Could not retrieve movies") {

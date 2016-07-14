@@ -20,6 +20,20 @@ Movie.all = function(callback) {
   })
 };
 
+Movie.topTen = function(callback) {
+  db.run("SELECT * FROM movies ORDER BY upvotes DESC", 
+    function(error, movies) {
+    if (error|| !movies) {
+      callback(error || new Error("Could not retrieve movies"), undefined);
+    } else {
+      callback(null, movies.map(function(movie) {
+        return new Movie(movie.id, movie.title, movie.upvotes);
+      }))
+    }
+  })
+}
+
+
 
 
 module.exports = Movie;
