@@ -1,1 +1,9 @@
-<%= @var %>
+<div>
+
+<h2>Top Books</h2>
+
+<% @books.each do |book| %>
+<%= book.name %> Ranked: <%= book.votes %><br>
+<% end %>
+
+</div>

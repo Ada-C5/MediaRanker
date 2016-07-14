@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @var = "hi"
+    @books = Book.all
+    @movies = Movie.all
+    @albums = Album.all
   end
 end
