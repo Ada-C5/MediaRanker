@@ -6,7 +6,7 @@ var Book = function(book) {
   this.id = book.id
   this.name = book.name
   this.description = book.description
-  this.author = book.author
+  this.by = book.author
   this.votes = book.votes
 }
 
