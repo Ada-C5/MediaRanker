@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var Controller = require('../controllers/docs')
+var Controller = require('../controllers/index')
 
 /* GET docs json. */
 // router.get('/api/docs.json', Controller.getJsonDocs)
@@ -10,9 +10,10 @@ var Controller = require('../controllers/docs')
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Scrabble Express' });
-});
+router.get('/', Controller.getIndex)
+// router.get('/', function(req, res, next) {
+//   res.render('index', { title: 'Scrabble Express' });
+// });
 
 
 module.exports = router;
