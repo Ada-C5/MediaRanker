@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <% include ../partials/head %>
+    <% include ./partials/head %>
   </head>
   <body>
     <header>
-      <% include ../partials/header %>
+      <% include ./partials/header %>
     </header>
 
-    <h2>Books</h2>
-
+    <h2><%= locals.type.toUpperCase() %></h2>
 
     <% for (let media of locals.media) { %>
       <p><%= media.name %></p>
@@ -19,7 +18,7 @@
     <% } %>
 
     <footer>
-      <% include ../partials/footer %>
+      <% include ./partials/footer %>
     </footer>
   </body>
 </html>
