@@ -12,7 +12,7 @@ var BooksController = {
         next(err)
       } else {
         locals = {}
-        locals.books = books
+        locals.media = books
         res.render ('books/index', { locals: locals })
       }
     })
