@@ -17,6 +17,15 @@
 
       <div class="col">
         <h1>Top Books</h1>
+        <div>
+          <% for (var book in books) { %>
+            <ul>
+              <li><%= books[book].title %></li>
+              <li>Ranking: <%= (parseInt(book)+1) %></li>
+              <li>Upvotes: <%= books[book].upvotes %></li>
+            </ul>
+          <% } %>
+        </div>
       </div>
 
       <div class="col">
