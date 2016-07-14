@@ -3,16 +3,21 @@ var Books = require("../models/books_model");
 
 var BooksController = {
 	getBooks: function(req, res) {
-		// Customer.all(function(error, customers) {
-		// 	if(error=="Could not retrieve customers") {
-		// 		res.status(404).send(error)
-		// 	} else if (error) {
-		// 		var err = "Please try again"
-		// 		res.status(500).send(err)
-		// 	} else {
-		// 		res.json(customers)
-		// 	}
-		// })
+		Books.all(function(error, books) {
+			if(error=="Could not retrieve books") {
+				res.status(404).send(error)
+			} else if (error) {
+				var err = "Please try again"
+				res.status(500).send(err)
+			} else {
+				console.log(books)
+				res.render('books', { 
+					title: 'Books List',
+					books: books
+				});
+			}
+		})
 	}
 }
+
 module.exports = BooksController
