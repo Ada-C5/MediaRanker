@@ -17,6 +17,10 @@ var BooksController = {
 				});
 			}
 		})
+	},
+
+	getBook: function(req, res) {
+		res.render()
 	}
 }
 
