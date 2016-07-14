@@ -10,8 +10,9 @@ var BooksController = {
         err.status = 500
         next(err)
       } else {
-        locals = books
-        render ('books/index', locals)
+        locals = {}
+        locals.books = books
+        res.render ('books/index', locals.books)
       }
     })
   }

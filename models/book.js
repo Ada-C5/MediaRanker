@@ -12,7 +12,7 @@ var Book = function(book) {
 
 Book.all = function(callback) {
   db.run("SELECT * FROM books", function(error, books) {
-    if(error || !movies) {
+    if(error || !books) {
       callback(error || new Error("Could not retrieve books"), undefined)
     } else {
       callback(null, books.map(function(book) {
