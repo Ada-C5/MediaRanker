@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var Controller = require('../controllers/albums')
 
+
+router.get('/:id', Controller.getAlbum)
 // select all from db
 router.get('/', Controller.getAlbums)
 // router.get('/sort/:column', Controller.subsetCustomers)

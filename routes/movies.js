@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var Controller = require('../controllers/movies')
 
+
+router.get('/:id', Controller.getMovies)
 // select all from db
 router.get('/', Controller.getMovies)
 

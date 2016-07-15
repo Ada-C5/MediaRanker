@@ -17,6 +17,10 @@ var MoviesController = {
 				});
 			}
 		})
+	},
+
+	getBook: function(req, res) {
+		res.render()
 	}
 }
 

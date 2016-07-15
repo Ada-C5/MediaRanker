@@ -17,6 +17,10 @@ var AlbumsController = {
 				});
 			}
 		})
+	},
+
+	getAlbum: function(req, res) {
+		res.render()
 	}
 }
 module.exports = AlbumsController
