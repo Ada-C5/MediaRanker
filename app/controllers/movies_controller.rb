@@ -9,11 +9,11 @@ class MoviesController < ApplicationController
   end
 
   def update
-
+    @movie = Movie.find(params[:movie_id])
   end
 
   def show
-
+    @movie = Movie.find(params[:movie_id])
   end
 
   def create
@@ -27,6 +27,6 @@ class MoviesController < ApplicationController
 private
 
   def movie_params
-    params.permit(:movie[:name, :director, :description])
+    params.permit(movie: [:name, :director, :description, :rank])
   end
 end

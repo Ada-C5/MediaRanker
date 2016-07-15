@@ -12,7 +12,7 @@ class BooksController < ApplicationController
   end
 
   def show
-
+    @book = Book.find(params[:book_id])
   end
 
   def create
@@ -26,6 +26,6 @@ class BooksController < ApplicationController
 private
 
   def book_params
-    params.permit(:book[:name, :author, :description])
+    params.permit(book: [:name, :author, :description, :rank])
   end
 end
