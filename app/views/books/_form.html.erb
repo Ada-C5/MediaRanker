@@ -1,0 +1,16 @@
+<%= form_for @book do |f| %>
+  <%= f.label :Name %>
+  <%= f.text_field :name, :required => :true %>
+  <br/>
+
+  <%= f.label :Author %>
+  <%= f.text_field :author, :required => :true %>
+  <br/>
+
+  <%= f.label :Description %>
+  <%= f.text_area :description, :required => :true %>
+  <br/>
+
+  <%= @book.persisted? ? (f.submit value: "Update book", id: 'special-button') : (f.submit value: "Add book", id: 'special-button') %>
+
+<% end %>

@@ -1,0 +1,9 @@
+<h1> <strong><%= @movie.name %></strong> Directed By: <%= @movie.director %> </h1>
+  <h3>Ranked: <%= @movie.rank %> </h3>
+  <h4> <%= @movie.description %> </h4>
+
+<%= button_to "Upvote", { action: "update", class: "upvote" },  method: :patch %>
+<%= button_to "Edit #{@movie.name}", { action: "edit", id: @movie.id },  method: :get %>
+<%= button_to "Delete", action: "destroy", id: @movie.id %>
+<%= button_to "View All Movies", movies_path, method: :get%>
+<%= button_to "View All Media", root_path, method: :get %>

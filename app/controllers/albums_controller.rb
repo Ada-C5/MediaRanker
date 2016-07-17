@@ -1,7 +1,7 @@
 class AlbumsController < ApplicationController
 
   def index
-    @albums.all
+    @albums = Album.all
   end
 
   def new
@@ -13,7 +13,7 @@ class AlbumsController < ApplicationController
   end
 
   def update
-    if params[:value] == "upvote"
+    if params[:class] == "upvote"
       @album = Album.find(params[:id])
       rank = @album[:rank] + 1
       @album.update(:rank => rank)
@@ -22,7 +22,7 @@ class AlbumsController < ApplicationController
       @album = Album.find(params[:id])
       @album.update(album_params[:album])
       redirect_to album_path
-
+    end
   end
 
   def show
@@ -30,7 +30,8 @@ class AlbumsController < ApplicationController
   end
 
   def create
-
+    Album.create(album_params[:album])
+    redirect_to albums_path
   end
 
   def destroy

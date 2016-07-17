@@ -1,23 +1,26 @@
 <section id="movies">
   <h1>Top Movies</h1>
   <% @movies.each do |movie| %>
-    <h2><%= link_to movie.name, movie_path(movie.id) %><small>Ranked: <%= movie.rank %></small>
+    <li><h2><%= link_to movie.name, movie_path(movie.id) %><small>Ranked: <%= movie.rank %></small></li>
   <% end %></h2>
 <%= link_to "View more movies", movies_path %>
 </section>
+<br/>
 
 <section id="books">
   <h1>Top Books</h1>
   <% @books.each do |book| %>
-    <h2><%= link_to book.name, book_path(book.id) %><small>Ranked: <%= book.rank %></small>
+    <li><h2><%= link_to book.name, book_path(book.id) %><small>Ranked: <%= book.rank %></small></li>
   <% end %></h2>
 <%= link_to "View more books", books_path %>
 </section>
+<br/>
 
 <section id="albums">
   <h1>Top Albums</h1>
   <% @albums.each do |album| %>
-    <h2><%= link_to album.name, album_path(album.id) %><small>Ranked: <%= album.rank %></small>
+    <li><h2><%= link_to album.name, album_path(album.id) %><small>Ranked: <%= album.rank %></small></li>
   <% end %></h2>
 <%= link_to "View more albums", albums_path %>
 </section>
+<br/>
