@@ -172,7 +172,7 @@ books = [
   {
     title: "Angelitos empantanados o historias para jovencitos",
     author: "Andrés Caicedo",
-    desxcription: "Resulta increíble ―mientras se leen con los nervios de punta y el corazón en la mano los tres relatos que componen Angelitos empantanados― que el escritor colombiano Andrés Caicedo no siga con vida",
+    description: "Resulta increíble ―mientras se leen con los nervios de punta y el corazón en la mano los tres relatos que componen Angelitos empantanados― que el escritor colombiano Andrés Caicedo no siga con vida",
     photo: "https://d.gr-assets.com/books/1450374821l/2258782.jpg",
     category_id: 2,
     ranking: 0
@@ -334,24 +334,32 @@ albums = [
     ranking: 0
   },
   {
-    title: "",
-    author: "",
+    title: "El carpintero",
+    author: "Andrés Cepeda",
     description: "",
     photo: "",
     category_id: 3,
     ranking: 0
   },
   {
-    title: "",
-    author: "",
+    title: "El Baile de los Sueños",
+    author: "Maia",
     description: "",
     photo: "",
     category_id: 3,
     ranking: 0
   },
   {
-    title: "",
-    author: "",
+    title: "El negocio",
+    author: "J Blavin",
+    description: "",
+    photo: "",
+    category_id: 3,
+    ranking: 0
+  },
+  {
+    title: "La familia",
+    author: "J Balvin",
     description: "",
     photo: "",
     category_id: 3,
