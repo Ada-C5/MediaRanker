@@ -4,7 +4,7 @@
 
 <p><%= @movie.description %></p>
 
-<button type="button" class="btn btn-primary">Upvote</button>
+<%= link_to "Upvote", upvote_movie_path(@movie.id), class: "btn btn-primary", method: :put %>
 <button type="button" class="btn btn-default">Edit <%= @movie.title %></button>
 <button type="button" class="btn btn-danger">Delete</button>
 <button type="button" class="btn btn-default">View All Movies</button>
