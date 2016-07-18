@@ -2,6 +2,7 @@
 
 <div class="row">
   <div class="col-sm-4">
+    <h2>Top Movies</h2>
     <% @movies.each do |movie|%>
     <div class="thumbnail">
 
@@ -19,6 +20,7 @@
     <% end %>
   </div>
   <div class="col-sm-4">
+    <h2>Top Books</h2>
     <% @books.each do |book|%>
     <div class="thumbnail">
 
@@ -30,25 +32,25 @@
 
     <p> Ranked: <%= book.ranking%> </p>
     </div>
-
-  </div>
-  <br>
+    </div>
+    <br>
     <% end %>
   </div>
   <div class="col-sm-4">
+    <h2>Top Albums</h2>
+
     <% @albums.each do |album|%>
-
     <div class="thumbnail">
-    <%= link_to article_path(album) do %>
-    <%= image_tag(album.photo, alt: "") %>
-    <div class="caption">
-    <h4> <%= album.title%> </h4>
-    <% end %>
-
-    <p> Ranked: <%= album.ranking%> </p>
-    </div>
-    </div>
-    <br>
+      <%= link_to article_path(album) do %>
+        <%= image_tag(album.photo, alt: "") %>
+        <div class="caption">
+        <h4> <%= album.title%> </h4>
       <% end %>
+
+      <p> Ranked: <%= album.ranking%> </p>
+      </div>
+      </div>
+      <br>
+    <% end %>
   </div>
 </div>
