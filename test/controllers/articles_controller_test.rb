@@ -37,9 +37,10 @@ class ArticlesControllerTest < ActionController::TestCase
     assert_redirected_to root_path(id)
   end
 
-  # test "should get destroy" do
-  #   delete :destroy
-  #   assert_response :redirect
-  # end
+  test "should get destroy" do
+    id = Article.first.id
+    delete :destroy, id: id
+    assert_response :redirect
+  end
 
 end
