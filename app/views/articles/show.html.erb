@@ -2,9 +2,15 @@
 
 <%= image_tag(@article.photo, alt: "") %>
 
-<h3> Author: <%= @article.author%></h3>
+<h2> Author: <%= @article.author%></h2>
+<h3> Rancked: <%= @article.ranking%></h3>
 
 <p> <%= @article.description%></p>
+
+<%= form_for @article do |f| %>
+<%= f.hidden_field :ranking, value: @article.ranking + 1 %>
+<%=f.submit 'Upvote!', class: "btn btn-primary"%>
+<% end %>
 
 
 <%= button_to "Edit this " + @article.category.name, article_path(@article), class: "btn btn-default", method: :get%>

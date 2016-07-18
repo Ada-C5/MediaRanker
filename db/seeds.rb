@@ -1,7 +1,7 @@
 movies = [
   {
     title: "Perder es cuestión de método",
-    author: "",
+    author: "Sergio Cabrera",
     description: "A body is discovered impaled on a stake near a scenic lake near Bogota. A journalist try to find what happened. With a friend, they set about to find the cause of the crime and uncover an intricate real estate fraud involving corrupt politicians, emerald hunters, nudists...",
     photo: "http://ia.media-imdb.com/images/M/MV5BNzU5Nzk5OTM3Nl5BMl5BanBnXkFtZTcwNzc5NjY5MQ@@._V1_UY268_CR3,0,182,268_AL_.jpg",
     category_id: 1,
@@ -9,7 +9,7 @@ movies = [
   },
   {
     title: "La estrategia del caracol",
-    author: "",
+    author: "Sergio Cabrera",
     description: "A lot of people live in an ocupated house; after many years of quiet living, the owner of the house wants them out. They try whatever they can to avoid being put out, without sucess. But one of them thinks of a way of saving, at least, their dignity...",
     photo: "http://ia.media-imdb.com/images/M/MV5BZWVkYzU3YTEtZmE5My00ZWVhLTg0YTctZTk0ZjY4YmY5NTdkXkEyXkFqcGdeQXVyNjExODE1MDc@._V1._SY209_CR1,0,140,209_.jpg",
     category_id: 1,
@@ -17,7 +17,7 @@ movies = [
   },
   {
     title: "Rosario Tijeras",
-    author: "",
+    author: "Emilio Maillé",
     description: "In 1989, in Medellin, the killer Rosario Tijeras has an affair with the playboy Emilio and is introduced to his best friend Antonio in a night-club. The relationship of Rosario with Emilio is limited to sex and she befriends Antonio, who is in love with her. After the death of her brother Jonhefe, Rosario and Antonio become closer and she falls in love for him.",
     photo: "http://ia.media-imdb.com/images/M/MV5BMGNlNzBkZjAtZWVjZC00Y2Y4LWFiYjctNjI0MWIzNmVlZjg0XkEyXkFqcGdeQXVyMjE2NjA4Njg@._V1._SY209_CR3,0,140,209_.jpg",
     category_id: 1,
@@ -25,7 +25,7 @@ movies = [
   },
   {
     title: "La pena máxima",
-    author: "",
+    author: "Jorge Echeverry",
     description: "A Colombian man's obsession with an international soccer match between his country and Argentina makes him commit the worst decisions of his life.",
     photo: "http://ia.media-imdb.com/images/M/MV5BYjVhNGUyYzUtYjVlNC00ZGI3LWIxYmQtOWJlNDk2YzA0YTA5XkEyXkFqcGdeQXVyMjQ4NDAyMDI@._V1._SY209_CR3,0,140,209_.jpg",
     category_id: 1,
@@ -33,7 +33,7 @@ movies = [
   },
   {
     title: "Golpe de estadio ",
-    author: "",
+    author: "Sergio Cabrera",
     description: "An oil company has set up a camp for geological research in a small village in Colombia that have been titled New Texas so it becomes the target of the guerrillas holding constant clashes with police in the area, the confrontation is altered in the interest of the sides of continuing the transmission of the world Cup qualifiers of U.S. 94 as a truce to end up doing together to watch the match between Colombia and the National Team Selection in Argentina remains the only TV working in the town",
     photo: "http://ia.media-imdb.com/images/M/MV5BZGRkZTQwOTMtNjc2Ny00MTc2LTlhNDktNTE2NjE1ZjQ3NDg1XkEyXkFqcGdeQXVyMzU0NzkwMDg@._V1._SY209_CR2,0,140,209_.jpg",
     category_id: 1,
@@ -41,7 +41,7 @@ movies = [
   },
   {
     title: "La mansión de Araucaima",
-    author: "",
+    author: "Carlos Mayolo",
     description: "A young model runs away from the set of a commercial spot she's filming, and enter the mansion of Araucaima, where its dwellers indulge in strange rites.",
     photo: "http://ia.media-imdb.com/images/M/MV5BNTJlY2U4NzctZTgzNi00MDFjLWIwZmEtZDUzMDllNDRlMDA1XkEyXkFqcGdeQXVyNjE0NjU5NDQ@._V1._SY209_CR1,0,140,209_.jpg",
     category_id: 1,
@@ -49,7 +49,7 @@ movies = [
   },
   {
     title: "At the End of the Spectra",
-    author: "",
+    author: "Juan Felipe Orozco",
     description: "After a traumatic situation that makes Vega become an agoraphobic person, she decides to live like a hermit in an apartment because of her father's recommendation. But some strange things start happening, she sees visions, and hears noises and voices. She starts to worry about the dark past of that apartment, and the bizarre obsession of her neighbor.",
     photo: "http://ia.media-imdb.com/images/M/MV5BNDhlN2ZjYmQtNzYyYS00MDcwLWExNDAtMjgyMGEzYTQzMjBiXkEyXkFqcGdeQXVyNjQ4ODc5NzA@._V1._SY209_CR3,0,140,209_.jpg",
     category_id: 1,
@@ -57,7 +57,7 @@ movies = [
   },
   {
     title: "Our Lady of the Assassins",
-    author: "",
+    author: "Barbet Schroeder",
     description: "The tempestuous love story between Fernando, an older man who has recently returned to his crime-ridden drug capitol hometown of Medellin, Colombia and the gun-happy 16-year-old assassin Alexis, who murders all too easily. When Alexis himself is fatally gunned down, grief-stricken Fernando hunts for his young lover's killer in the Medellin slums, but instead encounters Wilmar, who bears an uncanny resemblance to Alexis.",
     photo: "http://ia.media-imdb.com/images/M/MV5BMTc1MDc0MTM3OV5BMl5BanBnXkFtZTcwNTA2MjEyMQ@@._V1._SY209_CR4,0,140,209_.jpg",
     category_id: 1,
@@ -65,7 +65,7 @@ movies = [
   },
   {
     title: "El embajador de la India",
-    author: "",
+    author: "Mario Ribero Ferreira",
     description: "Jaime Florez, an astute provincial, and malicious, is involved in a misunderstanding: the notable people of a Colombian city confuse it with the diplomatic representative of India. Without much effort he decides to take advantage of the situation and deceives the whole world, until they discover him.",
     photo: "http://ia.media-imdb.com/images/M/MV5BNmIyN2QwOTktOWUxMS00NmM1LThkNGEtYzY4NzFkM2E0YTViXkEyXkFqcGdeQXVyNDY4OTIzODY@._V1._SY209_CR8,0,140,209_.jpg",
     category_id: 1,
@@ -73,7 +73,7 @@ movies = [
   },
   {
     title: "The People at Universal",
-    author: "",
+    author: "Felipe Aljure",
     description: "This is a dark comedy that takes place in an urban jungle, where each has to ensure its own survival. No one is bad, but all acting for his own benefit and without measure if their actions hurt others. The former Sergeant Diogenes Hernandez owns the Universal, a precarious detective agency private in the Centre of Bogotá, which is based in the same apartment where he and his wife Fabiola inhabit. His nephew, Clemente Fernández, who works at the Agency, maintains a romance with Fabiola, without trying to hurt the feelings of his uncle, but driven by the need to alleviate their empty urban and anonymous man.",
     photo: "http://ia.media-imdb.com/images/M/MV5BYTZiYjA1MGItM2MxNy00MWE5LThkM2QtMTY2ZTQ5MzIzNjAxXkEyXkFqcGdeQXVyMzY2MDk0MTk@._V1._SX140_CR0,0,140,209_.jpg",
     category_id: 1,
@@ -81,7 +81,7 @@ movies = [
   },
   {
     title: "A Ton of Luck",
-    author: "",
+    author: "Rodrigo Triana",
     description: "Based on a true story, a group of 147 overworked and underpaid Colombian soldiers find the treasure they didn't seek; $46 million. The film is a surreal black comedy and follows 4 of the 147 soldiers who were part of the anti-guerrilla 'Destroyer' battalion, and tells of their story leading up to and after finding the money. The soldiers decide to divide the money between themselves instead of giving the money to the Colombian government. The soldiers don't have food, water or toilet paper, but instead use their bags full of money as pillows. As the soldiers are recalled and taken back into civilization, they start to use their money for bad things, spending it on brothels, alcohol and prostitutes. The discovery the soldiers made changed their lives. They no longer live in poverty and now are capable of achieving their dreams. Now they hope to return to civilization and make their dreams come true.",
     photo: "http://ia.media-imdb.com/images/M/MV5BOTc0Njk5NTY4NV5BMl5BanBnXkFtZTcwNTc3MTAyMw@@._V1._SY209_CR4,0,140,209_.jpg",
     category_id: 1,
@@ -90,7 +90,7 @@ movies = [
 
   {
     title: "The Colors of the Mountain",
-    author: "",
+    author: "Carlos César Arbeláez",
     description: "",
     photo: "http://ia.media-imdb.com/images/M/MV5BMTM4NDQxNDEzOF5BMl5BanBnXkFtZTgwMzIxMDg0MDE@._V1._SY209_CR4,0,140,209_.jpg",
     category_id: 1,
@@ -98,7 +98,7 @@ movies = [
   },
   {
     title: "Paraiso Travel",
-    author: "",
+    author: "Simon Brand",
     description: "Love drives two young lovers from Medellin, Colombia to seek fortune in New York City, only to find a harsh reality that will put to test their true love for one another.",
     photo: "http://ia.media-imdb.com/images/M/MV5BMTk1NjMzNTQ0MF5BMl5BanBnXkFtZTcwMzIxMzc1MQ@@._V1._SX140_CR0,0,140,209_.jpg",
     category_id: 1,
