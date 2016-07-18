@@ -15,8 +15,8 @@ class BooksController < ApplicationController
       render "show"
     else
       @book = Book.find(params[:id])
-      @book.update(movie_params[:book])
-      redirect_to movie_path
+      @book.update(book_params[:book])
+      redirect_to book_path
     end
   end
 
@@ -29,7 +29,7 @@ class BooksController < ApplicationController
   end
 
   def create
-    Book.create(movie_params[:book])
+    Book.create(book_params[:book])
   end
 
   def destroy
