@@ -1,0 +1,44 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.col-sm-4 {
+  text-align: center;
+}
+
+.row .col-sm-4 {
+  margin: 1rem auto;
+}
+
+.col-headers {
+  font-size: 3.5rem;
+}
+
+.top-10 {
+  font-size: 2.5rem;
+}
+
+.upvotes {
+  font-size: 1.5rem;
+  display: block;
+}
+
+.view-more {
+  font-size: 1.2rem;
+}
+
+.form-label {
+  width: 20%;
+}

@@ -1,0 +1,20 @@
+<div class="panel panel-default">
+  <table class="table">
+    <tr>
+      <th>Votes</th>
+      <th>Name</th>
+      <th>Upvote</th>
+    </tr>
+
+    <% @books.each do |b| %>
+      <tr>
+        <td><%= b.upvotes %></td>
+        <td><%= link_to b.title, book_path(b.id) %></td>
+        <td><%= link_to "Upvote", upvote_book_path(b.id), class: "btn btn-default", method: :put %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<%= link_to "View All Media", root_path, class: "btn btn-default" %>
+<%= link_to "Add a Book", new_book_path, class: "btn btn-default" %>
