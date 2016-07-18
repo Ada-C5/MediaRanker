@@ -7,6 +7,17 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
   end
 
+  def new
+    @movie = Movie.new
+  end
+
+  def create
+    @movie = Movie.create(movies_params[:movie])
+    @movie.upvotes = 0
+    @movie.save
+    redirect_to movies_path
+  end
+
   def edit
     @movie = Movie.find(params[:id])
   end
