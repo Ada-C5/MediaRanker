@@ -1,0 +1,19 @@
+<%= form_for(zone) do |f| %>
+  <div class="form-group">
+    <%= f.label :title, class: "form-label" %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :director, class: "form-label" %>
+    <%= f.text_field :director, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description, class: "form-label" %>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+
+  <%= f.submit "Submit", class: "btn btn-default"%>
+<% end %>
+
