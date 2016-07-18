@@ -27,8 +27,14 @@ class BooksController < ApplicationController
   end
 
   def update
-    Book.update(params[:id], books_params[:book])
-    redirect_to books_path
+    @book = Book.update(params[:id], books_params[:book])
+    if @book.save
+      flash[:success] = "You successfully edited a book."
+      redirect_to books_path
+    else
+      flash.now[:error] = 'Book must have a title.'
+      render :new
+    end
   end
 
   def destroy

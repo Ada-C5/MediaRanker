@@ -27,8 +27,14 @@ class MoviesController < ApplicationController
   end
 
   def update
-    Movie.update(params[:id], movies_params[:movie])
-    redirect_to movies_path
+    @movie = Movie.update(params[:id], movies_params[:movie])
+    if @movie.save
+      flash[:success] = "You successfully edited a movie."
+      redirect_to movies_path
+    else
+      flash.now[:error] = 'Movie must have a title.'
+      render :new
+    end
   end
 
   def destroy

@@ -27,8 +27,14 @@ class AlbumsController < ApplicationController
   end
 
   def update
-    Album.update(params[:id], albums_params[:album])
-    redirect_to albums_path
+    @album = Album.update(params[:id], albums_params[:album])
+    if @album.save
+      flash[:success] = "You successfully edited an album."
+      redirect_to books_path
+    else
+      flash.now[:error] = 'Album must have a title.'
+      render :new
+    end
   end
 
   def destroy
