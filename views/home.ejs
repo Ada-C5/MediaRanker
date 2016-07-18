@@ -11,18 +11,30 @@
 
     <div class="row">
       <div class="col-md-4">
+        <h2>Top Movies</h2>
         <% for (movie of locals.movies) { %>
-          <p><%= movie.name %></p>
+          <h3>
+            <a href="#"><%= movie.name %></a>
+            <small>Ranked: <%= movie.votes %></small>
+          </h3>
         <% } %>
       </div>
       <div class="col-md-4">
+        <h2>Top Books</h2>
         <% for (book of locals.books) { %>
-          <p><%= book.name %></p>
+          <h3>
+            <a href="#"><%= book.name %></a>
+            <small>Ranked: <%= book.votes %></small>
+          </h3>
         <% } %>
       </div>
       <div class="col-md-4">
+        <h2>Top Albums</h2>
         <% for (album of locals.albums) { %>
-          <p><%= album.name %></p>
+          <h3>
+            <a href="#"><%= album.name %></a>
+            <small>Ranked: <%= album.votes %></small>
+          </h3>
         <% } %>
       </div>
     </div>
