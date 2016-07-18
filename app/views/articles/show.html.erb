@@ -13,7 +13,7 @@
 <% end %>
 
 
-<%= button_to "Edit this " + @article.category.name, article_path(@article), class: "btn btn-default", method: :get%>
+<%= button_to "Edit this " + @article.category.name[0..-2], edit_article_path(@article), class: "btn btn-default", method: :get%>
 
 <%= button_to "Delete", @article, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"%>
 
