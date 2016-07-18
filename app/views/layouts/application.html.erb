@@ -10,6 +10,17 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
 <body>
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+
+      <%= link_to root_path do %>
+          <h1> <%= image_tag("https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/1286235/90/60/m1/fpnw/wm0/true-proportions-colombia-flag-with-grunge-texture-.jpg?1463650602&s=c662be35d6d4a0d3285fcb43088d4426", alt: "") %>
+      Colombian Media Ranking </h1>
+      <% end %>
+
+
+    </div>
+  </nav>
   <div class="container">
 
     <%= yield %>
