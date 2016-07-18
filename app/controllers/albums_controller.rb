@@ -30,7 +30,7 @@ class AlbumsController < ApplicationController
     @album = Album.update(params[:id], albums_params[:album])
     if @album.save
       flash[:success] = "You successfully edited an album."
-      redirect_to books_path
+      redirect_to albums_path
     else
       flash.now[:error] = 'Album must have a title.'
       render :new
