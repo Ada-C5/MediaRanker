@@ -22,7 +22,7 @@
 
         <div class="col-md-3">
 
-          <%= button_to "Edit this "+ @category.name[0..-2], edit_article_path(@article), class: "btn btn-default", method: :get%>
+          <%= button_to "Edit this "+ @article.category.name[0..-2], edit_article_path(@article), class: "btn btn-default", method: :get%>
         </div>
         <div class="col-md-3">
 
