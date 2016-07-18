@@ -13,7 +13,13 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.create(books_params[:book])
-    redirect_to books_path
+    if @book.save
+      flash[:success] = "You successfully added a book."
+      redirect_to books_path
+    else
+      flash.now[:error] = 'Book must have a title.'
+      render :new
+    end
   end
 
   def edit

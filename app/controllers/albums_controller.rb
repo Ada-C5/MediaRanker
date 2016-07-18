@@ -13,7 +13,13 @@ class AlbumsController < ApplicationController
 
   def create
     @album = Album.create(albums_params[:album])
-    redirect_to albums_path
+    if @album.save
+      flash[:success] = "You successfully added an album."
+      redirect_to albums_path
+    else
+      flash.now[:error] = 'Album must have a title.'
+      render :new
+    end
   end
 
   def edit

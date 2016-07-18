@@ -13,7 +13,13 @@ class MoviesController < ApplicationController
 
   def create
     @movie = Movie.create(movies_params[:movie])
-    redirect_to movies_path
+    if @movie.save
+      flash[:success] = "You successfully added a movie."
+      redirect_to movies_path
+    else
+      flash.now[:error] = 'Movie must have a title.'
+      render :new
+    end
   end
 
   def edit
