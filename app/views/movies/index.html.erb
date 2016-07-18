@@ -10,7 +10,7 @@
       <tr>
         <td><%= m.upvotes %></td>
         <td><%= link_to m.title, movie_path(m.id) %></td>
-        <td><button type="button" class="btn btn-default">Upvote</button></td>
+        <td><%= link_to "Upvote", upvote_movie_path(m.id), class: "btn btn-default", method: :put %></td>
       </tr>
     <% end %>
   </table>
