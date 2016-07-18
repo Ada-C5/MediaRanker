@@ -8,6 +8,15 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :albums
-  resources :books
+  resources :albums do
+    member do
+      put 'upvote'
+    end
+  end
+
+  resources :books do
+    member do
+      put 'upvote'
+    end
+  end
 end
