@@ -12,11 +12,6 @@ class ArticlesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  # test "should get delete" do
-  #   get :destroy
-  #   assert_response :success
-  # end
-
   test "should get edit" do
 
     id = Article.first.id
@@ -41,5 +36,10 @@ class ArticlesControllerTest < ActionController::TestCase
     patch :update, id: id, article: { ranking: params[:article][:ranking] }
     assert_redirected_to root_path(id)
   end
+
+  # test "should get destroy" do
+  #   delete :destroy
+  #   assert_response :redirect
+  # end
 
 end
