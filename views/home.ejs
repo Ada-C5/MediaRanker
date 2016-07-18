@@ -8,7 +8,26 @@
       <% include ./partials/header %>
     </header>
 
-    <%= locals.albums %>
+
+    <div class="row">
+      <div class="col-md-4">
+        <% for (movie of locals.movies) { %>
+          <p><%= movie.name %></p>
+        <% } %>
+      </div>
+      <div class="col-md-4">
+        <% for (book of locals.books) { %>
+          <p><%= book.name %></p>
+        <% } %>
+      </div>
+      <div class="col-md-4">
+        <% for (album of locals.albums) { %>
+          <p><%= album.name %></p>
+        <% } %>
+      </div>
+    </div>
+
+    <button class="btn btn-primary">yo.</button>
 
     <footer>
       <% include ./partials/footer %>
