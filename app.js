@@ -5,6 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+// var jQuery = require('jQuery')
+// var bootstrap = require('bootstrap')
 var massive = require('massive')
 
 var app = express();
