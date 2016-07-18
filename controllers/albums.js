@@ -9,7 +9,7 @@ var AlbumsController = {
         err.status = 500
         next(err)
       } else {
-        locals = {}
+        var locals = {}
         locals.type = "Albums"
         locals.media = albums
         res.render ('index', { locals: locals })

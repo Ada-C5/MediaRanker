@@ -10,7 +10,7 @@ var MoviesContoller = {
         err.status = 500
         next(err)
       } else {
-        locals = {}
+        var locals = {}
         locals.type = "Movies"
         locals.media = movies
         res.render ('index', { locals: locals })

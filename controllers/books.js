@@ -10,7 +10,7 @@ var BooksController = {
         err.status = 500
         next(err)
       } else {
-        locals = {}
+        var locals = {}
         locals.type = "Books"
         locals.media = books
         res.render ('index', { locals: locals })
