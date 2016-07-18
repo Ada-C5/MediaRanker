@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 col-headers">Top Movies</div>
+    <div class="col-sm-4 col-headers">Top Books</div>
+    <div class="col-sm-4 col-headers">Top Albums</div>
+  </div>
+  <% 10.times do |i| %>
+    <div class="row">
+      <div class="col-sm-4 top-10">
+        <% if @movies[i] %>
+          <%= link_to @movies[i].title, movie_path(@movies[i].id) %>
+          <span class="upvotes"><%= "Upvotes: #{@movies[i].upvotes}" %></span>
+        <% end %>
+      </div>
+      <div class="col-sm-4 top-10">
+        <% if @books[i] %>
+          <%= link_to @books[i].title, book_path(@books[i].id) %>
+          <span class="upvotes"><%= "Upvotes: #{@books[i].upvotes}" %></span>
+        <% end %>
+      </div>
+      <div class="col-sm-4 top-10">
+        <% if @albums[i] %>
+          <%= link_to @albums[i].title, album_path(@albums[i].id) %>
+          <span class="upvotes"><%= "Upvotes: #{@albums[i].upvotes}" %></span>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

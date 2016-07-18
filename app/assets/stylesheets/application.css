@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+.col-sm-4 {
+  text-align: center;
+}
+
+.row .col-sm-4 {
+  margin: 1rem auto;
+}
+
+.col-headers {
+  font-size: 3.5rem;
+}
+
+.top-10 {
+  font-size: 2.5rem;
+}
+
+.upvotes {
+  font-size: 1.5rem;
+  display: block;
+}
