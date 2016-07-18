@@ -1,15 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  description: MyString
-  photo: MyString
-  categoty_id: 1
+Gaviria:
+  title: The Rose Seller
+  author: Víctor Gaviria
+  description: 13-year-old Monica leads a street life, making her living by selling flowers to couples in local nightspots, she is joined by 10-year-old Andrea who runs out of her house after her mother beats her.
+  photo: http://ia.media-imdb.com/images/M/MV5BMTUzOTM3NTc5MV5BMl5BanBnXkFtZTcwNzA1ODEwMg@@._V1_UY268_CR5,0,182,268_AL_.jpg
+  category: movies
+  ranking: 3
+
+Garcí­a:
+  title: Chronicle of a Death Foretold
+  author: Gabriel Garcí­a Márquez
+  description: Acaso sea 'Crónica de una muerte anunciada' la obra más 'realista' de Gabriel García Márquez, pues se basa en un hecho histórico acontecido en la tierra natal del escritor.
+  photo: https://d.gr-assets.com/books/1430736599l/23878.jpg
+  category: books
   ranking: 1
 
-two:
-  title: MyString
-  description: MyString
-  photo: MyString
-  categoty_id: 1
-  ranking: 1
+Shakira:
+  title: Sale el Sol
+  author: Shakira
+  description: Acaso sea 'Crónica de una muerte anunciada' la obra más 'realista' de Gabriel García Márquez, pues se basa en un hecho histórico acontecido en la tierra natal del escritor.
+  photo: https://archive.org/services/img/mbid-81d8c464-3a7c-40f1-b6f5-7925dd34d2d7
+  category: albums
+  ranking: 4
