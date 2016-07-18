@@ -1,0 +1,24 @@
+<ul>
+  <% @books.each do |book| %>
+    <li>
+      <%= link_to book.title, book_path(book.id) %>
+        Ranked <%= book.rank %>
+    </li>
+  <% end %>
+</ul>
+<ul>
+  <% @albums.each do |album| %>
+    <li>
+      <%= link_to album.title, album_path(album.id) %>
+        Ranked <%= album.rank %>
+    </li>
+  <% end %>
+</ul>
+<ul>
+  <% @movies.each do |movie| %>
+  <li>
+    <%= link_to movie.title, movie_path(movie.id) %>
+      Ranked <%= movie.rank %>
+  </li>
+  <% end %>
+</ul>
