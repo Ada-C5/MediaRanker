@@ -103,6 +103,22 @@ movies = [
     photo: "http://ia.media-imdb.com/images/M/MV5BMTk1NjMzNTQ0MF5BMl5BanBnXkFtZTcwMzIxMzc1MQ@@._V1._SX140_CR0,0,140,209_.jpg",
     category_id: 1,
     ranking: 0
+  },
+  {
+    title: "Rodrigo D: No futuro",
+    author: "Víctor Gaviria",
+    description: "Rodrigo and his friends are bored teenagers living in Medellin. Rodrigo wants to start a punk band. The youths mainly loaf around the hillside shanty towns and, for kicks, steal a bike or car, or shoot someone. (93 mins.)",
+    photo: "http://ia.media-imdb.com/images/M/MV5BNzU2NTFkNGEtMDUwOS00ZjIwLWFiNjktY2E0YTMyNTA1NTFkXkEyXkFqcGdeQXVyMTc3MDAzMQ@@._V1_UY268_CR5,0,182,268_AL_.jpg",
+    category_id: 1,
+    ranking: 3
+  },
+  {
+    title: "The Rose Seller",
+    author: "Víctor Gaviria",
+    description: "13-year-old Monica leads a street life, making her living by selling flowers to couples in local nightspots, she is joined by 10-year-old Andrea who runs out of her house after her mother beats her.",
+    photo: "http://ia.media-imdb.com/images/M/MV5BMTUzOTM3NTc5MV5BMl5BanBnXkFtZTcwNzA1ODEwMg@@._V1_UY268_CR5,0,182,268_AL_.jpg",
+    category_id: 1,
+    ranking: 3
   }
 ]
 
@@ -249,7 +265,7 @@ albums = [
     title: "Clásicos de la Provincia",
     author: "Carlos Vives",
     description: "",
-    photo: "",
+    photo: "https://i.ytimg.com/p/PLBN9UtpzNFo-MgS-kDJ7Da2UQfoz_itXr/mqdefault.jpg",
     category_id: 3,
     ranking: 0
   },
@@ -257,15 +273,15 @@ albums = [
     title: "30 Grandes Éxitos",
     author: "Diomedes Díaz",
     description: "",
-    photo: "",
+    photo: "http://www.discotecasophy.com/image/cache/data/Diomedes%20Diaz%2030%20grandes%20%C3%A9xitos%20vol%201(two%20Pack)-180x180.jpg",
     category_id: 3,
     ranking: 0
   },
   {
-    title: "Mar Adentro",
-    author: "	Donato y Estefano",
+    title: "Dos",
+    author: "Fanny Lu",
     description: "",
-    photo: "",
+    photo: "http://lh5.ggpht.com/-uP4teChru00/T3eYO6YMmdI/AAAAAAAADmg/LqQZgz5rHDk/h180/frases+de+canciones+de+fanny+lu+dos+las+mejores+frases+de+canciones+de+fanny+lu+frases+de+canciones+de+amor+frases+de+canciones+romanticas.png?imgmax=180",
     category_id: 3,
     ranking: 0
   },
@@ -273,7 +289,7 @@ albums = [
     title: "Pa' Otro La'o",
     author: "Chichí Peralta",
     description: "",
-    photo: "",
+    photo: "https://i.ytimg.com/p/PLsoaR7AwUdM9k-TM9P5WpoED_nm5HMo3A/mqdefault.jpg",
     category_id: 3,
     ranking: 0
   },
@@ -281,7 +297,7 @@ albums = [
     title: "Corazón Profundo",
     author: "Carlos Vives",
     description: "",
-    photo: "",
+    photo: "http://vignette3.wikia.nocookie.net/lyricwiki/images/8/83/Carlos_Vives_-_M%C3%A1s_Coraz%C3%B3n_Profundo.jpg/revision/latest/scale-to-width-down/180?cb=20150923184422",
     category_id: 3,
     ranking: 0
   },
@@ -289,7 +305,7 @@ albums = [
     title: "Ilusión",
     author: "Fonseca",
     description: "",
-    photo: "",
+    photo: "https://i.ytimg.com/p/PLOy0OlrzVLf_6rsHG8qzHOPPCA9tMzjDC/mqdefault.jpg",
     category_id: 3,
     ranking: 0
   },
@@ -297,7 +313,7 @@ albums = [
     title: "Sale el Sol",
     author: "Shakira",
     description: "",
-    photo: "",
+    photo: "https://archive.org/services/img/mbid-81d8c464-3a7c-40f1-b6f5-7925dd34d2d7",
     category_id: 3,
     ranking: 0
   },
@@ -305,7 +321,7 @@ albums = [
     title: "El Dorado",
     author: "Aterciopelados",
     description: "",
-    photo: "",
+    photo: "https://artwork-cdn.7static.com/static/img/sleeveart/00/005/365/0000536501_180.jpg",
     category_id: 3,
     ranking: 0
   },
@@ -313,7 +329,7 @@ albums = [
     title: "La Tierra del Olvido",
     author: "Carlos Vives",
     description: "",
-    photo: "",
+    photo: "https://i.ytimg.com/p/PLBN9UtpzNFo9SsFFH-T2XjY5XoNDextBj/mqdefault.jpg",
     category_id: 3,
     ranking: 0
   },
@@ -321,7 +337,7 @@ albums = [
     title: "Fíjate Bien",
     author: "Juanes",
     description: "",
-    photo: "",
+    photo: "https://i.ytimg.com/p/PLEARaKwcZx2ayXFYuhep_9wFQvER90MG7/mqdefault.jpg",
     category_id: 3,
     ranking: 0
   },
@@ -329,7 +345,7 @@ albums = [
     title: "Un Día Normal",
     author: "Juanes",
     description: "",
-    photo: "",
+    photo: "http://991.com/gallery_180x180/Juanes+A+Dios+Le+Pido+327583-991.jpg",
     category_id: 3,
     ranking: 0
   },
@@ -337,7 +353,7 @@ albums = [
     title: "El carpintero",
     author: "Andrés Cepeda",
     description: "",
-    photo: "",
+    photo: "https://archive.org/services/img/mbid-778db77d-979d-48c4-b249-e313445e9f69",
     category_id: 3,
     ranking: 0
   },
@@ -345,7 +361,7 @@ albums = [
     title: "El Baile de los Sueños",
     author: "Maia",
     description: "",
-    photo: "",
+    photo: "http://o.scdn.co/image/0c8ab4e611efdfaf5fa46c390436229985f619f6",
     category_id: 3,
     ranking: 0
   },
@@ -353,7 +369,7 @@ albums = [
     title: "El negocio",
     author: "J Blavin",
     description: "",
-    photo: "",
+    photo: "https://i.ytimg.com/p/PL0XPfRbuGHYYs8tflmRRovnXAWvnxH5ks/mqdefault.jpg",
     category_id: 3,
     ranking: 0
   },
@@ -361,7 +377,7 @@ albums = [
     title: "La familia",
     author: "J Balvin",
     description: "",
-    photo: "",
+    photo: "http://scene7.targetimg1.com/is/image/Target/14985294?wid=180&hei=180",
     category_id: 3,
     ranking: 0
   },
@@ -369,15 +385,15 @@ albums = [
     title: "Mi Sangre",
     author: "Juanes",
     description: "",
-    photo: "",
+    photo: "https://maekejit.wikispaces.com/file/view/mi_sangrre.jpg/271446166/229x223/mi_sangrre.jpg",
     category_id: 3,
     ranking: 0
   },
   {
-    title: "Bruta ciega sordomuda",
+    title: "Ciega Sordomuda",
     author: "Shakira",
     description: "",
-    photo: "",
+    photo: "http://991.com/gallery_180x180/Shakira+Ciega+Sordomuda+242666-991.jpg",
     category_id: 3,
     ranking: 0
   },
@@ -385,9 +401,17 @@ albums = [
     title: "Estalla",
     author: "Bomba Estereo",
     description: "",
-    photo: "",
+    photo: "http://e-cdn-images.deezer.com/images/cover/29cb583436f7a6effdcdc02f3aa56466/180x180-000000-80-0-0.jpg",
     category_id: 3,
-    ranking: 0
+    ranking: 4
+  },
+  {
+    title: "Laundry Service",
+    author: "Shakira",
+    description: "",
+    photo: "https://i.ytimg.com/p/PLGktc_1Y6KIv4CN6XDP8viFJkMWeVu1Z3/mqdefault.jpg",
+    category_id: 3,
+    ranking: 2
   }
 ]
 
