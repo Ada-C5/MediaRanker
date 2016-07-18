@@ -1,0 +1,22 @@
+<h1><%= @article.title%></h1>
+
+<%= image_tag(@article.photo, alt: "") %>
+
+<h3> Author: <%= @article.author%></h3>
+
+<p> <%= @article.description%></p>
+
+
+<%= button_to "Edit this " + @article.category.name, article_path(@article), class: "btn btn-default", method: :get%>
+
+<%= button_to "Delete", article_path(@article), class: "btn btn-danger", method: :delete%>
+
+<%if @article.category_id == 1 %>
+<%= button_to "View all " + @article.category.name, movies_path, class: "btn btn-default", method: :get%>
+<% elsif @article.category_id == 2 %>
+<%= button_to "View all " + @article.category.name, books_path, class: "btn btn-default", method: :get%>
+<% elsif @article.category_id == 2 %>
+<%= button_to "View all " + @article.category.name, albums_path, class: "btn btn-default", method: :get%>
+<%end %>
+
+<%= button_to "View all media", root_path, class: "btn btn-success", method: :get%>
