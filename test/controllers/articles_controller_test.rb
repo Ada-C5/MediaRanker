@@ -17,7 +17,7 @@ class ArticlesControllerTest < ActionController::TestCase
   end
 
   test "should get delete" do
-    get :delete
+    get :destroy
     assert_response :success
   end
 
