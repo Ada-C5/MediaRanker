@@ -16,11 +16,12 @@
         <div>
           <% for (var movie in movies) { %>
             <ul>
-              <li><a href="/movies/<%movies[movie].id%>"><%= movies[movie].title %></a></li>
+              <li><a href="/movies/<%=movies[movie].id%>"><%= movies[movie].title %></a></li>
               <li>Ranking: <%= (parseInt(movie)+1) %></li>
               <li>Upvotes: <%= movies[movie].upvotes %></li>
             </ul>
           <% } %>
+          <a href="/movies">View more Movies</a>
         </div>
       </div>
 
@@ -34,6 +35,7 @@
               <li>Upvotes: <%= books[book].upvotes %></li>
             </ul>
           <% } %>
+          <a href="/books">View more Books</a>
         </div>
       </div>
 
@@ -42,11 +44,12 @@
         <div>
           <% for (var album in albums) { %>
             <ul>
-              <li><a href="/albums/<%albums[album].id%>"><%= albums[album].title %></a></li>
+              <li><a href="/albums/<%=albums[album].id%>"><%= albums[album].title %></a></li>
               <li>Ranking: <%= (parseInt(album)+1) %></li>
               <li>Upvotes: <%= albums[album].upvotes %></li>
             </ul>
           <% } %>
+          <a href="/albums">View more Albums</a>
         </div>
       </div>
 
