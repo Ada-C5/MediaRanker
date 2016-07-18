@@ -13,8 +13,6 @@ class MoviesController < ApplicationController
 
   def create
     @movie = Movie.create(movies_params[:movie])
-    @movie.upvotes = 0
-    @movie.save
     redirect_to movies_path
   end
 

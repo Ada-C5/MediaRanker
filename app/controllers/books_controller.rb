@@ -13,8 +13,6 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.create(books_params[:book])
-    @book.upvotes = 0
-    @book.save
     redirect_to books_path
   end
 

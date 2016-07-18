@@ -13,8 +13,6 @@ class AlbumsController < ApplicationController
 
   def create
     @album = Album.create(albums_params[:album])
-    @album.upvotes = 0
-    @album.save
     redirect_to albums_path
   end
 
