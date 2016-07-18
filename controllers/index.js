@@ -7,7 +7,7 @@ var IndexController = {
   index: function (req, res, next) {
     var locals = {}
 
-    Movie.all(function(error, movies) {
+    Movie.topTen(function(error, movies) {
       if(error) {
         var err = new Error("Error retrieving movie list:\n" + error.message)
         err.status = 500
@@ -15,7 +15,7 @@ var IndexController = {
       } else {
         locals.movies = movies
 
-        Book.all(function(error, books) {
+        Book.topTen(function(error, books) {
           if(error) {
             var err = new Error("Error retrieving book list:\n" + error.message)
             err.status = 500
@@ -23,7 +23,7 @@ var IndexController = {
           } else {
             locals.books = books
 
-            Album.all(function(error, albums) {
+            Album.topTen(function(error, albums) {
               if(error) {
                 var err = new Error("Error retrieving album list:\n" + error.message)
                 err.status = 500

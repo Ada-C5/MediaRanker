@@ -22,4 +22,16 @@ Album.all = function(callback) {
   })
 }
 
+Album.topTen = function(callback) {
+  db.run("SELECT * FROM albums ORDER BY votes DESC LIMIT 10", function(error, albums) {
+    if(error || !albums) {
+      callback(error || new Error("Could not retrieve albums"), undefined)
+    } else {
+      callback(null, albums.map(function(album) {
+        return new Album(album)
+      }))
+    }
+  })
+}
+
 module.exports = Album
