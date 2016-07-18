@@ -6,6 +6,9 @@
 <h3> Rancked: <%= @article.ranking%></h3>
 
 <p> <%= @article.description%></p>
+<% if @spotify%>
+<iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A<%= @spotify%>&theme=white" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+<%end%>
 
 <%= form_for @article do |f| %>
 <%= f.hidden_field :ranking, value: @article.ranking + 1 %>

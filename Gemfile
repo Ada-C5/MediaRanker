@@ -26,7 +26,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rspotify', '1.10.0'
 
 group :development, :test do
-  gem 'byebug', '8.2.5'
   gem "pry-rails", '0.3.4'
   gem 'simplecov', '0.11.2'
   gem 'minitest-reporters'
