@@ -6,6 +6,6 @@
 
 <%= link_to "Upvote", upvote_movie_path(@movie.id), class: "btn btn-primary", method: :put %>
 <%= link_to "Edit #{@movie.title}", edit_movie_path(@movie.id), class: "btn btn-default" %>
-<button type="button" class="btn btn-danger">Delete</button>
+<%= link_to "Delete", movie_path(@movie.id), class: "btn btn-danger", method: :delete %>
 <%= link_to "View All Movies", movies_path, class: "btn btn-default" %>
 <%= link_to "View All Media", root_path, class: "btn btn-default" %>
