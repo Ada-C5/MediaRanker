@@ -1,0 +1,172 @@
+{
+  "MiniTest": {
+    "coverage": {
+      "/Users/melissajimison/Documents/c5/projects/MediaRanker/config/initializers/assets.rb": [
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/melissajimison/Documents/c5/projects/MediaRanker/config/initializers/backtrace_silencers.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/melissajimison/Documents/c5/projects/MediaRanker/config/initializers/cookies_serializer.rb": [
+        null,
+        null,
+        1
+      ],
+      "/Users/melissajimison/Documents/c5/projects/MediaRanker/config/initializers/filter_parameter_logging.rb": [
+        null,
+        null,
+        null,
+        1
+      ],
+      "/Users/melissajimison/Documents/c5/projects/MediaRanker/config/initializers/inflections.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/melissajimison/Documents/c5/projects/MediaRanker/config/initializers/mime_types.rb": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/melissajimison/Documents/c5/projects/MediaRanker/config/initializers/session_store.rb": [
+        null,
+        null,
+        1
+      ],
+      "/Users/melissajimison/Documents/c5/projects/MediaRanker/config/initializers/wrap_parameters.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/melissajimison/Documents/c5/projects/MediaRanker/config/routes.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/melissajimison/Documents/c5/projects/MediaRanker/app/models/article.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/melissajimison/Documents/c5/projects/MediaRanker/app/models/category.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/melissajimison/Documents/c5/projects/MediaRanker/app/controllers/articles_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        2,
+        2,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/melissajimison/Documents/c5/projects/MediaRanker/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1468882776
+  }
+}
