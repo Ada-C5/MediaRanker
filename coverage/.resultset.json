@@ -92,12 +92,12 @@
         null,
         null
       ],
-      "/Users/melissajimison/Documents/c5/projects/MediaRanker/app/models/article.rb": [
+      "/Users/melissajimison/Documents/c5/projects/MediaRanker/app/models/category.rb": [
         1,
         1,
         null
       ],
-      "/Users/melissajimison/Documents/c5/projects/MediaRanker/app/models/category.rb": [
+      "/Users/melissajimison/Documents/c5/projects/MediaRanker/app/models/article.rb": [
         1,
         1,
         null
@@ -112,15 +112,15 @@
         null,
         null,
         1,
-        0,
+        1,
         null,
         null,
         1,
-        0,
+        1,
         null,
         null,
         1,
-        0,
+        1,
         null,
         null,
         1,
@@ -167,6 +167,6 @@
         null
       ]
     },
-    "timestamp": 1468882776
+    "timestamp": 1468883155
   }
 }

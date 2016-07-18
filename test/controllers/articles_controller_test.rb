@@ -6,6 +6,21 @@ class ArticlesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get movies" do
+    get :movies
+    assert_response :success
+  end
+
+  test "should get books" do
+    get :books
+    assert_response :success
+  end
+
+  test "should get albums" do
+    get :albums
+    assert_response :success
+  end
+
   test "should get show" do
     article = Article.first
     get :show, {id: article.id}
