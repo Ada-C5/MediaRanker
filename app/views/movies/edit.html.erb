@@ -3,16 +3,18 @@
 <h2>Edit Movie</h2>
 
 <%= form_for @movie do |f| %>
-  <%= f.label :name %>:
-  <%= f.text_field :name %><br />
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control' %>
 
-  <%= f.label :director %>:
-  <%= f.text_field :director %><br />
+  <%= f.label :director %>
+  <%= f.text_field :director, class: 'form-control' %>
 
-  <%= f.label :description %>:
-  <%= f.text_field :description %><br />
+  <%= f.label :description %>
+  <%= f.text_field :description, class: 'form-control' %>
 
-  <%= f.submit %>
+  <br>
+  
+  <%= f.submit "Save", class: 'btn btn-default' %>
 <% end %>
 
 </div>
