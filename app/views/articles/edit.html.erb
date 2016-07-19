@@ -1,0 +1,35 @@
+<h1>Edit <%= @article.category.name[0..-2] %> </h1>
+<br>
+<%= form_for(@article) do |f| %>
+<div class="form-user">
+
+<div class="input-group form-label-width">
+  <%= f.label :title, class: "input-group-addon form-label-width-addon" %>
+  <%= f.text_field :title, class: "form-control form-width-control" %>
+</div>
+<br>
+
+  <div class="input-group form-label-width">
+  <%= f.label :description, class: "input-group-addon form-label-width-addon" %>
+  <%= f.text_field :description, class: "form-control form-width-control" %>
+  </div>
+  <br>
+
+
+  <div class="input-group form-label-width">
+    <%= f.label :'photo url', class: "input-group-addon form-label-width-addon" %>
+    <%= f.text_field :photo, class: "form-control" %>
+  </div>
+  <br>
+
+  <div class="input-group form-label-width">
+    <%= f.label :author, class: "input-group-addon form-label-width-addon" %>
+    <%= f.text_field :author, class: "form-control" %>
+  </div>
+  <br>
+
+  <%= f.submit "Save", class: "btn btn-primary btn-md" %>
+  <% end %>
+</div>
+
+</div>

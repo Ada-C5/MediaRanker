@@ -1,0 +1,48 @@
+<table class="table">
+  <tr>
+    <td>
+      <%= image_tag(@article.photo, alt: "") %>
+    </td>
+
+    <td>
+      <h2><%= @article.title%></h2>
+      <h3> Author: <%= @article.author%></h3>
+      <h4> Rancked: <%= @article.ranking%></h4>
+      <p> <%= @article.description%></p>
+      <% if @spotify%>
+      <iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A<%= @spotify%>&theme=white" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+      <%end%>
+      <br>
+      <%= form_for @article do |f| %>
+      <%= f.hidden_field :ranking, value: @article.ranking + 1 %>
+      <%=f.submit 'Upvote!', class: "btn btn-primary"%>
+      <% end %>
+      <br>
+      <div class="row">
+
+        <div class="col-md-3">
+
+          <%= button_to "Edit this "+ @article.category.name[0..-2], edit_article_path(@article), class: "btn btn-default", method: :get%>
+        </div>
+        <div class="col-md-3">
+
+          <%= button_to "Delete", @article, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"%>
+        </div>
+        <div class="col-md-3">
+          <%if @article.category_id == 1 %>
+          <%= button_to "View all " + @article.category.name, movies_path, class: "btn btn-default", method: :get%>
+          <% elsif @article.category_id == 2 %>
+          <%= button_to "View all " + @article.category.name, books_path, class: "btn btn-default", method: :get%>
+          <% elsif @article.category_id == 3 %>
+          <%= button_to "View all " + @article.category.name, albums_path, class: "btn btn-default", method: :get%>
+          <%end %>
+        </div>
+        <div class="col-md-3">
+          <%= button_to "View all media", root_path, class: "btn btn-success", method: :get%>
+        </div>
+      </div>
+
+    </td>
+
+  </tr>
+</table>
