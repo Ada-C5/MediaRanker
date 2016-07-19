@@ -100,6 +100,16 @@
       "/Users/melissajimison/Documents/c5/projects/MediaRanker/app/models/article.rb": [
         1,
         1,
+        null,
+        1,
+        null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/melissajimison/Documents/c5/projects/MediaRanker/app/controllers/articles_controller.rb": [
@@ -167,6 +177,6 @@
         null
       ]
     },
-    "timestamp": 1468884663
+    "timestamp": 1468891022
   }
 }
