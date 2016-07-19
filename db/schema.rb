@@ -11,4 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-# 
+ActiveRecord::Schema.define(version: 20160716082040) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "albums", force: :cascade do |t|
+    t.text     "name",        null: false
+    t.text     "artist"
+    t.text     "description"
+    t.integer  "rank"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "books", force: :cascade do |t|
+    t.text     "name",        null: false
+    t.text     "author"
+    t.text     "description"
+    t.integer  "rank"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "movies", force: :cascade do |t|
+    t.text     "name",        null: false
+    t.text     "director"
+    t.text     "description"
+    t.integer  "rank"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+end
