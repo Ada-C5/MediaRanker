@@ -21,10 +21,17 @@ class MoviesController < ApplicationController
     end
   end
 
+  def update
+    @movie = Movie.find(params[:id])
+    if @movie.update(movie_access_params[:movie])
+      redirect_to movies_path
+    end
+  end
+
   private
 
   def movie_access_params
-    params.permit(movie: [:title, :director, :description])
+    params.permit(movie: [:id, :title, :upvotes, :director, :description])
   end
 
 end
