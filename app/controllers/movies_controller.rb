@@ -1,11 +1,30 @@
 class MoviesController < ApplicationController
 
   def index
+    @movies = Movie.all
     render :index
   end
 
   def new
+    @movie = Movie.new
     render :new
+  end
+
+  def create
+    # I need to figure out a way to start out with 0 upvotes
+    @movie = Movie.new(movie_access_params[:movie])
+    @movie.upvotes = 0
+    if @movie.save
+      redirect_to movies_path
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def movie_access_params
+    params.permit(movie: [:title, :director, :description])
   end
 
 end

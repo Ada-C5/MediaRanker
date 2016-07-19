@@ -1,11 +1,18 @@
 <table>
   <tr>
     <th>Ranking</th>
-    <th>Name</th>
+    <th>Title</th>
     <th>Upvote</th>
   </tr>
 
   <!-- generate each movie row here -->
+  <% @movies.each do |movie| %>
+    <tr>
+      <td><%= movie.title %></td>
+      <td><%= movie.director %></td>
+      <td>Upvote</td>
+    </tr>
+  <% end %>
 
 </table>
 
