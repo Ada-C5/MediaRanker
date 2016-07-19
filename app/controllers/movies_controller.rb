@@ -1,4 +1,5 @@
 class MoviesController < ApplicationController
+
   def new
     @new_movie = Movie.new
   end
@@ -25,18 +26,25 @@ class MoviesController < ApplicationController
   end
 
   def update
-    @movie = Movie.find(params[:id])
-    @movie.name = params[:movie]["name"]
-    @movie.director = params[:movie]["director"]
-    @movie.description = params[:movie]["description"]
-    @movie.save
-    redirect_to movie_path(@movie.id)
+    if params.key?("upvote")
+      @movie = Movie.find(params[:id])
+      @movie.votes += 1
+      @movie.save
+      redirect_to movie_path(@movie.id)
+    else
+      @movie = Movie.find(params[:id])
+      @movie.name = params[:movie]["name"]
+      @movie.director = params[:movie]["director"]
+      @movie.description = params[:movie]["description"]
+      @movie.save
+      redirect_to movie_path(@movie.id)
+    end
   end
 
   def destroy
     @movie = Movie.find(params[:id])
     @movie.destroy
-    redirect_to all_movies_path
+    redirect_to movies_path
   end
 
   def show
@@ -45,12 +53,6 @@ class MoviesController < ApplicationController
 
   def index
     @movies = Movie.all.order('votes desc')
-  end
-
-  private
-
-  def task_create_params
-    params.permit(movie: [:name, :director, :description, :votes])
   end
 
 end
