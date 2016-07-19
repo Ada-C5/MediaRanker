@@ -1,2 +1,26 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<div class="row">
+  <div class="col-lg-12">
+    <table class="table table-hover">
+      <tbody>
+        <tr>
+          <th> Ranking </th>
+          <th> Name </th>
+          <th> Upvote </th>
+        </tr>
+
+        <% @books.each do |book| %>
+          <tr>
+            <td> Ranked: <%=book.votes%> </td>
+            <td> <%= link_to book.name, book_path(book.id) %> </td>
+            <td> <%= button_to("Upvote", {:controller => "books", :action => "update", :id => book.id, :upvote => true}, :method => :patch, class:"btn btn-primary") %> </td>
+          </tr>
+        <% end %>
+
+      </tbody>
+    </table>
+
+    <%= button_to("View All Media", {:controller => "home", :action => "index"}, :method => :get, class:"btn btn-default") %>
+    <%= button_to("Add A Book", {:controller => "books", :action => "new"}, :method => :get, class:"btn btn-default") %>
+
+  </div>
+</div>

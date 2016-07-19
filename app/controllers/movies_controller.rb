@@ -1,5 +1,13 @@
 class MoviesController < ApplicationController
 
+  def index
+    @movies = Movie.all.order('votes desc')
+  end
+
+  def show
+    @movie = Movie.find(params[:id])
+  end
+
   def new
     @new_movie = Movie.new
   end
@@ -12,13 +20,6 @@ class MoviesController < ApplicationController
     @new_movie.votes = 0
     @new_movie.save
     redirect_to movie_path(@new_movie.id)
-  end
-
-  def upvote
-    @movie = Movie.find(params[:id])
-    @movie.votes += 1
-    @movie.save
-    redirect_to movie_path(@movie.id)
   end
 
   def edit
@@ -45,14 +46,6 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
     @movie.destroy
     redirect_to movies_path
-  end
-
-  def show
-    @movie = Movie.find(params[:id])
-  end
-
-  def index
-    @movies = Movie.all.order('votes desc')
   end
 
 end

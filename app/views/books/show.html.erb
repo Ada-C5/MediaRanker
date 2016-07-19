@@ -1,2 +1,24 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<div class="row">
+<div class="col-lg-12">
+
+  <h1>
+    <%= @book.name %>
+    <small>Written by: <%= @book.author %></small>
+  </h1>
+
+  <h4>
+    Ranked: <%= @book.votes %>
+  </h4>
+
+  <p>
+    <%= @book.description %>
+  </p>
+
+  <%= button_to("Upvote", {:controller => "books", :action => "update", :id => @book.id, :upvote => true}, :method => :patch, class:"btn btn-primary") %>
+  <br>
+  <%= button_to("Edit #{@book.name}", {:controller => "books", :action => "edit", :id => @book.id}, :method => :get, class:"btn btn-default") %>
+  <%= button_to("DELETE", {:controller => "books", :action => "destroy", :id => @book.id}, :method => :delete, data: { confirm: "Are you sure?" }, class:"btn btn-danger") %>
+  <%= button_to("View All Books", {:controller => "books", :action => "index"}, :method => :get, class:"btn btn-default") %>
+  <%= button_to("View All Media", {:controller => "home", :action => "index"}, :method => :get, class:"btn btn-default") %>
+</div>
+</div>

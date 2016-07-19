@@ -14,9 +14,10 @@
 
   <% @top_books.each do |book| %>
     <h2>
-      <%= book.name %> Ranked: <%= book.votes %><br>
+      <%= link_to book.name, book_path(book.id) %>  Ranked: <%= book.votes %><br>
     </h2>
   <% end %>
+  <%= link_to("View All Books", {:controller => "books", :action => "index"}, :method => :get) %>
 </div>
 
 <div class="col-md-4">
