@@ -2,7 +2,6 @@ body {
   padding: 65px;
   padding-top: 0;
   font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: bold;
 }
 
 h2 {
@@ -12,10 +11,6 @@ h2 {
 h3 {
   font-size: 30px;
 }
-
-/*a {
-  color: #00B7FF;
-}*/
 
 /** Header **/
 .page-header {
