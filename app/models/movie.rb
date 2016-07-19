@@ -1,2 +1,4 @@
-class Movie < ActiveRecord::Base
+class Movie < ApplicationRecord
+
+  has_many :votes
 end
