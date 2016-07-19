@@ -2,7 +2,7 @@
 <div class="col-lg-12">
 <h2>New Movie</h2>
 
-<%= form_for @new_movie, url: new_movie_path, html: {method: :post} do |f| %>
+<%= form_for @new_movie, url: movies_path, html: {method: :post} do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name, class: 'form-control' %>
 
