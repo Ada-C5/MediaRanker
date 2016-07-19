@@ -21,7 +21,7 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
     if @article.category_id == 3
-      @spotify = RSpotify::Album.search(@article.title)[0].id
+      @spotify = @article.get_spotify_id
     end
 
   end
