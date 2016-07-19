@@ -14,7 +14,7 @@
     <%= @movie.description %>
   </p>
 
-  <%= button_to "Upvote", {:controller => "movies", :action => "upvote", :id => @movie.id}, {form_class: 'form', class: 'btn btn-primray'} %>
+  <%= button_to("Upvote", {:controller => "movies", :action => "upvote", :id => @movie.id}, class:"btn btn-primary") %>
 
   <%= button_to("View All Media", {:controller => "home", :action => "index"}, :method => :get, class:"btn btn-default") %>
 
