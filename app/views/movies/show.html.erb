@@ -16,7 +16,7 @@
 
   <%= button_to("Upvote", {:controller => "movies", :action => "upvote", :id => @movie.id}, class:"btn btn-primary") %>
   <%= button_to("Edit #{@movie.name}", {:controller => "movies", :action => "edit", :id => @movie.id}, :method => :get, class:"btn btn-default") %>
-  <%= button_to("DELETE", {:controller => "movies", :action => "destroy", :id => @movie.id}, :method => :delete, class:"btn btn-danger") %>
+  <%= button_to("DELETE", {:controller => "movies", :action => "destroy", :id => @movie.id}, :method => :delete, data: { confirm: "Are you sure?" }, class:"btn btn-danger") %>
 
   <%= button_to("View All Media", {:controller => "home", :action => "index"}, :method => :get, class:"btn btn-default") %>
   <%= button_to("View All Movies", {:controller => "movies", :action => "index"}, :method => :get, class:"btn btn-default") %>
