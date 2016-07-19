@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post '/movies/:id' => 'movies#upvote', as: 'edit_movie'
   delete '/movies/:id' => 'movies#destroy'
   get '/movies/:id/edit' => 'movies#edit'
+  patch '/movies/:id' => 'movies#update'
   # get 'albums/new'
   #
   # get 'albums/create'
