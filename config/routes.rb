@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'home#index', as: 'root'
 
   get '/movies/:id' => 'movies#show', as: 'movie'
+  get '/movies' => 'movies#index', as: 'all_movies'
   post '/movies/:id' => 'movies#upvote', as: 'edit_movie'
 
   # get 'albums/new'

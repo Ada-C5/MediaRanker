@@ -23,6 +23,7 @@ class MoviesController < ApplicationController
   end
 
   def index
+    @movies = Movie.all.order('votes desc')
   end
 
   private
