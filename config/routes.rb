@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/movies/:id' => 'movies#show', as: 'movie'
   get '/movies' => 'movies#index', as: 'all_movies'
   post '/movies/:id' => 'movies#upvote', as: 'edit_movie'
+  delete '/movies/:id' => 'movies#destroy'
 
   # get 'albums/new'
   #
