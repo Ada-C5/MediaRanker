@@ -17,6 +17,6 @@
   <%= button_to("Upvote", {:controller => "movies", :action => "upvote", :id => @movie.id}, class:"btn btn-primary") %>
 
   <%= button_to("View All Media", {:controller => "home", :action => "index"}, :method => :get, class:"btn btn-default") %>
-
+  <%= button_to("View All Movies", {:controller => "movies", :action => "index"}, :method => :get, class:"btn btn-default") %>
 </div>
 </div>
