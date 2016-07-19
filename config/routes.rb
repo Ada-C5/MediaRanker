@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  root 'home#index', as: 'root'
 
   get '/movies/:id' => 'movies#show', as: 'movie'
   post '/movies/:id' => 'movies#upvote', as: 'edit_movie'
