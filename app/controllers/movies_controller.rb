@@ -1,8 +1,16 @@
 class MoviesController < ApplicationController
   def new
+    @new_movie = Movie.new
   end
 
   def create
+    @new_movie = Movie.new
+    @new_movie.name = params[:movie]["name"]
+    @new_movie.director = params[:movie]["director"]
+    @new_movie.description = params[:movie]["description"]
+    @new_movie.votes = 0
+    @new_movie.save
+    redirect_to movie_path(@new_movie.id)
   end
 
   def upvote
