@@ -3,7 +3,6 @@
 
   <% @top_movies.each do |movie| %>
     <h2>
-      <!--  THIS DOESN'T WORK !! -->
       <%= link_to movie.name, movie_path(movie.id) %>  Ranked: <%= movie.votes %><br>
     </h2>
   <% end %>

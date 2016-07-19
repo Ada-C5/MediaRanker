@@ -13,5 +13,8 @@
   <p>
     <%= @movie.description %>
   </p>
+
+  <%= button_to "Upvote", :controller => "movies", :action => "upvote", :id => @movie.id %>
+
 </div>
 </div>
