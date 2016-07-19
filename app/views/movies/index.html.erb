@@ -12,7 +12,7 @@
           <tr>
             <td> Ranked: <%=movie.votes%> </td>
             <td> <%= link_to movie.name, movie_path(movie.id) %> </td>
-            <td> <%= button_to("Upvote", {:controller => "movies", :action => "upvote", :id => movie.id}, class:"btn btn-primary") %> </td>
+            <td> <%= button_to("Upvote", {:controller => "movies", :action => "upvote", :id => movie.id}, class:"btn btn-default") %> </td>
           </tr>
         <% end %>
 
