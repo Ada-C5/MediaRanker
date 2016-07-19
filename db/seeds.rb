@@ -358,7 +358,7 @@ albums = [
     ranking: 0
   },
   {
-    title: "El Baile de los Sueños",
+    title: "Baile de los Sueños",
     author: "Maia",
     description: "",
     photo: "http://o.scdn.co/image/0c8ab4e611efdfaf5fa46c390436229985f619f6",
@@ -366,7 +366,7 @@ albums = [
     ranking: 0
   },
   {
-    title: "El negocio",
+    title: "El Negocio",
     author: "J Blavin",
     description: "",
     photo: "https://i.ytimg.com/p/PL0XPfRbuGHYYs8tflmRRovnXAWvnxH5ks/mqdefault.jpg",
@@ -374,7 +374,7 @@ albums = [
     ranking: 0
   },
   {
-    title: "La familia",
+    title: "La Familia",
     author: "J Balvin",
     description: "",
     photo: "http://scene7.targetimg1.com/is/image/Target/14985294?wid=180&hei=180",
@@ -390,7 +390,7 @@ albums = [
     ranking: 0
   },
   {
-    title: "Ciega Sordomuda",
+    title: "Donde Estan Los Ladrones",
     author: "Shakira",
     description: "",
     photo: "http://991.com/gallery_180x180/Shakira+Ciega+Sordomuda+242666-991.jpg",
@@ -398,7 +398,7 @@ albums = [
     ranking: 0
   },
   {
-    title: "Estalla",
+    title: "Blow Up",
     author: "Bomba Estereo",
     description: "",
     photo: "http://e-cdn-images.deezer.com/images/cover/29cb583436f7a6effdcdc02f3aa56466/180x180-000000-80-0-0.jpg",
