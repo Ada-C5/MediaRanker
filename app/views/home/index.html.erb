@@ -6,6 +6,7 @@
       <%= link_to movie.name, movie_path(movie.id) %>  Ranked: <%= movie.votes %><br>
     </h2>
   <% end %>
+  <%= link_to("View All Movies", {:controller => "movies", :action => "index"}, :method => :get) %>
 </div>
 
 <div class="col-md-4">
