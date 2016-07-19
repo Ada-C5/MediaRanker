@@ -8,8 +8,8 @@
   <!-- generate each movie row here -->
   <% @movies.each do |movie| %>
     <tr>
+      <td>Ranked: <%= movie.upvotes %></td>
       <td><%= movie.title %></td>
-      <td><%= movie.director %></td>
       <td>Upvote</td>
     </tr>
   <% end %>
