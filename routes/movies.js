@@ -9,6 +9,8 @@ router.get('/:movie_id', MoviesController.show)
 /* GET movies listing. */
 router.get('/', MoviesController.index)
 
+/* Delete a movie */
+router.post('/delete', MoviesController.delete)
 /* Update a movie */
 router.post('/update', MoviesController.update)
 /* Upvote a movie */

@@ -68,4 +68,14 @@ Movie.update = function(input, callback) {
   })
 }
 
+Movie.delete = function(id, callback) {
+  db.run("DELETE FROM movies WHERE id=$1;", [id], function(error, movie) {
+    if(error || !movie) {
+      callback(error || new Error("Could not retrieve movies"), undefined)
+    } else {
+      callback(null, id)
+    }
+  })
+}
+
 module.exports = Movie

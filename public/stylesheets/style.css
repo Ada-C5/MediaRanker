@@ -25,3 +25,7 @@ h3 {
 .upvote-form {
   margin-bottom: 10px;
 }
+
+.delete-media {
+  display: inline;
+}

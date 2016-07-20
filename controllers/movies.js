@@ -83,6 +83,20 @@ var MoviesContoller = {
         res.redirect (200, '/movies/' + movie_id)
       }
     })
+  },
+
+  delete: function (req, res, next) {
+    var movie_id = req.body.delete
+
+    Movie.delete(movie_id, function(error, id) {
+      if(error) {
+        var err = new Error("Error retrieving movie list:\n" + error.message)
+        err.status = 500
+        next(err)
+      } else {
+        res.redirect (200, '/movies')
+      }
+    })
   }
 
 }
