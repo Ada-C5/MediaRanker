@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-lg-12">
+    <table class="table table-hover">
+      <tbody>
+        <tr>
+          <th> Ranking </th>
+          <th> Name </th>
+          <th> Upvote </th>
+        </tr>
+
+        <% @movies.each do |movie| %>
+          <tr>
+            <td> Ranked: <%=movie.votes%> </td>
+            <td> <%= link_to movie.name, movie_path(movie.id) %> </td>
+            <td> <%= button_to("Upvote", {:controller => "movies", :action => "update", :id => movie.id, :upvote => true}, :method => :patch, class:"btn btn-primary") %> </td>
+          </tr>
+        <% end %>
+
+      </tbody>
+    </table>
+
+    <%= button_to("View All Media", {:controller => "home", :action => "index"}, :method => :get, class:"btn btn-default") %>
+    <%= button_to("Add A Movie", {:controller => "movies", :action => "new"}, :method => :get, class:"btn btn-default") %>
+
+  </div>
+</div>

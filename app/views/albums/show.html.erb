@@ -1,0 +1,24 @@
+<div class="row">
+<div class="col-lg-12">
+
+  <h1>
+    <%= @album.name %>
+    <small>Produced by: <%= @album.artist %></small>
+  </h1>
+
+  <h4>
+    Ranked: <%= @album.votes %>
+  </h4>
+
+  <p>
+    <%= @album.description %>
+  </p>
+
+  <%= button_to("Upvote", {:controller => "albums", :action => "update", :id => @album.id, :upvote => true}, :method => :patch, class:"btn btn-primary") %>
+  <br>
+  <%= button_to("Edit #{@album.name}", {:controller => "albums", :action => "edit", :id => @album.id}, :method => :get, class:"btn btn-default") %>
+  <%= button_to("DELETE", {:controller => "albums", :action => "destroy", :id => @album.id}, :method => :delete, data: { confirm: "Are you sure?" }, class:"btn btn-danger") %>
+  <%= button_to("View All Albums", {:controller => "albums", :action => "index"}, :method => :get, class:"btn btn-default") %>
+  <%= button_to("View All Media", {:controller => "home", :action => "index"}, :method => :get, class:"btn btn-default") %>
+</div>
+</div>

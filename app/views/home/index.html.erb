@@ -1,0 +1,32 @@
+<div class="col-md-4">
+  <h1>Top Movies</h1>
+
+  <% @top_movies.each do |movie| %>
+    <h2>
+      <%= link_to movie.name, movie_path(movie.id) %>  Ranked: <%= movie.votes %><br>
+    </h2>
+  <% end %>
+  <%= link_to("View All Movies", {:controller => "movies", :action => "index"}, :method => :get) %>
+</div>
+
+<div class="col-md-4">
+  <h1>Top Books</h1>
+
+  <% @top_books.each do |book| %>
+    <h2>
+      <%= link_to book.name, book_path(book.id) %>  Ranked: <%= book.votes %><br>
+    </h2>
+  <% end %>
+  <%= link_to("View All Books", {:controller => "books", :action => "index"}, :method => :get) %>
+</div>
+
+<div class="col-md-4">
+  <h1>Top Albums</h1>
+
+  <% @top_albums.each do |album| %>
+    <h2>
+      <%= link_to album.name, album_path(album.id) %>  Ranked: <%= album.votes %><br>
+    </h2>
+  <% end %>
+  <%= link_to("View All Albums", {:controller => "albums", :action => "index"}, :method => :get) %>
+</div>
