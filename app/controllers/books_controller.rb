@@ -29,11 +29,18 @@ class BooksController < ApplicationController
   end
 
   def create
-    Book.create(book_params[:book])
+    @book = Book.new(book_params[:book])
+    @book.update(:rank => 0)
+     if @book.save
+       redirect_to books_path
+     else
+       render "new"
+     end
   end
 
   def destroy
-
+    Book.destroy(params[:id])
+    redirect_to books_path
   end
 
 private

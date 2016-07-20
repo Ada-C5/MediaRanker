@@ -14,6 +14,11 @@ class MoviesController < ApplicationController
       rank = @movie[:rank] + 1
       @movie.update(:rank => rank)
       render "show"
+    elsif params[:class] == "upvote_i"
+      @movie = Movie.find(params[:id])
+      rank = @movie[:rank] + 1
+      @movie.update(:rank => rank)
+      render "show"
     else
       @movie = Movie.find(params[:id])
       @movie.update(movie_params[:movie])
@@ -30,11 +35,18 @@ class MoviesController < ApplicationController
   end
 
   def create
-    Movie.create(movie_params[:movie])
+    @movie = Movie.new(movie_params[:movie])
+    @movie.update(:rank => 0)
+     if @movie.save
+       redirect_to movies_path
+     else
+       render "new"
+     end
   end
 
   def destroy
-
+    Movie.destroy(params[:id])
+    redirect_to movies_path
   end
 
 private
