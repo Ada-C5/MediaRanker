@@ -5,6 +5,11 @@ class MoviesController < ApplicationController
     render :index
   end
 
+  def show
+    @movie = Movie.find(params[:id])
+    render :show
+  end
+
   def new
     @movie = Movie.new
     render :new
