@@ -8,7 +8,7 @@
     <%= button_to "Upvote", movie_upvote_path(@movie.id), method: :put, class: "btn btn-primary" %>
   </p>
   <div class="show-buttons">
-    <%= button_to "Edit Movie", edit_movie_path(@movie.id), class: "btn btn-default" %>
+    <%= button_to "Edit Movie", edit_movie_path(@movie.id), method: :get, class: "btn btn-default" %>
     <%= button_to "DELETE", movie_path, method: :delete, class: "btn btn-danger" %>
     <%= button_to "View All Movies", movies_path, method: :get, class: "btn btn-default" %>
     <%= button_to "View All Media", root_path, method: :get, class: "btn btn-default" %>

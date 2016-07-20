@@ -16,6 +16,10 @@ h1 {
   padding-left: 10%;
 }
 
+h2.edit {
+  text-align: center;
+}
+
 .header-img {
   height: 100px;
   width: 100px;
@@ -24,4 +28,12 @@ h1 {
 
 form.button_to  {
   display: inline;
+}
+
+.control-label {
+  margin-top: 1.5% !important;
+}
+
+.form-submit {
+  margin-left: 34%;
 }
