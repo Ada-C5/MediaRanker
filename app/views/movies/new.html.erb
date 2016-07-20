@@ -1,0 +1,27 @@
+<h2 class="edit">New Movie</h2>
+<div class="col-lg-12">
+  <%= form_for @movie, url: movie_path(@movie.id), method: :patch, :html => { :class => "form-horizontal center" } do |f| %>
+    <div class="form-group">
+        <%= f.label :title, class: "control-label" %><br>
+      <div class="col-xs-12">
+        <%= f.text_field :title, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+        <%= f.label :directed_by, class: "control-label" %><br>
+      <div class="col-xs-12">
+        <%= f.text_field :directed_by, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+        <%= f.label :description, class: "control-label" %><br>
+      <div class="col-xs-12">
+        <%= f.text_area :description, class: "form-control" %>
+      </div>
+    </div>
+
+    <%= f.submit "Save", class: 'btn btn-default form-submit'  %>
+  <% end %>
+</div>  
