@@ -14,7 +14,7 @@ class AlbumsController < ApplicationController
 
   def update
     @album = Album.find(params[:id])
-    @album.update_attributes(album_update_params[:album])
+    @album.update_attributes(album_params[:album])
     redirect_to album_path(@album.id)
   end
 

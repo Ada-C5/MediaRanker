@@ -1,0 +1,32 @@
+/*
+
+
+ */
+
+
+html {
+  margin: 2%;
+}
+
+header {
+  height: 100px;
+}
+
+h1 {
+  padding-top: 2%;
+  padding-left: 10%;
+}
+
+.header-img {
+  height: 100px;
+  width: 100px;
+  float: left;
+}
+
+form.button_to  {
+  display: inline;
+}
+
+.control-label, .edit {
+  margin-left: 1%;
+}
