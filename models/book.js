@@ -57,4 +57,15 @@ Book.addVote = function(input, callback) {
   })
 }
 
+Book.update = function(input, callback) {
+  db.run("UPDATE books SET name=$1, description=$2, author=$3 WHERE id=$4;", input, function(error, book) {
+    book_id = input[3]
+    if(error || !book) {
+      callback(error || new Error("Could not retrieve books"), undefined)
+    } else {
+      callback(null, book_id)
+    }
+  })
+}
+
 module.exports = Book

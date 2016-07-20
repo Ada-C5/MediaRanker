@@ -48,6 +48,43 @@ var BooksController = {
         res.redirect (200, '/books/' + book_id)
       }
     })
+  },
+
+  edit: function (req, res, next) {
+
+    console.log("boop: ", req.params.book_id)
+    var book_id = req.params.book_id
+
+    Book.find(book_id, function(error, books) {
+      if(error) {
+        var err = new Error("Error retrieving book:\n" + error.message)
+        err.status = 500
+        next(err)
+      } else {
+        var locals = {}
+        locals.type = "books"
+        locals.madeBy = "Directed"
+        locals.media = books[0]
+        res.render ('edit', { locals: locals })
+      }
+    })
+  },
+
+  update: function (req, res, next) {
+    var book_id = req.body.books_id
+    var name = req.body.name
+    var description = req.body.description
+    var director = req.body.by
+
+    Book.update([name, description, director, book_id], function(error, id) {
+      if(error) {
+        var err = new Error("Error retrieving book list:\n" + error.message)
+        err.status = 500
+        next(err)
+      } else {
+        res.redirect (200, '/books/' + book_id)
+      }
+    })
   }
 
 }

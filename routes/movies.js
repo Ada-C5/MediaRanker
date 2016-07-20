@@ -8,10 +8,10 @@ router.get('/:movie_id/edit', MoviesController.edit)
 router.get('/:movie_id', MoviesController.show)
 /* GET movies listing. */
 router.get('/', MoviesController.index)
-/* Edit a movie */
+
+/* Update a movie */
 router.post('/update', MoviesController.update)
 /* Upvote a movie */
 router.post('/', MoviesController.upvote)
-
 
 module.exports = router

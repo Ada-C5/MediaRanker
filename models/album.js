@@ -57,4 +57,15 @@ Album.addVote = function(input, callback) {
   })
 }
 
+Album.update = function(input, callback) {
+  db.run("UPDATE albums SET name=$1, description=$2, artist=$3 WHERE id=$4;", input, function(error, album) {
+    album_id = input[3]
+    if(error || !album) {
+      callback(error || new Error("Could not retrieve albums"), undefined)
+    } else {
+      callback(null, album_id)
+    }
+  })
+}
+
 module.exports = Album
