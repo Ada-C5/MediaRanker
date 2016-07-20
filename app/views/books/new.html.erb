@@ -1,6 +1,6 @@
-<h2 class="edit">Edit <%= @book.title %></h2>
+<h2 class="edit">New Book</h2>
 <div class="col-lg-12">
-  <%= form_for @book, url: book_path(@book.id), method: :patch, :html => { :class => "form-horizontal center" } do |f| %>
+  <%= form_for @book, :html => { :class => "form-horizontal center" } do |f| %>
     <div class="form-group">
         <%= f.label :title, class: "control-label" %><br>
       <div class="col-xs-12">
