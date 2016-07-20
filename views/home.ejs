@@ -14,7 +14,7 @@
         <h2>Top Movies</h2>
         <% for (movie of locals.movies) { %>
           <h3>
-            <a href=<%= "/movies/" + book.id %>><%= movie.name %></a>
+            <a href=<%= "/movies/" + movie.id %>><%= movie.name %></a>
             <small>Ranked: <%= movie.votes %></small>
           </h3>
         <% } %>

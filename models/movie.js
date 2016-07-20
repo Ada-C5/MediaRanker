@@ -46,8 +46,8 @@ Movie.topTen = function(callback) {
   })
 }
 
-Movie.addVote = function(input, callback) {
-  db.run("UPDATE movies SET votes=votes+1 WHERE id=$1;", [input], function(error, movie) {
+Movie.addVote = function(id, callback) {
+  db.run("UPDATE movies SET votes=votes+1 WHERE id=$1;", [id], function(error, movie) {
     movie_id = input
     if(error || !movie) {
       callback(error || new Error("Could not retrieve movies"), undefined)

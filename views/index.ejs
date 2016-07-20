@@ -19,7 +19,7 @@
           <% for (let media of locals.media) { %>
           <tr>
             <td>Ranked: <%= media.votes %></td>
-            <td class="col-md-7"><a href="#"><%= media.name %></a></td>
+            <td class="col-md-7"><a href=<%= "/" + locals.type + "/" + media.id %>><%= media.name %></a></td>
             <td>
               <form action=<%= "/" + locals.type %> method="post">
                 <input class="" type="hidden" name="upvote" value=<%= media.id %> id="upvote">
