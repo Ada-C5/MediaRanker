@@ -66,6 +66,23 @@ var MoviesContoller = {
         res.render ('edit', { locals: locals })
       }
     })
+  },
+
+  update: function (req, res, next) {
+    var movie_id = req.body.movies_id
+    var name = req.body.name
+    var description = req.body.description
+    var director = req.body.by
+
+    Movie.update([name, description, director, movie_id], function(error, id) {
+      if(error) {
+        var err = new Error("Error retrieving movie list:\n" + error.message)
+        err.status = 500
+        next(err)
+      } else {
+        res.redirect (200, '/movies/' + movie_id)
+      }
+    })
   }
 
 }

@@ -57,4 +57,15 @@ Movie.addVote = function(id, callback) {
   })
 }
 
+Movie.update = function(input, callback) {
+  db.run("UPDATE movies SET name=$1, description=$2, director=$3 WHERE id=$4;", input, function(error, movie) {
+    movie_id = input[3]
+    if(error || !movie) {
+      callback(error || new Error("Could not retrieve movies"), undefined)
+    } else {
+      callback(null, movie_id)
+    }
+  })
+}
+
 module.exports = Movie
