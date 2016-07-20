@@ -48,6 +48,25 @@ var MoviesContoller = {
         res.redirect (200, '/movies/' + movie_id)
       }
     })
+  },
+
+  edit: function (req, res, next) {
+    var movie_id = req.params.movie_id
+
+    Movie.find(movie_id, function(error, movies) {
+      if(error) {
+        var err = new Error("Error retrieving movie:\n" + error.message)
+        err.status = 500
+        next(err)
+      } else {
+        var locals = {}
+        locals.type = "movies"
+        locals.madeBy = "Directed"
+        locals.media = movies[0]
+        // console.log("bah: ", locals.madeBy)
+        res.render ('edit', { locals: locals })
+      }
+    })
   }
 
 }

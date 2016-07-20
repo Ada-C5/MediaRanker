@@ -18,7 +18,7 @@
         <input class="btn btn-primary" type="submit" value="Upvote">
       </form>
 
-      <a class="btn btn-default" href="#">Edit <%= locals.media.name %></a>
+      <a class="btn btn-default" href=<%= "/" + locals.type + "/" + locals.media.id + "/edit" %>>Edit <%= locals.media.name %></a>
       <a class="btn btn-danger" href="#">DELETE</a>
       <a class="btn btn-default" href=<%= "/" + locals.type %>>View All <%= locals.type %></a>
       <a class="btn btn-default" href="/">View All Media</a>
