@@ -25,8 +25,8 @@
 
   <% @top_albums.each do |album| %>
     <h2>
-      <%= album.name %> Ranked: <%= album.votes %><br>
+      <%= link_to album.name, album_path(album.id) %>  Ranked: <%= album.votes %><br>
     </h2>
   <% end %>
-
+  <%= link_to("View All Albums", {:controller => "albums", :action => "index"}, :method => :get) %>
 </div>
