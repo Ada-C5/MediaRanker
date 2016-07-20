@@ -14,4 +14,9 @@ class MoviesController < ApplicationController
     @movie.update(rank: ranking += 1)
     redirect_to movie_path(@movie.id) 
   end
+
+  def destroy
+    @movie = Movie.find(params[:id]).delete
+    redirect_to movies_path
+  end
 end
