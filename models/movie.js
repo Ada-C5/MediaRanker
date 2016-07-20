@@ -11,7 +11,7 @@ var Movie = function(movie) {
 }
 
 Movie.all = function(callback) {
-  db.run("SELECT * FROM movies ORDER BY votes;", function(error, movies) {
+  db.run("SELECT * FROM movies ORDER BY votes DESC;", function(error, movies) {
     if(error || !movies) {
       callback(error || new Error("Could not retrieve movies"), undefined)
     } else {

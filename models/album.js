@@ -11,7 +11,7 @@ var Album = function(album) {
 }
 
 Album.all = function(callback) {
-  db.run("SELECT * FROM albums ORDER BY votes;", function(error, albums) {
+  db.run("SELECT * FROM albums ORDER BY votes DESC;", function(error, albums) {
     if(error || !albums) {
       callback(error || new Error("Could not retrieve albums"), undefined)
     } else {

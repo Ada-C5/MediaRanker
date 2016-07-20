@@ -11,7 +11,7 @@ var Book = function(book) {
 }
 
 Book.all = function(callback) {
-  db.run("SELECT * FROM books ORDER BY votes;", function(error, books) {
+  db.run("SELECT * FROM books ORDER BY votes DESC;", function(error, books) {
     if(error || !books) {
       callback(error || new Error("Could not retrieve books"), undefined)
     } else {
