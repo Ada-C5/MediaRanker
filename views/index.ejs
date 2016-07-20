@@ -21,7 +21,7 @@
             <td>Ranked: <%= media.votes %></td>
             <td class="col-md-7"><a href="#"><%= media.name %></a></td>
             <td>
-              <form action="/movies" method="post">
+              <form action=<%= "/" + locals.type %> method="post">
                 <input class="" type="hidden" name="upvote" value=<%= media.id %> id="upvote">
                 <input class="btn btn-default" type="submit" value="Upvote">
               </form>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ./partials/head %>
+  </head>
+  <body>
+    <header>
+      <% include ./partials/header %>
+    </header>
+
+    <div class="col-lg-12">
+      <h2><%= locals.media.name %> <small><%= locals.madeBy %> by: <%= locals.media.by %></small></h2>
+      <h4>Ranked: <%= locals.media.votes %></h4>
+      <p><%= locals.media.description %></p>
+
+      <form class="upvote-form" action=<%= "/" + locals.type %> method="post">
+        <input class="" type="hidden" name="upvote" value=<%= locals.media.id %> id="upvote">
+        <input class="btn btn-primary" type="submit" value="Upvote">
+      </form>
+
+      <a class="btn btn-default" href="#">Edit <%= locals.media.name %></a>
+      <a class="btn btn-danger" href="#">DELETE</a>
+      <a class="btn btn-default" href=<%= "/" + locals.type %>>View All <%= locals.type %></a>
+      <a class="btn btn-default" href="/">View All Media</a>
+
+    </div>
+
+
+    <footer>
+      <% include ./partials/footer %>
+    </footer>
+  </body>
+</html>

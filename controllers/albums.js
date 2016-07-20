@@ -10,7 +10,7 @@ var AlbumsController = {
         next(err)
       } else {
         var locals = {}
-        locals.type = "Albums"
+        locals.type = "albums"
         locals.media = albums
         res.render ('index', { locals: locals })
       }
@@ -27,9 +27,10 @@ var AlbumsController = {
         next(err)
       } else {
         var locals = {}
-        locals.type = "Albums"
+        locals.type = "albums"
+        locals.madeBy = "Recorded"
         locals.media = albums[0]
-        res.render ('albums/show', { locals: locals })
+        res.render ('show', { locals: locals })
       }
     })
   },

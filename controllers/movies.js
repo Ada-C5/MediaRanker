@@ -11,7 +11,7 @@ var MoviesContoller = {
         next(err)
       } else {
         var locals = {}
-        locals.type = "Movies"
+        locals.type = "movies"
         locals.media = movies
         res.render ('index', { locals: locals })
       }
@@ -28,10 +28,11 @@ var MoviesContoller = {
         next(err)
       } else {
         var locals = {}
-        locals.type = "Movies"
+        locals.type = "movies"
+        locals.madeBy = "Directed"
         locals.media = movies[0]
-        console.log("boop: ", movies)
-        res.render ('movies/show', { locals: locals })
+        console.log("bah: ", locals.madeBy)
+        res.render ('show', { locals: locals })
       }
     })
   },

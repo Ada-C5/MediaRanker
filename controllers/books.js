@@ -11,7 +11,7 @@ var BooksController = {
         next(err)
       } else {
         var locals = {}
-        locals.type = "Books"
+        locals.type = "books"
         locals.media = books
         res.render ('index', { locals: locals })
       }
@@ -28,9 +28,10 @@ var BooksController = {
         next(err)
       } else {
         var locals = {}
-        locals.type = "Books"
+        locals.type = "books"
+        locals.madeBy = "Written"
         locals.media = books[0]
-        res.render ('books/show', { locals: locals })
+        res.render ('show', { locals: locals })
       }
     })
   },
