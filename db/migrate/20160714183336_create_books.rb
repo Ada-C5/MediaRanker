@@ -6,7 +6,6 @@ class CreateBooks < ActiveRecord::Migration
       t.integer :rank
       t.string :description
       t.timestamps null: false
-
     end
   end
 end
