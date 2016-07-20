@@ -14,7 +14,7 @@
         <h2>Top Movies</h2>
         <% for (movie of locals.movies) { %>
           <h3>
-            <a href="#"><%= movie.name %></a>
+            <a href=<%= "/movies/" + book.id %>><%= movie.name %></a>
             <small>Ranked: <%= movie.votes %></small>
           </h3>
         <% } %>
@@ -24,7 +24,7 @@
         <h2>Top Books</h2>
         <% for (book of locals.books) { %>
           <h3>
-            <a href="#"><%= book.name %></a>
+            <a href=<%= "/books/" + book.id %>><%= book.name %></a>
             <small>Ranked: <%= book.votes %></small>
           </h3>
         <% } %>
@@ -34,7 +34,7 @@
         <h2>Top Albums</h2>
         <% for (album of locals.albums) { %>
           <h3>
-            <a href="#"><%= album.name %></a>
+            <a href=<%= "/albums/" + album.id %>><%= album.name %></a>
             <small>Ranked: <%= album.votes %></small>
           </h3>
         <% } %>

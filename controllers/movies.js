@@ -31,7 +31,6 @@ var MoviesContoller = {
         locals.type = "movies"
         locals.madeBy = "Directed"
         locals.media = movies[0]
-        console.log("bah: ", locals.madeBy)
         res.render ('show', { locals: locals })
       }
     })
