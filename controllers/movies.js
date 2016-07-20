@@ -41,7 +41,7 @@ var MoviesContoller = {
 
     Movie.addVote(movie_id, function(error, moe_id) {
       if(error) {
-        var err = new Error("Error retrieving movue list:\n" + error.message)
+        var err = new Error("Error retrieving movie list:\n" + error.message)
         err.status = 500
         next(err)
       } else {
