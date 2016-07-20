@@ -2,3 +2,8 @@
 Directed by: <%= @movie.director %>
 Ranked: <%= @movie.upvotes %>
 <%= @movie.description %>
+
+<%= link_to "Upvote", movie_path(@movie.id, movie: {upvotes: @movie.upvotes + 1}), method: :patch %>
+
+Edit <%= @movie.title %>
+<%= link_to "Delete", movie_path(@movie.id), method: :delete %>

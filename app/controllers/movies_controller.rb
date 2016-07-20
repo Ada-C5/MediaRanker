@@ -29,6 +29,13 @@ class MoviesController < ApplicationController
   def update
     @movie = Movie.find(params[:id])
     if @movie.update(movie_access_params[:movie])
+      redirect_to movie_path
+    end
+  end
+
+  def destroy
+    @movie = Movie.find(params[:id])
+    if @movie.destroy
       redirect_to movies_path
     end
   end
