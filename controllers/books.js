@@ -85,6 +85,20 @@ var BooksController = {
         res.redirect (200, '/books/' + book_id)
       }
     })
+  },
+
+  delete: function (req, res, next) {
+    var book_id = req.body.delete
+
+    Book.delete(book_id, function(error, id) {
+      if(error) {
+        var err = new Error("Error retrieving book list:\n" + error.message)
+        err.status = 500
+        next(err)
+      } else {
+        res.redirect (200, '/books')
+      }
+    })
   }
 
 }

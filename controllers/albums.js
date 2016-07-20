@@ -82,6 +82,20 @@ var AlbumsController = {
         res.redirect (200, '/albums/' + album_id)
       }
     })
+  },
+
+  delete: function (req, res, next) {
+    var album_id = req.body.delete
+
+    Album.delete(album_id, function(error, id) {
+      if(error) {
+        var err = new Error("Error retrieving album list:\n" + error.message)
+        err.status = 500
+        next(err)
+      } else {
+        res.redirect (200, '/albums')
+      }
+    })
   }
 
 }

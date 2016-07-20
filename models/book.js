@@ -68,4 +68,14 @@ Book.update = function(input, callback) {
   })
 }
 
+Book.delete = function(id, callback) {
+  db.run("DELETE FROM books WHERE id=$1;", [id], function(error, book) {
+    if(error || !book) {
+      callback(error || new Error("Could not retrieve books"), undefined)
+    } else {
+      callback(null, id)
+    }
+  })
+}
+
 module.exports = Book

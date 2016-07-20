@@ -9,6 +9,8 @@ router.get('/:book_id', BooksController.show)
 /* GET books listing. */
 router.get('/', BooksController.index)
 
+/* Delete a book */
+router.post('/delete', BooksController.delete)
 /* Update a book */
 router.post('/update', BooksController.update)
 /* Upvote a book */

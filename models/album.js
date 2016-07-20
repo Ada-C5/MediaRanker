@@ -68,4 +68,14 @@ Album.update = function(input, callback) {
   })
 }
 
+Album.delete = function(id, callback) {
+  db.run("DELETE FROM albums WHERE id=$1;", [id], function(error, album) {
+    if(error || !album) {
+      callback(error || new Error("Could not retrieve albums"), undefined)
+    } else {
+      callback(null, id)
+    }
+  })
+}
+
 module.exports = Album
