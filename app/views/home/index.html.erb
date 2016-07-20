@@ -1,18 +1,25 @@
-<h3>Top Movies</h3>
-<ul>
-  <li>movie 1</li>
-  <li>movie 2</li>
-</ul>
+<div class="top-movies">
+  <h3>Top Movies</h3>
+  <ul>
+    <% @movies.each do |movie| %>
+      <li><%= link_to movie.title, movie_path(movie.id) %> Ranked: <%= movie.upvotes %></li>
+    <% end %>
+  </ul>
+  <%= link_to "View More Movies", movies_path %>
+</div>
 
-<h3>Top Books</h3>
-<ul>
-  <li>book 1</li>
-  <li>book 2</li>
-</ul>
+<div class="top-books">
+  <h3>Top Books</h3>
+  <ul>
+    <li>book 1</li>
+    <li>book 2</li>
+  </ul>
+</div>
 
-
-<h3>Top Albums</h3>
-<ul>
-  <li>album 1</li>
-  <li>album 2</li>
-</ul>
+<div class="top-albums">
+  <h3>Top Albums</h3>
+  <ul>
+    <li>album 1</li>
+    <li>album 2</li>
+  </ul>
+</div>
