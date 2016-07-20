@@ -1,0 +1,6 @@
+<%= form_for @movie do |f| %>
+  Title: <%= f.text_field :title %>
+  Director: <%= f.text_field :director %>
+  Description: <%= f.text_area :description %>
+  <%= f.submit "Save" %>
+<% end %>

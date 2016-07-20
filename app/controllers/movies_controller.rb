@@ -26,6 +26,11 @@ class MoviesController < ApplicationController
     end
   end
 
+  def edit
+    @movie = Movie.find(params[:id])
+    render :edit
+  end
+
   def update
     @movie = Movie.find(params[:id])
     if @movie.update(movie_access_params[:movie])
