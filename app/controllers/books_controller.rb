@@ -45,7 +45,8 @@ class BooksController < ApplicationController
 
   def rank
     @book = Book.find(params[:id])
-    @book.rank
+    rank = @book.rank += 1 
+    @book.update(rank: rank)
     redirect_to books_path
   end
 end

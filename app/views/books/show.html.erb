@@ -1,17 +1,3 @@
-<%= @book.title %>
-<%= @book.author %>
-<%= @book.rank %>
-
-Edit
-
-Delete
-
-View All Movies
-
-View All Media 
-
-
-
 <h1>
   Title: <%= @book.title %>
 </h1>
@@ -21,8 +7,6 @@ View All Media
 <h3>
   Ranking: <%= @book.rank %>
 </h3>
-
-<p><%= @book.description %></p>
 
 <%= link_to "Upvote", rank_book_path(@book.id), class: "btn btn-primary", method: :put %>
 <%= link_to "Edit #{@book.title}", edit_book_path(@book.id), class: "btn btn-default" %>
