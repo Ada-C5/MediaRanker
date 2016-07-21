@@ -1,12 +1,15 @@
 <h1>
   Title: <%= @book.title %>
+  <small>
+    Author: <%= @book.author %>
+  </small>
 </h1>
-<h2>
-  Author: <%= @book.author %>
-</h2>
 <h3>
   Ranking: <%= @book.rank %>
 </h3>
+<p>
+  <%= @book.description %>
+</p>
 
 <%= link_to "Upvote", rank_book_path(@book.id), class: "btn btn-primary", method: :put %>
 <%= link_to "Edit #{@book.title}", edit_book_path(@book.id), class: "btn btn-default" %>

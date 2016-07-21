@@ -27,7 +27,7 @@ class BooksController < ApplicationController
   end
 
   def update
-    @book = Book.update(params[:id], books_params[:book])
+    @book = Book.update(params[:id], book_params[:book])
     if @book.save
       flash[:success] = 'Book information updated!'
       redirect_to books_path
@@ -48,5 +48,11 @@ class BooksController < ApplicationController
     rank = @book.rank += 1 
     @book.update(rank: rank)
     redirect_to books_path
+  end
+
+  private
+
+  def book_params
+    params.permit(book: [:title, :author, :description])
   end
 end
