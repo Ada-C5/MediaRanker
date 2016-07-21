@@ -9,7 +9,6 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
-    @book.rank = 0
   end
 
   def create

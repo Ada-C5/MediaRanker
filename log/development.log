@@ -4751,3 +4751,77 @@ Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.1ms)
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/books/8" for ::1 at 2016-07-21 00:03:39 -0700
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 16.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/books/8/edit" for ::1 at 2016-07-21 00:03:40 -0700
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_entryform.html.erb (2.8ms)
+  Rendered books/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/books/8" for ::1 at 2016-07-21 00:03:46 -0700
+Processing by BooksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1PQ3nidwoZeNoi352IjoCGSFEFH5B7QJkLTZvUXu9yZ/c77MBnJqhVmetIdAUIEttLLzhJ5vX/n6tE/yuIAKwA==", "book"=>{"title"=>"the night watch", "author"=>"terry pratchett", "description"=>"test"}, "commit"=>"Submit", "id"=>"8"}
+Unpermitted parameters: utf8, _method, authenticity_token, commit, id
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "books" SET "description" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["description", "test"], ["updated_at", 2016-07-21 07:03:46 UTC], ["id", 8]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:03:46 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddNullFalseToTitles (20160721070517)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aalbums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "title" text, "artist" text, "rank" integer DEFAULT 0, "description" text)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aalbums" ("id","created_at","updated_at","title","artist","rank","description")
+                     SELECT "id","created_at","updated_at","title","artist","rank","description" FROM "albums"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "albums"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "albums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "title" text NOT NULL, "artist" text, "rank" integer DEFAULT 0, "description" text)[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "albums" ("id","created_at","updated_at","title","artist","rank","description")
+                     SELECT "id","created_at","updated_at","title","artist","rank","description" FROM "aalbums"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aalbums"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "abooks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "title" text, "author" text, "rank" integer DEFAULT 0, "description" text)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "abooks" ("id","created_at","updated_at","title","author","rank","description")
+                     SELECT "id","created_at","updated_at","title","author","rank","description" FROM "books"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "books"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "title" text NOT NULL, "author" text, "rank" integer DEFAULT 0, "description" text)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "books" ("id","created_at","updated_at","title","author","rank","description")
+                     SELECT "id","created_at","updated_at","title","author","rank","description" FROM "abooks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "abooks"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "amovies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "title" text, "director" text, "rank" integer DEFAULT 0, "description" text)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "amovies" ("id","created_at","updated_at","title","director","rank","description")
+                     SELECT "id","created_at","updated_at","title","director","rank","description" FROM "movies"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "movies"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "title" text NOT NULL, "director" text, "rank" integer DEFAULT 0, "description" text)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "movies" ("id","created_at","updated_at","title","director","rank","description")
+                     SELECT "id","created_at","updated_at","title","director","rank","description" FROM "amovies"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "amovies"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160721070517"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
