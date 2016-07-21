@@ -13,18 +13,21 @@
     </tr> 
   </thead>
   <tbody>
-      <% @albums.each do |album| %>
-        <tr>
-          <td>
-            <%= album.rank %>
-          </td>
-          <td>
-            <%= link_to album.title, album_path(album.id) %>
-          </td>
-          <td>
-            Upvote Button 
-          </td>
-        </tr>
-      <% end %>
+    <% @albums.each do |album| %>
+      <tr>
+        <td>
+          <%= album.rank %>
+        </td>
+        <td>
+          <%= link_to album.title, album_path(album.id) %>
+        </td>
+        <td>
+          Upvote Button 
+        </td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
+
+<%= link_to "View All Media", root_path, class: "btn btn-default" %>
+<%= link_to "Add an Album", new_album_path, class: "btn btn-default" %>
