@@ -10,30 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160714193003) do
+ActiveRecord::Schema.define(version: 20160721062336) do
 
   create_table "albums", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.text     "title"
     t.text     "artist"
     t.integer  "rank"
+    t.text     "description"
   end
 
   create_table "books", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.text     "title"
     t.text     "author"
     t.integer  "rank"
+    t.text     "description"
   end
 
   create_table "movies", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.text     "title"
     t.text     "director"
     t.integer  "rank"
+    t.text     "description"
   end
 
 end
