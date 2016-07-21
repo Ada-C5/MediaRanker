@@ -1,0 +1,18 @@
+<h1>
+  Title: <%= @movie.title %>
+  <small>
+    Director: <%= @movie.director %>
+  </small>
+</h1>
+<h3>
+  Ranking: <%= @movie.rank %>
+</h3>
+<p>
+  <%= @movie.description %>
+</p>
+
+<%= link_to "Upvote", rank_book_path(@movie.id), class: "btn btn-primary", method: :put %>
+<%= link_to "Edit #{@movie.title}", edit_book_path(@movie.id), class: "btn btn-default" %>
+<%= link_to "Delete", movie_path(@movie.id), class: "btn btn-danger", method: :delete %>
+<%= link_to "View All Movies", moviess_path, class: "btn btn-default" %>
+<%= link_to "View All Media", root_path, class: "btn btn-default" %>

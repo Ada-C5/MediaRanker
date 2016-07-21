@@ -21,10 +21,12 @@
         <td>
           <%= link_to movie.title, movie_path(movie.id) %>
         </td>
-        <td>
-          Upvote Button 
+          <%= link_to "Upvote", rank_movie_path(movie.id), class: "btn btn-default", method: :put %>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
+
+<%= link_to "Add A Movie", new_movie_path, class: "btn btn-default" %>
+<%= link_to "View All Media", root_path, class: "btn btn-default" %>
