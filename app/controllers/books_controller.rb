@@ -9,10 +9,11 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
+    @book.rank = 0
   end
 
   def create
-    @book = Book.create(books_params[:book])
+    @book = Book.create(book_params[:book])
     if @book.save
       flash[:success] = 'New book added!'
       redirect_to books_path
