@@ -22,7 +22,7 @@
           <%= link_to album.title, album_path(album.id) %>
         </td>
         <td>
-          Upvote Button 
+          <%= link_to "Upvote", rank_album_path(album.id), class: "btn btn-default", method: :put %>
         </td>
       </tr>
     <% end %>

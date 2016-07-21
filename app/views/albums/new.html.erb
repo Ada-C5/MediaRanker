@@ -1,0 +1,15 @@
+<% if @album.errors.any? %>
+  <ul>
+    <% @album.errors.each do |column, message| %>
+      <li>
+        <%= column.capitalize %> <%= message %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h1>
+  Add an Album
+</h1>
+
+<%= render partial: 'entryform', locals: { object: @album } %>

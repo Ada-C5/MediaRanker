@@ -1,0 +1,15 @@
+<% if @movie.errors.any? %>
+  <ul>
+    <% @movie.errors.each do |column, message| %>
+      <li>
+        <%= column.capitalize %> <%= message %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h1>
+  Add a Movie
+</h1>
+
+<%= render partial: 'entryform', locals: { object: @movie } %>

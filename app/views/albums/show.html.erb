@@ -1,0 +1,18 @@
+<h1>
+  Title: <%= @album.title %>
+  <small>
+    Artist: <%= @album.artist %>
+  </small>
+</h1>
+<h3>
+  Ranking: <%= @album.rank %>
+</h3>
+<p>
+  <%= @album.description %>
+</p>
+
+<%= link_to "Upvote", rank_album_path(@album.id), class: "btn btn-primary", method: :put %>
+<%= link_to "Edit #{@album.title}", edit_album_path(@album.id), class: "btn btn-default" %>
+<%= link_to "Delete", album_path(@album.id), class: "btn btn-danger", method: :delete %>
+<%= link_to "View All Albums", albums_path, class: "btn btn-default" %>
+<%= link_to "View All Media", root_path, class: "btn btn-default" %>
