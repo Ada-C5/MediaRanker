@@ -22,7 +22,7 @@
             <%= link_to book.title, book_path(book.id) %>
           </td>
           <td>
-            Upvote Button 
+            <%= link_to "Upvote", rank_book_path(book.id), class: "btn btn-default", method: :put %>
           </td>
         </tr>
       <% end %>

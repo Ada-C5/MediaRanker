@@ -3,19 +3,19 @@ Rails.application.routes.draw do
 
   resources :books do
     member do
-      put 'upvote'
+      put 'rank'
     end
   end
 
   resources :movies do
     member do
-      put 'upvote'
+      put 'rank'
     end
   end
 
   resources :albums do
     member do
-      put 'upvote'
+      put 'rank'
     end
   end
 
