@@ -12,7 +12,7 @@ class BooksController < ApplicationController
   end
 
   def create
-    @book = Book.create(book_params[:book])
+    @book = Book.new(book_params[:book])
     if @book.save
       flash[:success] = 'New book added!'
       redirect_to books_path
@@ -29,10 +29,8 @@ class BooksController < ApplicationController
   def update
     @book = Book.update(params[:id], book_params[:book])
     if @book.save
-      flash[:success] = 'Book information updated!'
       redirect_to books_path
     else
-      flash.now[:error] = 'Entries must have a title.'
       render :new
     end
   end
