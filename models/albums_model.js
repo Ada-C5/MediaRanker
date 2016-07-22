@@ -1,10 +1,12 @@
 var app = require("../app");
 var db = app.get("db");
 
-var Album = function(id, title, upvotes) {
+var Album = function(id, title, upvotes, artist, overview) {
   this.id = id;
   this.title = title;
   this.upvotes = upvotes;
+  this.artist = artist;
+  this.overview = overview;
 }
 
 Album.all = function(callback) {

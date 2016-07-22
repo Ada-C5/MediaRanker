@@ -17,7 +17,7 @@
         <% for (var album of albums) { %>
   			<tr>
       		<td>Votes: <%= album.upvotes %></td>
-        	<td><%= album.title %></td>
+        	<td><a href="/albums/<%= album.id %>"><%= album.title %></a></td>
           <td>
             <form action="/albums/<%=album.id%>" method="post">
               <input type="hidden" name="media" value="albums"/>

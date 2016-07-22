@@ -71,7 +71,7 @@ var IndexController = {
 				res.redirect('/' + req.body.media)
 			}
 		})
-	}
+	},
 }
 
 

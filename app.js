@@ -50,7 +50,6 @@ app.use('/books', books);
 app.use('/movies', movies);
 app.use('/albums', albums);
 
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
