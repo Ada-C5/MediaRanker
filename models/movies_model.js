@@ -31,9 +31,38 @@ Movie.topTen = function(callback) {
       }))
     }
   })
-}
+};
 
+Movie.upvote = function(id, callback) {
+  db.run("UPDATE movies SET upvotes = upvotes + 1 WHERE id = $1", [id], 
+    function(error, movie) {
+    if (error|| !movie) {
+      callback(error || new Error("Could not add to db"));
+    } else {
+      callback(null)
+    }
+  })
+};
 
+Movie.find = function(id, callback) {
+  db.movies.findOne({id: id}, function(error, movie) {
+    if (error || !movie) {
+      callback(error || new Error("Could not retrieve movie"), undefined);
+    } else {
+      movie = new Movie(movie.id, movie.title, movie.upvotes, movie.author, movie.overview)
+      callback(null, movie)
+    }
+  })
+};
 
+Movie.remove = function(id, callback) {
+  db.movies.destroy({id: id}, function(error, movie) {
+    if (error || !movie) {
+      callback(error || new Error("Could not delete movie"));
+    } else {
+      callback(null)
+    }
+  })
+};
 
 module.exports = Movie;
