@@ -1,4 +1,42 @@
 Rails.application.routes.draw do
+
+
+
+  resources :albums
+  resources :books
+  resources :movies
+
+# Known routes:
+
+#   Prefix Verb   URI Pattern                Controller#Action
+#     albums GET    /albums(.:format)          albums#index
+#            POST   /albums(.:format)          albums#create
+#  new_album GET    /albums/new(.:format)      albums#new
+# edit_album GET    /albums/:id/edit(.:format) albums#edit
+#      album GET    /albums/:id(.:format)      albums#show
+#            PATCH  /albums/:id(.:format)      albums#update
+#            PUT    /albums/:id(.:format)      albums#update
+#            DELETE /albums/:id(.:format)      albums#destroy
+#      books GET    /books(.:format)           books#index
+#            POST   /books(.:format)           books#create
+#   new_book GET    /books/new(.:format)       books#new
+#  edit_book GET    /books/:id/edit(.:format)  books#edit
+#       book GET    /books/:id(.:format)       books#show
+#            PATCH  /books/:id(.:format)       books#update
+#            PUT    /books/:id(.:format)       books#update
+#            DELETE /books/:id(.:format)       books#destroy
+#     movies GET    /movies(.:format)          movies#index
+#            POST   /movies(.:format)          movies#create
+#  new_movie GET    /movies/new(.:format)      movies#new
+# edit_movie GET    /movies/:id/edit(.:format) movies#edit
+#      movie GET    /movies/:id(.:format)      movies#show
+#            PATCH  /movies/:id(.:format)      movies#update
+#            PUT    /movies/:id(.:format)      movies#update
+#            DELETE /movies/:id(.:format)      movies#destroy
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
