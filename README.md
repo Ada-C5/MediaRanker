@@ -28,7 +28,7 @@ Once you've explored the existing Media Ranker site, this project:
 - requires you to create a Rails application
   - conform to Rails conventions on naming and inflection
   - by using `rails new .` you will create a new rails app _inside_ of the fork folder instead of creating a _new_ folder for your rails app
-  
+
 **You shall submit a pull request _with a meaningful pull request description_ once you are done with the baseline which shall be merged before moving onto implementing the requirements. _Do not push any additional code until your baseline PR has been merged_**
 
 ### Requirements
