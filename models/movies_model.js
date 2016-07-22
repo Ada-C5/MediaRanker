@@ -49,7 +49,7 @@ Movie.find = function(id, callback) {
     if (error || !movie) {
       callback(error || new Error("Could not retrieve movie"), undefined);
     } else {
-      movie = new Movie(movie.id, movie.title, movie.upvotes, movie.author, movie.overview)
+      movie = new Movie(movie.id, movie.title, movie.upvotes, movie.director, movie.overview)
       callback(null, movie)
     }
   })
