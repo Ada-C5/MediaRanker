@@ -31,7 +31,39 @@ Album.topTen = function(callback) {
       }))
     }
   })
-}
+};
+
+Album.upvote = function(id, callback) {
+  db.run("UPDATE albums SET upvotes = upvotes + 1 WHERE id = $1", [id], 
+    function(error, album) {
+    if (error|| !album) {
+      callback(error || new Error("Could not add to db"));
+    } else {
+      callback(null)
+    }
+  })
+};
+
+Album.find = function(id, callback) {
+  db.albums.findOne({id: id}, function(error, album) {
+    if (error || !album) {
+      callback(error || new Error("Could not retrieve album"), undefined);
+    } else {
+      album = new Album(album.id, album.title, album.upvotes, album.artist, album.overview)
+      callback(null, album)
+    }
+  })
+};
+
+Album.remove = function(id, callback) {
+  db.albums.destroy({id: id}, function(error, album) {
+    if (error || !album) {
+      callback(error || new Error("Could not delete album"));
+    } else {
+      callback(null)
+    }
+  })
+};
 
 
 module.exports = Album;
