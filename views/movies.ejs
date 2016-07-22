@@ -3,21 +3,26 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-<!--     <link rel='docs' href='/docs.json' /> -->
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <table>
     	<tr>
-    		<th>Ranking</th>
+    		<th>Votes</th>
     		<th>Name</th>
     		<th>Upvote</th>
     	</tr>
         <% for (var movie of movies) { %>
   			<tr>
-      		<td>Ranked: <%= movie.ranking %></td>
+      		<td>Votes: <%= movie.upvotes %></td>
         	<td><%= movie.title %></td>
+          <td>
+            <form action="/movies/<%=movie.id%>" method="post">
+              <input type="hidden" name="media" value="movies"/>
+              <input class="btn btn-default" type="submit" value="Upvote"/>  
+            </form>
+          </td>
 				</tr>
         <% } %>
     </table>

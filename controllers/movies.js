@@ -19,8 +19,23 @@ var MoviesController = {
 		})
 	},
 
-	getBook: function(req, res) {
-		res.render()
+	getMovie: function(req, res) {
+		Movies.find(req.params.id, function(error, movie) {
+			if(error=="Could not retrieve movie") {
+				res.status(404).send(error)
+			} else if (error) {
+				var err = "Please try again"
+				res.status(500).send(err)
+			} else {
+					res.render('movie', { 
+						id: movie.id,
+						title: movie.title,
+						director: movie.director,
+						overview: movie.overview,
+						upvotes: movie.upvotes
+					});
+			}
+		})
 	}
 }
 
