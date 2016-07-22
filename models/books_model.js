@@ -64,7 +64,27 @@ Book.remove = function(id, callback) {
       callback(null)
     }
   })
-}
+};
+
+Book.remove = function(id, callback) {
+  db.books.destroy({id: id}, function(error, book) {
+    if (error || !book) {
+      callback(error || new Error("Could not delete book"));
+    } else {
+      callback(null)
+    }
+  })
+};
+
+Book.update = function(id, artist, overview, title, callback) {
+  db.books.update({id: id, artist: artist, overview: overview, title: title}, function(error, book) {
+    if (error || !book) {
+      callback(error || new Error("Could not update book"));
+    } else {
+      callback(null)
+    }
+  })
+};
 
 
 module.exports = Book;

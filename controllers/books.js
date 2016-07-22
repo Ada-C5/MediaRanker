@@ -39,6 +39,39 @@ var BooksController = {
 					});
 			}
 		})
+	},
+
+		editBook: function(req, res) {
+		Books.find(req.params.id, function(error, book) {
+			if(error=="Could not retrieve book") {
+				res.status(404).send(error)
+			} else if (error) {
+				var err = "Please try again"
+				res.status(500).send(err)
+			} else {
+					res.render('editbook', { 
+						id: book.id,
+						title: book.title,
+						author: book.author,
+						overview: book.overview,
+						upvotes: book.upvotes
+					});
+			}
+		})
+	},
+
+	updateBook: function(req, res) {
+		Books.update(req.params.id, req.query.artist, req.query.overview, req.query.title, function(error, book) {
+			if(error=="Could not retrieve book") {
+				res.status(404).send(error)
+			} else if (error) {
+				var err = "Please try again"
+				res.status(500).send(err)
+			} else {
+				console.log('cornbread')
+					res.redirect('/books/' + id)
+			}
+		})
 	}
 }
 

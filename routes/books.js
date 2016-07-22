@@ -3,6 +3,9 @@ var router = express.Router();
 var Controller = require('../controllers/books')
 var indexController = require('../controllers/index')
 
+
+router.get('/:id/edit', Controller.editBook)
+router.get('/:id/update', Controller.updateBook)
 router.get('/:id', Controller.getBook)
 router.get('/', Controller.getBooks)
 router.post('/:id/delete', indexController.deleteMedia)
