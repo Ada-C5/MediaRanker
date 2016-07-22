@@ -6,12 +6,12 @@ var Movies = require("../models/movies_model");
 var IndexController = {
 	// get top 10 media with ranking, upvotes and title in desc order
 	getIndex: function(req, res) {
-		Movies.all(function(error, topMovies) {
+		Movies.topTen(function(error, topMovies) {
 			if(error) {
 				var err = new Error("Could not retrieve movies");
 				err.status = 404;
 			} else {
-				Albums.all(function(error, topAlbums) {
+				Albums.topTen(function(error, topAlbums) {
 					if(error) {
 						var err = new Error("Could not retrieve albums");
 						err.status = 404;
@@ -35,7 +35,27 @@ var IndexController = {
 					});
 				}
 			})
-		}
+		},
+
+	upvote: function(req, res) {
+		var media = req.body.media == 'books' ? Books : 
+		            req.body.media == 'albums' ? Albums :
+		            Movies;
+
+		media.upvote(req.params.id, function(error) {
+			if(error=="Could not add to db") {
+				res.status(404).send(error)
+			} else if (error) {
+				// var err = "Please try again"
+				res.status(500).send(error)
+			} else {
+				console.log("final else")
+				res.redirect('/' + req.body.media + '/' + req.params.id)
+			}
+		})
+	}
 }
+
+
 
 module.exports = IndexController

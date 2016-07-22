@@ -32,5 +32,16 @@ Book.topTen = function(callback) {
   })
 }
 
+Book.upvote = function(id, callback) {
+  db.run("UPDATE books SET upvotes = upvotes + 1 WHERE id = $1", [id], 
+    function(error, book) {
+    if (error|| !book) {
+      callback(error || new Error("Could not add to db"));
+    } else {
+      callback(null)
+    }
+  })
+}
+
 
 module.exports = Book;

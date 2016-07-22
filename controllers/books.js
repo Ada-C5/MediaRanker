@@ -20,7 +20,9 @@ var BooksController = {
 	},
 
 	getBook: function(req, res) {
-		res.render()
+		// need book object to render
+		console.log(req.body)
+		res.render('book')
 	}
 }
 
