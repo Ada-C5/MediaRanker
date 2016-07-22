@@ -9,13 +9,8 @@ class AlbumsController < ApplicationController
   end
 
   def create
-    @new_album = Album.new
-    @new_album.title = params[:album]["title"]
-    @new_album.artist = params[:album]["artist"]
-    @new_album.description = params[:album]["description"]
-    @new_album.rank = 0
-    @new_album.save
-    redirect_to album_path(@new_album.id)
+    @album = Album.create(album_params[:album])
+    redirect_to albums_path
   end
 
   def show
