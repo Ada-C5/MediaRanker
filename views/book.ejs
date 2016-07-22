@@ -6,26 +6,21 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
     <table>
-    	<tr>
-    		<th>Ranking</th>
-    		<th>Name</th>
-    		<th>Upvote</th>
-    	</tr>
-        <% for (var book of books) { %>
   			<tr>
-          <td>Ranked: <%= book.upvotes %></td>
-      		<td>Votes: <%= book.upvotes %></td>
-        	<td><%= book.title %></td>
+          <td>Author: <%= author %></td>
+      		<td>Votes: <%= upvotes %></td>
+        	<td>Title: <%= title %></td>
+          <td>Overview: <%= overview %></td>
           <td>
-            <form action="/books/<%=book.id%>" method="post">
+            <form action="/books/<%=id%>" method="post">
               <input type="hidden" name="media" value="books"/>
               <input class="btn btn-default" type="submit" value="Upvote"/>  
             </form>
           </td>
 				</tr>
-        <% } %>
     </table>
+    <a href="/movies">View all Movies"</a>
+    <a href="/">View more Media"</a>
   </body>
 </html>

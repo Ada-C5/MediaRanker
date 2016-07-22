@@ -20,9 +20,25 @@ var BooksController = {
 	},
 
 	getBook: function(req, res) {
-		// need book object to render
-		console.log(req.body)
-		res.render('book')
+		Books.find(req.params.id, function(error, book) {
+			if(error=="Could not retrieve book") {
+				res.status(404).send(error)
+			} else if (error) {
+				var err = "Please try again"
+				res.status(500).send(err)
+			} else {
+
+					console.log("ppooo" + book.title)
+
+					res.render('book', { 
+						id: book.id,
+						title: book.title,
+						author: book.author,
+						overview: book.overview,
+						upvotes: book.upvotes
+					});
+			}
+		})
 	}
 }
 
