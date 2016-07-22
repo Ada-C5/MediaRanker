@@ -1,14 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var Controller = require('../controllers/albums')
-
+var indexController = require('../controllers/index')
 
 router.get('/:id', Controller.getAlbum)
-// select all from db
 router.get('/', Controller.getAlbums)
-// router.get('/sort/:column', Controller.subsetCustomers)
-// router.get('/:customer_id/current', Controller.getCustomersCurrent)
-// router.get('/:customer_id/history', Controller.getCustomersHistory)
-
+router.post('/:id/delete', indexController.deleteMedia)
+router.post('/:id', indexController.upvote)
 
 module.exports = router;
