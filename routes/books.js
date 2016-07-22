@@ -12,7 +12,7 @@ router.get('/', BooksController.index)
 /* Delete a book */
 router.post('/delete', BooksController.delete)
 /* Update a book */
-router.post('/update', BooksController.update)
+router.post('/:book_id', BooksController.update)
 /* Upvote a book */
 router.post('/', BooksController.upvote)
 

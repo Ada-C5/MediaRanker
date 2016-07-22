@@ -1,8 +1,29 @@
-<form action=<%= "/" + locals.type + "/update" %> method="post" class="edit-form">
-  <label class="media-name">Name: <input class="media-name-textbox" type="text" name="name" value=<%= locals.media.name %> id="name"></label>
-  <label class="media-by"><%= locals.madeBy %> by: <input class="media-by-textbox" type="text" name="by" value=<%= locals.media.by %> id="by"></label>
-  <label class="media-description">Description: <input class="media-description-textbox" type="text" name="description" value=<%= locals.media.description %> id="description"></label>
-  <input type="hidden" name=<%= locals.type + "_id" %> value=<%= locals.media.id %> id="upvote">
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ./partials/head %>
+  </head>
+  <body>
+    <header>
+      <% include ./partials/header %>
+    </header>
 
-  <input type="submit" value="Update">
-</form>
+    <div class="col-lg-12">
+      <h2>Edit <%= locals.type %></h2>
+
+      <form action=<%= "/" + locals.type + "/" + locals.media.id %> method="post" class="edit-form">
+        <div class="form-group">
+        <label class="media-name">Name: <input class="form-control media-name-textbox" type="text" name="name" value=<%= locals.media.name %> id="name"></label>
+        <label class="media-by"><%= locals.madeBy %> by: <input class="form-control media-by-textbox" type="text" name="by" value=<%= locals.media.by %> id="by"></label>
+        <label class="media-description">Description: <input class="form-control media-description-textbox" type="text" name="description" value=<%= locals.media.description %> id="description"></label>
+        <input type="hidden" name=<%= locals.type + "_id" %> value=<%= locals.media.id %> id="upvote">
+
+        <input class="btn btn-default" type="submit" value="Update">
+      </form>
+    </div>
+
+    <footer>
+      <% include ./partials/footer %>
+    </footer>
+  </body>
+</html>

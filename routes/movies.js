@@ -12,7 +12,7 @@ router.get('/', MoviesController.index)
 /* Delete a movie */
 router.post('/delete', MoviesController.delete)
 /* Update a movie */
-router.post('/update', MoviesController.update)
+router.post('/:movie_id', MoviesController.update)
 /* Upvote a movie */
 router.post('/', MoviesController.upvote)
 
