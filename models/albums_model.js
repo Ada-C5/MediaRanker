@@ -67,5 +67,15 @@ Album.remove = function(id, callback) {
   })
 };
 
+Album.update = function(id, artist, overview, title, callback) {
+  db.albums.update({id: id, artist: artist, overview: overview, title: title}, function(error, album) {
+    if (error || !album) {
+      callback(error || new Error("Could not update album"));
+    } else {
+      callback(null)
+    }
+  })
+};
+
 
 module.exports = Album;
