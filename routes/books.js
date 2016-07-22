@@ -3,6 +3,7 @@ var router = express.Router();
 var Controller = require('../controllers/books')
 var indexController = require('../controllers/index')
 
+router.post('/:id/delete', indexController.delete)
 router.get('/:id', Controller.getBook)
 // select all from db
 router.get('/', Controller.getBooks)

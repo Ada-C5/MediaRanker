@@ -18,9 +18,20 @@
               <input class="btn btn-default" type="submit" value="Upvote"/>  
             </form>
           </td>
+          <td>
+            <form action="/books/<%=id%>/delete" method="POST" onsubmit="return confirm('Are you sure you want to submit this form?');">
+              <input type="hidden" name="media" value="books"/>
+<!--               <input class="btn btn-default" type="submit" value="Delete"/> -->
+               <input class="btn btn-default" type="submit" name="completeYes" value="Delete" />  
+            </form>
+          </td>
 				</tr>
     </table>
     <a href="/movies">View all Movies"</a>
     <a href="/">View more Media"</a>
   </body>
 </html>
+<!-- 
+<form action="adminprocess.php" method="POST" onsubmit="return confirm('Are you sure you want to submit this form?');">
+    <input type="submit" name="completeYes" value="Complete Transaction" />
+</form> -->
