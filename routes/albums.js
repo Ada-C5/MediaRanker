@@ -4,6 +4,7 @@ var Controller = require('../controllers/albums')
 var indexController = require('../controllers/index')
 
 router.get('/:id/edit', Controller.editAlbum)
+router.get('/:id/update', Controller.updateAlbum)
 router.get('/:id', Controller.getAlbum)
 router.get('/', Controller.getAlbums)
 router.post('/:id/delete', indexController.deleteMedia)
