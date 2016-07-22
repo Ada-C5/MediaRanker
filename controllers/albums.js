@@ -20,7 +20,22 @@ var AlbumsController = {
 	},
 
 	getAlbum: function(req, res) {
-		res.render()
+		Albums.find(req.params.id, function(error, album) {
+			if(error=="Could not retrieve album") {
+				res.status(404).send(error)
+			} else if (error) {
+				var err = "Please try again"
+				res.status(500).send(err)
+			} else {
+					res.render('album', { 
+						id: album.id,
+						title: album.title,
+						artist: album.artist,
+						overview: album.overview,
+						upvotes: album.upvotes
+					});
+			}
+		})
 	}
 }
 module.exports = AlbumsController
