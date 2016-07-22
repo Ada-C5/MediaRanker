@@ -56,5 +56,15 @@ Book.find = function(id, callback) {
   })
 };
 
+Book.remove = function(id, callback) {
+  db.books.destroy({id: id}, function(error, book) {
+    if (error || !book) {
+      callback(error || new Error("Could not delete book"));
+    } else {
+      callback(null)
+    }
+  })
+}
+
 
 module.exports = Book;
