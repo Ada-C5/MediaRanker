@@ -1,0 +1,22 @@
+<div class= "col-lg-12">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Ranking</th>
+        <th>Name</th>
+        <th>Upvote</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%@albums.each do |album|%>
+        <tr>
+          <td>Ranked: <%= album.upvote%></td>
+          <td><%=link_to album.name, album_path(album.id)%></td>
+          <td><%=link_to "Upvote", album_upvote_path(album), class: "btn btn-default", method: :put%></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+</form>
