@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20160723013455) do
     t.string   "name",                    null: false
     t.string   "author"
     t.string   "description"
-    t.integer  "vote",        default: 0
+    t.integer  "upvote",      default: 0
   end
 
   create_table "movies", force: :cascade do |t|
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20160723013455) do
     t.string   "name",                    null: false
     t.string   "director"
     t.string   "description"
-    t.integer  "vote",        default: 0
+    t.integer  "upvote",      default: 0
   end
 
 end

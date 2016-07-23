@@ -3,6 +3,6 @@ class AddBasicInfoToMovies < ActiveRecord::Migration
     add_column :movies, :name, :string, null: false
     add_column :movies, :director, :string
     add_column :movies, :description, :string
-    add_column :movies, :vote, :integer, default: 0
+    add_column :movies, :upvote, :integer, default: 0
   end
 end

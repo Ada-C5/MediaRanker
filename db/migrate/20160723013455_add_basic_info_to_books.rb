@@ -3,6 +3,6 @@ class AddBasicInfoToBooks < ActiveRecord::Migration
     add_column :books, :name, :string, null: false
     add_column :books, :author, :string
     add_column :books, :description, :string
-    add_column :books, :vote, :integer, default: 0
+    add_column :books, :upvote, :integer, default: 0
   end
 end
