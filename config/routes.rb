@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
 
-
+   root "home#index"
 
   resources :albums
+  patch   'albums/:id/upvote' => 'albums#upvote',  as: :upvote_album
+
   resources :books
+  patch   'books/:id/upvote' => 'books#upvote',  as: :upvote_book
+
   resources :movies
+  patch   'movies/:id/upvote' => 'movies#upvote',  as: :upvote_movie
 
 # Known routes:
 
