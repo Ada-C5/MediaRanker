@@ -1,7 +1,10 @@
 require 'test_helper'
 
 class AlbumsControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  
+
+  test "should get index" do
+    get '/albums'
+    assert_response :success
+  end
 end

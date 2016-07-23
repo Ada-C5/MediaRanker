@@ -1,0 +1,27 @@
+{
+  "MiniTest": {
+    "coverage": {
+      "/Users/jadevance/C5/projects/MediaRanker/app/models/album.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/jadevance/C5/projects/MediaRanker/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/jadevance/C5/projects/MediaRanker/app/models/book.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/jadevance/C5/projects/MediaRanker/app/models/movie.rb": [
+        1,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1469232473
+  }
+}
