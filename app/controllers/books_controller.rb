@@ -11,7 +11,11 @@ class BooksController < ApplicationController
 
   private
 
-  def book_params
+  def book_create_params
     params.permit(book: [:name, :author,:description, :upvote])
+  end
+
+  def book_edit_params
+    params.permit(book: [:name, :author,:description, :upvote, :updated_at])
   end
 end

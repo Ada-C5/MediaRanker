@@ -11,7 +11,11 @@ class AlbumsController < ApplicationController
 
   private
 
-  def album_params
+  def album_create_params
     params.permit(album: [:name, :artist,:description, :upvote])
+  end
+
+  def album_edit_params
+    params.permit(album: [:name, :artist,:description, :upvote, :updated_at])
   end
 end
