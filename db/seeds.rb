@@ -13,19 +13,22 @@ movies = [
   {
     name: "Now and Then",
     director: "Someone old like me",
-    description: "My favorite when young."
+    description: "My favorite when young.",
+    votes: 1
   },
 
   {
     name: "Little Champions",
     director: "Devon Sawa Admirer",
-    description: "Can't remember what it was about"
+    description: "Can't remember what it was about",
+    votes: 2
   },
 
   {
     name: "Pretty Woman",
     director: "Not Richard Gere",
-    description: "Not P.C."
+    description: "Not P.C.",
+    votes: 3
   }
 ]
 

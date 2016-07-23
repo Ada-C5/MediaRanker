@@ -25,6 +25,13 @@ class MoviesController < ApplicationController
     redirect_to movie_path
   end
 
+  def upvote
+    @movie = Movie.find(params[:id])
+    current_votes = @movie.votes
+    @movie.update(votes: current_votes += 1)
+    redirect_to movie_path
+  end
+
   private
 
   def movie_create_params  #tell rails which params are ok to be in the model
