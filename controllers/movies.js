@@ -12,6 +12,7 @@ var MoviesContoller = {
       } else {
         var locals = {}
         locals.type = "movies"
+        locals.displayType = "Movie"
         locals.media = movies
         res.render ('index', { locals: locals })
       }

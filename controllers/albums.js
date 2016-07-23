@@ -11,6 +11,7 @@ var AlbumsController = {
       } else {
         var locals = {}
         locals.type = "albums"
+        locals.displayType = "Album"
         locals.media = albums
         res.render ('index', { locals: locals })
       }
@@ -45,6 +46,23 @@ var AlbumsController = {
         next(err)
       } else {
         res.redirect (200, '/albums/' + album_id)
+      }
+    })
+  },
+
+  new: function (req, res, next) {
+
+    Album.find(album_id, function(error, albums) {
+      if(error) {
+        var err = new Error("Error retrieving album:\n" + error.message)
+        err.status = 500
+        next(err)
+      } else {
+        var locals = {}
+        locals.type = "albums"
+        locals.madeBy = "Directed"
+        locals.media = albums[0]
+        res.render ('edit', { locals: locals })
       }
     })
   },

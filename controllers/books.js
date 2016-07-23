@@ -12,6 +12,7 @@ var BooksController = {
       } else {
         var locals = {}
         locals.type = "books"
+        locals.displayType = "Book"
         locals.media = books
         res.render ('index', { locals: locals })
       }
