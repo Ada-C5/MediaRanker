@@ -18,6 +18,9 @@
             <h3><%=link_to category[i].name, movie_path(category[i].id)%>
             <small>Ranked: <%=category[i].upvote%></small></h3>
           <%end%>
+          <%if (i+1) == @top && category[i+1] != nil%>
+            <a href="/movies">View More Movies</a>
+          <%end%>
         </div>
       <%end%>
     </div>
