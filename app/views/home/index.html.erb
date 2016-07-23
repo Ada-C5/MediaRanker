@@ -1,3 +1,35 @@
-<div class= "topmovies"></div>
-<div class= "topbooks"></div>
-<div class= "topalbums"></div>
+<div class= "container">
+  <div class= "row">
+    <div class= "col-md-4">
+      <h2>Top Movies</h2>
+    </div>
+    <div class= "col-md-4">
+      <h2>Top Books</h2>
+    </div>
+    <div class= "col-md-4">
+      <h2>Top Albums</h2>
+    </div>
+  </div>
+  <% @top.times do |i| %>
+    <div class= "row">
+      <div class= "col-md-4">
+        <%if @movies[i]%>
+          <h3><%=link_to @movies[i].name, movie_path(@movies[i].id)%>
+          <small>Ranked: <%=@movies[i].upvote%></small></h3>
+        <%end%>
+      </div>
+      <div class= "col-md-4">
+        <%if @books[i]%>
+          <h3><%=link_to @books[i].name, movie_path(@books[i].id)%>
+          <small>Ranked: <%=@books[i].upvote%></small></h3>
+        <%end%>
+      </div>
+      <div class= "col-md-4">
+        <%if @albums[i]%>
+          <h3><%=link_to @albums[i].name, movie_path(@albums[i].id)%>
+          <small>Ranked: <%=@albums[i].upvote%></small></h3>
+        <%end%>
+      </div>
+    </div>
+    <% end %>
+</div>
