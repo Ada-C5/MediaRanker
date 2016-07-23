@@ -35,4 +35,30 @@ class BooksControllerTest < ActionDispatch::IntegrationTest
     end
     assert_redirected_to '/books'
   end
+
+  test "should create book if title is given" do
+    assert_difference('Book.count', 1) do
+      post "/books", params: { book: { title: "All Tomorrow's Parties" } }
+    end
+    assert_redirected_to '/books'
+  end
+
+  test "should NOT create book if title is NOT given" do
+    assert_no_difference('Book.count') do
+      post "/books", params: { book: { title: "" } }
+    end
+  end
+
+  test "update book if title is present" do
+    patch "/books/#{@book.id}", params: { book: { title: "Idoru" } }
+    assert_redirected_to '/books'
+    @book.reload
+    assert_equal "Idoru", @book.title
+  end
+
+  test "should NOT update book if title is removed" do
+    patch "/books/#{@book.id}", params: { book: { title: "" } }
+    @book.reload
+    assert_equal "Into the Wild", @book.title
+  end
 end

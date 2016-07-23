@@ -35,4 +35,30 @@ class MoviessControllerTest < ActionDispatch::IntegrationTest
     end
     assert_redirected_to '/movies'
   end
+
+  test "should create movie if title is given" do
+    assert_difference('Movie.count', 1) do
+      post "/movies", params: { movie: { title: "All Tomorrow's Parties" } }
+    end
+    assert_redirected_to '/movies'
+  end
+
+  test "should NOT create movie if title is NOT given" do
+    assert_no_difference('Movie.count') do
+      post "/movies", params: { movie: { title: "" } }
+    end
+  end
+
+  test "update movie if title is present" do
+    patch "/movies/#{@movie.id}", params: { movie: { title: "Ghostbusters" } }
+    assert_redirected_to '/movies'
+    @movie.reload
+    assert_equal "Ghostbusters", @movie.title
+  end
+
+  test "should NOT update movie if title is removed" do
+    patch "/movies/#{@movie.id}", params: { movie: { title: "" } }
+    @movie.reload
+    assert_equal "Mad Max: Fury Road", @movie.title
+  end
 end
