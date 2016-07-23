@@ -35,6 +35,12 @@ class BooksControllerTest < ActionDispatch::IntegrationTest
     assert_not_nil assigns(:book)
   end
 
+  test "route to rank" do
+    put "/books/#{@book.id}/rank"
+    assert_response :redirect
+    assert_not_nil assigns(:book)
+  end
+
   test "destroy the book" do
     assert_difference('Book.count', -1) do
       delete "/books/#{@book.id}"

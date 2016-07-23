@@ -35,6 +35,12 @@ class MoviessControllerTest < ActionDispatch::IntegrationTest
     assert_not_nil assigns(:movie)
   end
 
+  test "route to rank" do
+    put "/movies/#{@movie.id}/rank"
+    assert_response :redirect
+    assert_not_nil assigns(:movie)
+  end
+  
   test "destroy the movie" do
     assert_difference('Movie.count', -1) do
       delete "/movies/#{@movie.id}"
