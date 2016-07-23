@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MediaRanker</title>
+  <title>Media Ranker</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
 <body>
+<div class="page-header">
+  <h1>
+  <img src="http://media-ranker.herokuapp.com/assets/owl-5e51d9e0d49c787f2ebd143e32cbf41c.jpg" alt="owl"
+  <a href="/">Media Ranker</a>
+  <small>Ranking the Best of Everything</small>
+  </h1>
+</div>
 
 <%= yield %>
 
