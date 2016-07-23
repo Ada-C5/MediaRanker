@@ -5,5 +5,6 @@ class HomeController < ApplicationController
     @movies = Movie.limit(@top).order('upvote desc')
     @books = Book.limit(@top).order('upvote desc')
     @albums = Album.limit(@top).order('upvote desc')
+    @categories = [@movies, @books, @albums]
   end
 end
