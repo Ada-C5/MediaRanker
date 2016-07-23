@@ -11,9 +11,10 @@ router.get('/', MoviesController.index)
 
 /* Delete a movie */
 router.post('/delete', MoviesController.delete)
+/* Upvote a movie */
+router.post('/upvote', MoviesController.upvote)
 /* Update a movie */
 router.post('/:movie_id', MoviesController.update)
-/* Upvote a movie */
 router.post('/', MoviesController.upvote)
 
 module.exports = router

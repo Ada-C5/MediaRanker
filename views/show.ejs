@@ -13,7 +13,7 @@
       <h4>Ranked: <%= locals.media.votes %></h4>
       <p><%= locals.media.description %></p>
 
-      <form class="upvote-form" action=<%= "/" + locals.type %> method="post">
+      <form class="upvote-form" action=<%= "/" + locals.type + "/upvote" %> method="post">
         <input class="" type="hidden" name="upvote" value=<%= locals.media.id %> id="upvote">
         <input class="btn btn-primary" type="submit" value="Upvote">
       </form>

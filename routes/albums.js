@@ -11,9 +11,10 @@ router.get('/', AlbumsController.index)
 
 /* Delete a album */
 router.post('/delete', AlbumsController.delete)
+// Upvote an album
+router.post('/upvote', AlbumsController.upvote)
 // Update an album
 router.post('/:album_id', AlbumsController.update)
-// Upvote an album
 router.post('/', AlbumsController.upvote)
 
 module.exports = router

@@ -11,9 +11,10 @@ router.get('/', BooksController.index)
 
 /* Delete a book */
 router.post('/delete', BooksController.delete)
+/* Upvote a book */
+router.post('/upvote', BooksController.upvote)
 /* Update a book */
 router.post('/:book_id', BooksController.update)
-/* Upvote a book */
 router.post('/', BooksController.upvote)
 
 module.exports = router
