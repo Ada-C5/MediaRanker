@@ -1,28 +1,26 @@
 <div class= "container">
   <div class= "row">
-    <div class= "col-md-4">
-      <h2>Top Movies</h2>
-    </div>
-    <div class= "col-md-4">
-      <h2>Top Books</h2>
-    </div>
-    <div class= "col-md-4">
-      <h2>Top Albums</h2>
-    </div>
-  </div>
-  <% @top.times do |i| %>
-    <div class= "row">
-      <% @categories.each do |category|%>
-        <div class= "col-md-4">
+    <% @categories.each do |category|%>
+      <div class= "col-md-4">
+        <!-- prints out the corresponding header -->
+        <%if category == "@movies"%>
+          <h2>Top Movies</h2>
+        <%elsif category == "@books"%>
+          <h2>Top Books</h2>
+        <%else%>
+          <h2>Top Albums</h2>
+        <% end %>
+        <!-- prints out the list by category -->
+        <% @top.times do |i| %>
           <%if category[i]%>
             <h3><%=link_to category[i].name, movie_path(category[i].id)%>
             <small>Ranked: <%=category[i].upvote%></small></h3>
-          <%end%>
+          <% end %>
           <%if (i+1) == @top && category[i+1] != nil%>
             <a href="/movies">View More Movies</a>
-          <%end%>
-        </div>
-      <%end%>
-    </div>
-  <% end %>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
 </div>
