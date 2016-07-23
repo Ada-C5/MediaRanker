@@ -6889,3 +6889,1276 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 42ms (Views: 39.1ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for ::1 at 2016-07-21 00:49:51 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" ORDER BY "books"."rank" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[36mAlbum Load (0.3ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" ORDER BY "albums"."rank" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" ORDER BY "movies"."rank" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered home/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/books/10" for ::1 at 2016-07-21 00:49:53 -0700
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 27ms (Views: 23.8ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/books/10/rank" for ::1 at 2016-07-21 00:49:55 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"qSZph5mmE5cvVkDwYfuQcClTbzSe6g/c1/tGeRyizS0VRa+DGgDCkrFc982/oIyqMkGqqZOs9zlZAzhA807TuQ==", "id"=>"10"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 104], ["updated_at", 2016-07-21 07:49:55 UTC], ["id", 10]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:49:55 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/9" for ::1 at 2016-07-21 00:49:58 -0700
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/books/9/rank" for ::1 at 2016-07-21 00:50:00 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"hkptcM+5Qc2xYpsfbJtlVYBMcjJHYv2qNrKKScD26Z46Kat0TB+QyC9oLCKywHmPm163r0okBU+4SvRwLxr3Cg==", "id"=>"9"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 93], ["updated_at", 2016-07-21 07:50:00 UTC], ["id", 9]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:00 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/books/16/rank" for ::1 at 2016-07-21 00:50:04 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"+Wkb4BcFV4kHtYKoUVluyRz8rgQiQmN/KL4kF/HDWRxFCt3klKOGjJm/NZWPAnITB+5rmS8Em5qmRlouHi9HiA==", "id"=>"16"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 1], ["updated_at", 2016-07-21 07:50:04 UTC], ["id", 16]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:04 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:05 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"z1y0qbobq0l4hlyginBb205EZQKGpVwc5Ztf3RpMzGpzP3KtOb16TOaM651UK0cBVVagn4vjpPlrYyHk9aDS/g==", "id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 21], ["updated_at", 2016-07-21 07:50:05 UTC], ["id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:05 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:05 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"TkOZ06XIdFwmRahstWyylpntOkWG7bMUfJKqyNibj7/yIF/XJm6lWbhPH1FrN65Mgv//2IurS/HyatTxN3eRKw==", "id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 22], ["updated_at", 2016-07-21 07:50:05 UTC], ["id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:05 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:05 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"/Q/MW7wJNDYxTVgpxRWUWPhyXQ8hPbYNUIjssadfxy9BbApfP6/lM69H7xQbToiC42CYkix7TujecJKISLPZuw==", "id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 23], ["updated_at", 2016-07-21 07:50:05 UTC], ["id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:05 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:05 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"oeLdZD7HP9+AyDsfzEmPQFunb6Tu3u3BtbbKvBHHJAMdgRtgvWHu2h7CjCISEpOaQLWqOeOYFSQ7TrSF/is6lw==", "id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 24], ["updated_at", 2016-07-21 07:50:05 UTC], ["id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:05 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:05 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"AFH5L0ywL+tU+fPj9kSpDTzYWxTVUdr2vF7PUpCZ/FG8Mj8rzxb+7srzRN4oH7XXJ8qeidgXIhMyprFrf3XixQ==", "id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 25], ["updated_at", 2016-07-21 07:50:05 UTC], ["id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:05 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:05 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"aECv67WZ20OOijb0yYGAZi/A2xFbv1xbYKzgxeDsmpTUI2nvNj8KRhCAgckX2py8NNIejFb5pL7uVJ78DwCEAA==", "id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 26], ["updated_at", 2016-07-21 07:50:05 UTC], ["id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:05 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:06 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"+L6cLUTbIA+TfZewdFmWkWgR9xx1zhblwPn5NqfNcG1E3Vopx33xCg13II2qAopLcwMygXiI7gBOAYcPSCFu+Q==", "id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 27], ["updated_at", 2016-07-21 07:50:06 UTC], ["id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:06 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:06 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"b3Pk5cCiGUdasga/jcILuOx03aKjeMfzojk8sXy0Ep3TECLhQwTIQsS4sYJTmRdi92YYP64+PxYswUKIk1gMCQ==", "id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 28], ["updated_at", 2016-07-21 07:50:06 UTC], ["id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:06 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:06 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"pAXld3+ht+YsW9s1Rc3bCkgBXkTXPV1GBzmIcP6XIGAYZiNz/Adm47JRbAiblsfQUxOb2dp7paOJwfZJEXs+9A==", "id"=>"2"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 29], ["updated_at", 2016-07-21 07:50:06 UTC], ["id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:06 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:06 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"1CAnPIxBPKxsxaU0+hOoxh6ilNX4mN6VjPJLgQGy/8FoQ+E4D+ftqfLPEgkkSLQcBbBRSPXeJnACCjW47l7hVQ==", "id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 30], ["updated_at", 2016-07-21 07:50:06 UTC], ["id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:06 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/3/rank" for ::1 at 2016-07-21 00:50:06 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"zbITJiguZQybEw7dtt7NgAgTGjlP2GLh4rVA+xIQD/Nx0dUiq4i0CQUZueBohdFaEwHfpEKemgRsTT7C/fwRZw==", "id"=>"3"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 31], ["updated_at", 2016-07-21 07:50:06 UTC], ["id", 3]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:06 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:07 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"TZzW7n5j6Doy/solnn74Hm7Rfppk6tpxslgc9UdKO27x/xDq/cU5P6z0fRhAJeTEdcO7B2msIpQ8oGLMqKYl+g==", "id"=>"2"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 31], ["updated_at", 2016-07-21 07:50:07 UTC], ["id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:07 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/3/rank" for ::1 at 2016-07-21 00:50:07 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"XWcTWdH56/F3LjPhHam5IGXGSoQScu+AZoUn82J2LcnhBNVdUl869OkkhNzD8qX6ftSPGR80F2XofVnKjZozXQ==", "id"=>"3"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 32], ["updated_at", 2016-07-21 07:50:07 UTC], ["id", 3]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 5ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:07 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:07 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"WpGeCni6bqn9u4CpVtCbF1BHq2OdZyqzgiup1z9Zobbm8lgO+xy/rGOxN5SIi4fNS1Vu/pAh0lYM09fu0LW/Ig==", "id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 32], ["updated_at", 2016-07-21 07:50:07 UTC], ["id", 2]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 6ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:07 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/books/3/rank" for ::1 at 2016-07-21 00:50:07 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"KAzb5PkAqABG4SEygDuXut2q4eipvLuNrPWqrKeFJyeUbx3geqZ5Bdjrlg9eYItgxrgkdaT6Q2giDdSVSGk5sw==", "id"=>"3"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 33], ["updated_at", 2016-07-21 07:50:07 UTC], ["id", 3]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:07 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:07 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"xgJ0xoNZZkSHcrbq7uMbhwl0n+O14DaeO+GdsDpnBPN6YbLCAP+3QRl4AdcwuAddEmZafrimznu1GeOJ1YsaZw==", "id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 33], ["updated_at", 2016-07-21 07:50:07 UTC], ["id", 2]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:07 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/3/rank" for ::1 at 2016-07-21 00:50:07 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"5oP7qPnVXydpBYgRh8UNi9H1R5wG6VrfZBD12wHgDwZa4D2senOOIvcPPyxZnhFRyueCAQuvojrq6Ivi7gwRkg==", "id"=>"3"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 34], ["updated_at", 2016-07-21 07:50:07 UTC], ["id", 3]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:07 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:07 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"V+lA5/yG/5iopvedxizTqIqXCLB5BQki/xNb5rSzAN3riobjfyAunTasQKAYd89ykYXNLXRD8cdx6yXfW18eSQ==", "id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 34], ["updated_at", 2016-07-21 07:50:07 UTC], ["id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:07 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/3/rank" for ::1 at 2016-07-21 00:50:08 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"ype/pKYsvupchUFIzU4KpbEfjjPdmBdo4KAzfcx1Cct29HmgJYpv78KP9nUTFRZ/qg1LrtDe741uWE1EI5kXXw==", "id"=>"3"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 35], ["updated_at", 2016-07-21 07:50:08 UTC], ["id", 3]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:08 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:08 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"sJAFUj4h1PYs9IDmulfN1cquym/5IGHpbX2bo9GDsQ0M88NWvYcF87L+N9tkDNEP0bwP8vRmmQzjheWaPm+vmQ==", "id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 35], ["updated_at", 2016-07-21 07:50:08 UTC], ["id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:08 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/3/rank" for ::1 at 2016-07-21 00:50:08 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"6oYR/kjs4UhYutVwbylEbPdMVRODUBjQuA/SBGcP3xlW5df6y0owTcawYk2xcli27F6Qjo4W4DU296w9iOPBjQ==", "id"=>"3"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 36], ["updated_at", 2016-07-21 07:50:08 UTC], ["id", 3]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:08 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:08 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"6EHsb5Idwh2GLKwjpdM9Rt87AOeHCpU/dOnxVxp84Z5UIiprEbsTGBgmGx57iCGcxCnFeopMbdr6EY9u9ZD/Cg==", "id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 36], ["updated_at", 2016-07-21 07:50:08 UTC], ["id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:08 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/3/rank" for ::1 at 2016-07-21 00:50:08 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"zeUjaRWSCTc9KCOecrw8+qr/Lnh7So5x1PhQSll/KdpxhuVtljTYMqMilKOs5yAgse3r5XYMdpRaAC5ztpM3Tg==", "id"=>"3"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 37], ["updated_at", 2016-07-21 07:50:08 UTC], ["id", 3]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:08 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:08 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"cQfu9ArkKopZV6WRi9lhCJNHgkI5Ta2eCEc/1tdyt8vNZCjwiUL7j8ddEqxVgn3SiFVH3zQLVXuGv0HvOJ6pXw==", "id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 37], ["updated_at", 2016-07-21 07:50:08 UTC], ["id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:08 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/books/3/rank" for ::1 at 2016-07-21 00:50:09 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"CRN05YUx9ZPaq53/wQE5OdeZEm/5POEnlTknF3M9/2u1cLLhBpcklkShKsIfWiXjzIvX8vR6GcIbwVkunNHh/w==", "id"=>"3"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 38], ["updated_at", 2016-07-21 07:50:09 UTC], ["id", 3]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:09 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:09 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"zPeMWNI7E3olPTBFVriYPTyUDzvUv/G+AGAB8kpVHfRwlEpcUZ3Cf7s3h3iI44TnJ4bKptn5CVuOmH/LpbkDYA==", "id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 38], ["updated_at", 2016-07-21 07:50:09 UTC], ["id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:09 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/3/rank" for ::1 at 2016-07-21 00:50:09 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"tqg/rZcyShrzi88r6qr3kGzSKM4FqZdjgZ2hlk75cAoKy/mpFJSbH22BeBY08etKd8DtUwjvb4YPZd+voRVung==", "id"=>"3"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 39], ["updated_at", 2016-07-21 07:50:09 UTC], ["id", 3]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 6ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:09 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:09 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"6RrN+1YX+lLdh028raM3oIEMe/MnfKmuYpYODWSQ+aVVeQv/1bErV0ON+oFz+Ct6mh6+bio6UUvsbnA0i3znMQ==", "id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 39], ["updated_at", 2016-07-21 07:50:09 UTC], ["id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:09 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/3/rank" for ::1 at 2016-07-21 00:50:09 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"7C0lhy7RwNemn9kYOKIECVZDZL20fRuyicsnMr8z2A9QTuODrXcR0jiVbiXm+RjTTVGhILk741cHM1kLUN/Gmw==", "id"=>"3"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 40], ["updated_at", 2016-07-21 07:50:09 UTC], ["id", 3]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:09 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:09 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"nQccuow4Kj6upEuDLnBWCktapx4dQXI0HruXqNfAekwhZNq+D577OzCu/L7wK0rQUEhigxAHitGQQ+mROCxk2A==", "id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 40], ["updated_at", 2016-07-21 07:50:09 UTC], ["id", 2]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:09 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/4/rank" for ::1 at 2016-07-21 00:50:10 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"ZxWNpGpZeQZdyVtyPMtJFhOk0rbGPxIwHXfeO3PYK1rbdkug6f+oA8PD7E/ikFXMCLYXK8t56tWTj6ACnDQ1zg==", "id"=>"4"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 41], ["updated_at", 2016-07-21 07:50:10 UTC], ["id", 4]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 6ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:10 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/3/rank" for ::1 at 2016-07-21 00:50:10 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"bgktwlnrsGw+QBTP1iZiG8O2JPIynx0y+7+w/CGiDfXSauvG2k1haaBKo/IIfX7B2KThbz/Z5dd1R87Fzk4TYQ==", "id"=>"3"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 41], ["updated_at", 2016-07-21 07:50:10 UTC], ["id", 3]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:10 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:10 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"tVdXcn5x3Avb2iKcde+QSxnGFB7j9YTqZpxgfpcXE+4JNJF2/dcNDkXQlaGrtIyRAtTRg+6zfA/oZB5HePsNeg==", "id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 41], ["updated_at", 2016-07-21 07:50:10 UTC], ["id", 2]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:10 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/4/rank" for ::1 at 2016-07-21 00:50:10 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"JVFuRgjwn0lf5sNVo9Oou0UYAaBSgy/QRXalouhUN8SZMqhCi1ZOTMHsdGh9iLRhXgrEPV/F1zXLjtubB7gpUA==", "id"=>"4"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 42], ["updated_at", 2016-07-21 07:50:10 UTC], ["id", 4]]
+  [1m[35m (66.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 72ms (ActiveRecord: 66.5ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:10 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/3/rank" for ::1 at 2016-07-21 00:50:10 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"7qCdW/d1j6cwpBfqBcRQmfcgsTTGEuFnvhtfR2J1RZtSw1tfdNNeoq6uoNfbn0xD7DJ0qctUGYIw4yF+jZlbDw==", "id"=>"3"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 42], ["updated_at", 2016-07-21 07:50:10 UTC], ["id", 3]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 3ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:10 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:10 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"j1NdwepZGbRL2IfhjNbtf1zNlabmtjr38pyxj40QPcszMJvFaf/IsdXSMNxSjfGlR99QO+vwwhJ8ZM+2YvwjXw==", "id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 42], ["updated_at", 2016-07-21 07:50:10 UTC], ["id", 2]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:10 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/4/rank" for ::1 at 2016-07-21 00:50:10 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"GNEKIPrzVVyBqRW5KTPJI9HlrgaJ9nnl3FKexOxfWZ+ksswkeVWEWR+jooT3aNX5yvdrm4SwgQBSquD9A7NHCw==", "id"=>"4"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 43], ["updated_at", 2016-07-21 07:50:10 UTC], ["id", 4]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 5ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:10 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/books/3/rank" for ::1 at 2016-07-21 00:50:11 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"KXESIZ2NNLUS+m2bJ+g/UkC8qcQPOgi9mUh2H/Pa2EiVEtQlHivlsIzw2qb5syOIW65sWQJ88FgXsAgmHDbG3A==", "id"=>"3"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 43], ["updated_at", 2016-07-21 07:50:11 UTC], ["id", 3]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:11 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/2/rank" for ::1 at 2016-07-21 00:50:11 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"feX1WnZTa7P79dfrtlr+Fc1ozeLxIflBBe2/XmLwh/bBhjNe9fW6tmX/YNZoAeLP1noIf/xnAaSLFcFnjRyZYg==", "id"=>"2"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 43], ["updated_at", 2016-07-21 07:50:11 UTC], ["id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 3ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:11 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/4/rank" for ::1 at 2016-07-21 00:50:11 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"QsK5lwApOiGc7zaqeZBFOSsL2KburtY6pYr2/V1WE9v+oX+Tg4/rJALlgZeny1njMBkdO+PoLt8rcojEsroNTw==", "id"=>"4"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 44], ["updated_at", 2016-07-21 07:50:11 UTC], ["id", 4]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 6ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:11 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/4/rank" for ::1 at 2016-07-21 00:50:13 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"GQffhWLlAytH7omWhamJNg9VqSXDZ6+8uIjbWYKti9WlZBmB4UPSLtnkPqtb8pXsFEdsuM4hV1k2cKVgbUGVQQ==", "id"=>"4"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 45], ["updated_at", 2016-07-21 07:50:13 UTC], ["id", 4]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:13 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/4/rank" for ::1 at 2016-07-21 00:50:13 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"H+g0NB/Ky+Q3tyFIbCzqmEhY8vQhEQRnueI/CnWm2nKji/IwnGwa4am9lnWyd/ZCU0o3aSxX/II3GkEzmkrE5g==", "id"=>"4"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 46], ["updated_at", 2016-07-21 07:50:13 UTC], ["id", 4]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:13 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/4/rank" for ::1 at 2016-07-21 00:50:13 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"z+etY3QTgDX0niIMCCmR+7bTeFrJeEh+usU+m3NmaeNzhGtn97VRMGqUlTHWco0hrcG9x8Q+sJs0PUCinIp3dw==", "id"=>"4"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 47], ["updated_at", 2016-07-21 07:50:13 UTC], ["id", 4]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:13 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/4/rank" for ::1 at 2016-07-21 00:50:13 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"n2WUQO6SCdUt/PIcqEoVmUbvzvnvlSFezhXo+FQYEKMjBlJEbTTY0LP2RSF2EQlDXf0LZOLT2btA7ZbBu/QONw==", "id"=>"4"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 48], ["updated_at", 2016-07-21 07:50:13 UTC], ["id", 4]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 3ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:13 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/4/rank" for ::1 at 2016-07-21 00:50:13 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"tDzSkM8dsARtaTa4zAhjGLmOYTpcnqJV4pjbLbTAQJEIXxSUTLthAfNjgYUSU3/Copykp1HYWrBsYKUUWyxeBQ==", "id"=>"4"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 49], ["updated_at", 2016-07-21 07:50:13 UTC], ["id", 4]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:13 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/4/rank" for ::1 at 2016-07-21 00:50:14 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"5kyMq7bIxnVN7adrX8m4hB1ayHUPzL/LRtq28whFrmJaL0qvNW4XcNPnEFaBkqReBkgN6AKKRy7IIsjK56mw9g==", "id"=>"4"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 50], ["updated_at", 2016-07-21 07:50:14 UTC], ["id", 4]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:14 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/5/rank" for ::1 at 2016-07-21 00:50:14 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"N1koCjO5hJV5hostVXTW2LoGoPtGsD5JcxuVA+yCkZKLOu4OsB9VkOeMPBCLL8oCoRRlZkv2xqz94+s6A26PBg==", "id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 51], ["updated_at", 2016-07-21 07:50:14 UTC], ["id", 5]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:14 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/4/rank" for ::1 at 2016-07-21 00:50:15 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"UK25Yxd6+o5hIiPVGJEXbZaG9yEPmsNWbBWng75mmSDszn9nlNwri/8olOjGygu3jZQyvALcO7Pi7dm6UYqHtA==", "id"=>"4"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 51], ["updated_at", 2016-07-21 07:50:15 UTC], ["id", 4]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:15 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/5/rank" for ::1 at 2016-07-21 00:50:15 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"F4Ops8lVz+EA+oN9R89IwiWlCy2mcPzClFnT/MXs6Emr4G+3SvMe5J7wNECZlFQYPrfOsKs2BCcaoa3FKgD23Q==", "id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 52], ["updated_at", 2016-07-21 07:50:15 UTC], ["id", 5]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 6ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:15 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/4/rank" for ::1 at 2016-07-21 00:50:15 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"ceGDxXXj8LNUBGx5oizE2c5va12sOO8JJmQNBl4Kbp3NgkXB9kUhtsoO20R8d9gD1X2uwKF+F+yonHM/seZwCQ==", "id"=>"4"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 52], ["updated_at", 2016-07-21 07:50:15 UTC], ["id", 4]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:15 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/5/rank" for ::1 at 2016-07-21 00:50:16 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"ZnEROZetTjXhbtRE0522j+NIh8DEIDOW3HchSl6bB4faEtc9FAufMH9kY3kNxqpV+FpCXclmy3NSj19zsXcZEw==", "id"=>"5"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 53], ["updated_at", 2016-07-21 07:50:16 UTC], ["id", 5]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:16 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/4/rank" for ::1 at 2016-07-21 00:50:16 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"/VQDY0NGWPJX9CHP5ZUn3kK7LAIpD3x7IRm4oF1VptpBN8VnwOCJ98n+lvI7zjsEWanpnyRJhJ6v4caZsrm4Tg==", "id"=>"4"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 53], ["updated_at", 2016-07-21 07:50:16 UTC], ["id", 4]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:16 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/6/rank" for ::1 at 2016-07-21 00:50:17 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"kkfuRjRG9Muq67PoSB1BIyWAtH2Jgh7BqdXmJ1GFvXcuJChCt+AlzjThBNWWRl35PpJx4ITE5iQnLZgevmmj4w==", "id"=>"6"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 61], ["updated_at", 2016-07-21 07:50:17 UTC], ["id", 6]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:17 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/6/rank" for ::1 at 2016-07-21 00:50:17 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"U9U7ssoWBbH9MQzZxWhgOuUhcXi/WK4nFGpwoBPP+mvvtv22SbDUtGM7u+QbM3zg/jO05bIeVsKakg6Z/CPk/w==", "id"=>"6"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 62], ["updated_at", 2016-07-21 07:50:17 UTC], ["id", 6]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:17 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/6/rank" for ::1 at 2016-07-21 00:50:17 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"iTE5QonPNf5SHZ27TXKV1Q3hY3+YF615itPWr6yBQ0w1Uv9GCmnk+8wXKoaTKYkPFvOm4pVRVZwEK6iWQ21d2A==", "id"=>"6"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 63], ["updated_at", 2016-07-21 07:50:17 UTC], ["id", 6]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:17 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/6/rank" for ::1 at 2016-07-21 00:50:17 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"HYP3emvU1Co90wT0SRP2yynQWZbg2gcHZuu9zsqdAhah4DF+6HIFL6PZs8mXSOoRMsKcC+2c/+LoE8P3JXEcgg==", "id"=>"6"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 64], ["updated_at", 2016-07-21 07:50:17 UTC], ["id", 6]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:17 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/6/rank" for ::1 at 2016-07-21 00:50:17 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"eIi/yhCH2wxvkDpMrt860NMjDkIx0tP7bVGbqDb+sr/E63nOkyEKCfGajXFwhCYKyDHL3zyUKx7jqeWR2RKsKw==", "id"=>"6"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 65], ["updated_at", 2016-07-21 07:50:17 UTC], ["id", 6]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:17 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/8/rank" for ::1 at 2016-07-21 00:50:18 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"DeYu7fBukvlhYi5WIJcP3bbfHKoVj3nWqJ9NxLUmoaKxhejpc8hD/P9omWv+zBMHrc3ZNxjJgTMmZzP9Wsq/Ng==", "id"=>"8"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 82], ["updated_at", 2016-07-21 07:50:18 UTC], ["id", 8]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:18 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/books/8/rank" for ::1 at 2016-07-21 00:50:18 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"0dK+zjWGphPUgP140tN0JXAEXu3HqqQxP/Nkhpf5qYxtsXjKtiB3FkqKSkUMiGj/axabcMrsXNSxCxq/eBW3GA==", "id"=>"8"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 83], ["updated_at", 2016-07-21 07:50:18 UTC], ["id", 8]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 4ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:18 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/books/8/rank" for ::1 at 2016-07-21 00:50:18 -0700
+Processing by BooksController#rank as HTML
+  Parameters: {"authenticity_token"=>"XIq2E0bGOHmoB43fsnb39YCzMJu3ne5K84RjzEZRL0Xg6XAXxWDpfDYNOuJsLesvm6H1BrrbFq99fB31qb0x0Q==", "id"=>"8"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "books" SET "rank" = ?, "updated_at" = ? WHERE "books"."id" = ?[0m  [["rank", 84], ["updated_at", 2016-07-21 07:50:18 UTC], ["id", 8]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/books
+Completed 302 Found in 3ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/books" for ::1 at 2016-07-21 00:50:18 -0700
+Processing by BooksController#index as HTML
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."rank" DESC[0m
+  Rendered books/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-22 16:41:32 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" ORDER BY "books"."rank" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" ORDER BY "albums"."rank" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" ORDER BY "movies"."rank" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered home/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 30ms (Views: 27.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-07-22 17:02:11 -0700
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT  "books".* FROM "books" ORDER BY "books"."rank" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" ORDER BY "albums"."rank" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" ORDER BY "movies"."rank" DESC LIMIT ?[0m  [["LIMIT", 10]]
+  Rendered home/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 42ms (Views: 33.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/albums" for ::1 at 2016-07-22 17:02:13 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.2ms)[0m  [1m[34mSELECT "albums".* FROM "albums" ORDER BY "albums"."rank" DESC[0m
+  Rendered albums/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/albums/new" for ::1 at 2016-07-22 17:02:15 -0700
+Processing by AlbumsController#new as HTML
+  Rendering albums/new.html.erb within layouts/application
+  Rendered albums/_entryform.html.erb (2.1ms)
+  Rendered albums/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 26ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/albums" for ::1 at 2016-07-22 17:02:16 -0700
+Processing by AlbumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cuie/vCt49di0dBV1sB5QZzSFNKZVf8TIjrWMvZvOQs0xtBqh5TGggSvPAOt7FTybIT0TyWl7P37zeOn4PR9rA==", "album"=>{"title"=>"", "artist"=>"", "description"=>""}, "commit"=>"Submit"}
+Unpermitted parameters: utf8, authenticity_token, commit
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering albums/new.html.erb within layouts/application
+  Rendered albums/_entryform.html.erb (1.6ms)
+  Rendered albums/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.3ms)
+
+
