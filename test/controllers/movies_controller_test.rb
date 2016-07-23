@@ -23,6 +23,12 @@ class MoviessControllerTest < ActionDispatch::IntegrationTest
     assert_not_nil assigns(:movie)
   end
 
+  test "get new" do
+    get "/movies/new"
+    assert_response :success
+    assert_not_nil assigns(:movie)
+  end
+
   test "get edit" do
     get "/movies/#{@movie.id}/edit"
     assert_response :success

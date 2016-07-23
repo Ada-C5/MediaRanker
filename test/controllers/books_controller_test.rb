@@ -23,6 +23,12 @@ class BooksControllerTest < ActionDispatch::IntegrationTest
     assert_not_nil assigns(:book)
   end
 
+  test "get new" do
+    get "/books/new"
+    assert_response :success
+    assert_not_nil assigns(:book)
+  end
+
   test "get edit" do
     get "/books/#{@book.id}/edit"
     assert_response :success

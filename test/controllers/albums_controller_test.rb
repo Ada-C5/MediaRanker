@@ -24,17 +24,36 @@ class AlbumsControllerTest < ActionDispatch::IntegrationTest
     assert_not_nil assigns(:album)
   end
 
+  test "get new" do
+    get "/albums/new"
+    assert_response :success
+    assert_not_nil assigns(:album)
+  end
+
   test "get edit" do
     get "/albums/#{@album.id}/edit"
     assert_response :success
     assert_not_nil assigns(:album)
   end
 
+  test "route to rank" do
+    put "/albums/#{@album.id}/rank"
+    assert_response :redirect
+    assert_not_nil assigns(:album)
+  end
+### broken
+  # test "update the rank" do
+  #   assert_difference('@album.rank', +1) do
+  #     put "/albums/#{@album.id}/rank"
+  #   end
+  #   assert_response :redirect
+  # end 
+
   test "destroy the album" do
     assert_difference('Album.count', -1) do
       delete "/albums/#{@album.id}"
     end
-    assert_redirected_to '/albums'
+    assert_response :redirect
   end
 
   test "should create album if title is given" do
