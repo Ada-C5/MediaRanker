@@ -35,3 +35,58 @@ movies = [
 movies.each do |movie|
   Movie.create(movie)
 end
+
+books = [
+  {
+    name: "Robinson Crusoe",
+    author: "Someone smart",
+    description: "My favorite book when young.",
+    votes: 1
+  },
+
+  {
+    name: "Little Women",
+    author: "Louise May Alcott",
+    description: "The Best ever.",
+    votes: 2
+  },
+
+  {
+    name: "Harry Potter",
+    author: "J.K. Rowling",
+    description: "The hubs likes it",
+    votes: 3
+  }
+]
+
+books.each do |book|
+  Book.create(book)
+end
+
+
+albums = [
+  {
+    name: "All My Ada Ladies",
+    artist: "Beeyonce",
+    description: "Awesome.",
+    votes: 1
+  },
+
+  {
+    name: "Gatos en el Balcon",
+    artist: "Fey",
+    description: "Very 90's",
+    votes: 2
+  },
+
+  {
+    name: "Pies Descalzos",
+    artist: "Shakira",
+    description: "Antes de ser famosa",
+    votes: 3
+  }
+]
+
+albums.each do |album|
+  Album.create(album)
+end

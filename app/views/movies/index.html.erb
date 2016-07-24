@@ -1,7 +1,14 @@
-All Movies
+<h2>All Movies</h2>
 
-<ul>
+<table>
+  <tr>
+    <td>Votes</td>
+    <td>Title</td>
+  </tr>
   <% @movies.each do |movie| %>
-    <li><%= link_to movie.name, movie_path(movie.id) %></li>
+  <tr>
+    <td><%= movie.votes %></td>
+    <td><%= link_to movie.name, movie_path(movie.id) %></td>
+  </tr>
   <% end %>
-</ul>
+</table>

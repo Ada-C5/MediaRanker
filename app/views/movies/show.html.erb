@@ -1,4 +1,5 @@
 <div class="title"><%= @movie.name %></div> <div class=""> Directed by: <%= @movie.director %> </div>
+<div class=""> Description: <%= @movie.description %> </div>
 
 <div class="">Votes: <%= @movie.votes%></div>
 <div class=""><%= link_to "Upvote", upvote_movie_path, method: :post %></div>
