@@ -1,0 +1,16 @@
+<h2>New</h2>
+<%= form_for @new_movie do |f| %>
+  <div class = "field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class = "field">
+    <%= f.label :director %><br>
+    <%= f.text_field :director %>
+  </div>
+  <div class = "field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <%= f.submit "Save" %>
+<% end %>

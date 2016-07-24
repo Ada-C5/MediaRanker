@@ -1,0 +1,15 @@
+<div class= "result">
+  <h2> <%= @book.title %></h2>
+  <p>Artist: <%= @book.author %></p>
+  <p>Ranking: <%= @book.rank %></p>
+  <p>Description: <%= @book.description %></p>
+
+  <%= button_to "Upvote", upvote_book_path(@book.id), method: :patch %>
+<div>
+
+<div class="buttons">
+   <%= button_to "Edit Book", edit_book_path(@book.id), method: :get %>
+   <%= button_to "DELETE", book_path, method: :delete %>
+   <%= button_to "View All Books", books_path, method: :get %>
+   <%= button_to "View All Media", root_path, method: :get %>
+ </div>
