@@ -76,8 +76,8 @@ Book.remove = function(id, callback) {
   })
 };
 
-Book.update = function(id, artist, overview, title, callback) {
-  db.books.update({id: id, artist: artist, overview: overview, title: title}, function(error, book) {
+Book.update = function(id, author, overview, title, callback) {
+  db.books.update({id: id, author: author, overview: overview, title: title}, function(error, book) {
     if (error || !book) {
       callback(error || new Error("Could not update book"));
     } else {

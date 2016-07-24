@@ -10,7 +10,6 @@ var BooksController = {
 				var err = "Please try again"
 				res.status(500).send(err)
 			} else {
-				console.log(books)
 				res.render('books', { 
 					title: 'Books List',
 					books: books
@@ -27,9 +26,6 @@ var BooksController = {
 				var err = "Please try again"
 				res.status(500).send(err)
 			} else {
-
-					console.log("ppooo" + book.title)
-
 					res.render('book', { 
 						id: book.id,
 						title: book.title,
@@ -61,15 +57,14 @@ var BooksController = {
 	},
 
 	updateBook: function(req, res) {
-		Books.update(req.params.id, req.query.artist, req.query.overview, req.query.title, function(error, book) {
+		Books.update(req.params.id, req.query.author, req.query.overview, req.query.title, function(error, book) {
 			if(error=="Could not retrieve book") {
 				res.status(404).send(error)
 			} else if (error) {
 				var err = "Please try again"
 				res.status(500).send(err)
 			} else {
-				console.log('cornbread')
-					res.redirect('/books/' + id)
+				res.redirect('/books/' + req.params.id)
 			}
 		})
 	}
