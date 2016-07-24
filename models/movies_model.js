@@ -1,10 +1,12 @@
 var app = require("../app");
 var db = app.get("db");
 
-var Movie = function(id, title, upvotes) {
+var Movie = function(id, title, upvotes, director, overview) {
   this.id = id;
   this.title = title;
   this.upvotes = upvotes;
+  this.director = director;
+  this.overview = overview;
 }
 
 Movie.all = function(callback) {

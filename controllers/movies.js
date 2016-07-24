@@ -39,7 +39,7 @@ var MoviesController = {
 	},
 
 	editMovie: function(req, res) {
-		Moviess.find(req.params.id, function(error, movie) {
+		Movies.find(req.params.id, function(error, movie) {
 			if(error=="Could not retrieve movie") {
 				res.status(404).send(error)
 			} else if (error) {
@@ -49,7 +49,7 @@ var MoviesController = {
 					res.render('editMovie', { 
 						id: movie.id,
 						title: movie.title,
-						artist: movie.artist,
+						director: movie.director,
 						overview: movie.overview,
 						upvotes: movie.upvotes
 					});
@@ -58,15 +58,14 @@ var MoviesController = {
 	},
 
 	updateMovie: function(req, res) {
-		Movies.update(req.params.id, req.query.artist, req.query.overview, req.query.title, function(error, movie) {
+		Movies.update(req.params.id, req.query.director, req.query.overview, req.query.title, function(error, movie) {
 			if(error=="Could not retrieve movie") {
 				res.status(404).send(error)
 			} else if (error) {
 				var err = "Please try again"
 				res.status(500).send(err)
 			} else {
-				console.log('cornbread')
-					res.redirect('/movies/' + id)
+				res.redirect('/movies/' + id)
 			}
 		})
 	}
