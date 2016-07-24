@@ -16,7 +16,7 @@ Album.all = function(callback) {
       callback(error || new Error("Could not retrieve albums"), undefined);
     } else {
       callback(null, albums.map(function(album) {
-        return new Album(album.id, album.title);
+        return new Album(album.id, album.title, album.upvotes);
       }))
     };
   })
