@@ -66,7 +66,7 @@ var AlbumsController = {
 				res.status(500).send(err)
 			} else {
 				console.log('cornbread')
-					res.redirect('/albums/' + id)
+					res.redirect('/albums/' + req.params.id)
 			}
 		})
 	}
