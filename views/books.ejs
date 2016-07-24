@@ -15,9 +15,8 @@
     	</tr>
         <% for (var book of books) { %>
   			<tr>
-          <td>Ranked: <%= book.upvotes %></td>
       		<td>Votes: <%= book.upvotes %></td>
-        	<td><%= book.title %></td>
+          <td><a href="/books/<%= book.id %>"><%= book.title %></a></td>
           <td>
             <form action="/books/<%=book.id%>" method="post">
               <input type="hidden" name="media" value="books"/>

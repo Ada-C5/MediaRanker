@@ -15,7 +15,7 @@ Book.all = function(callback) {
       callback(error || new Error("Could not retrieve books"), undefined);
     } else {
       callback(null, books.map(function(book) {
-        return new Book(book.id, book.title);
+        return new Book(book.id, book.title, book.upvotes);
       }))
     };
   })
