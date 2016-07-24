@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MediaRankerSuz</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<header>
+  <%= image_tag("owl_eyes.jpg", class: "img-responsive", style: "height: 15rem; width: 15rem")%>
+  <div class="page-header">
+    <h1><a href="/">Media Ranker</a> <small>Ranking the Best of Everything</small></h1>
+  </div>
+</header>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

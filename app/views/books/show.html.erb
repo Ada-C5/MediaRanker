@@ -1,0 +1,12 @@
+<div class="col-lg-12">
+  <h1> <strong><%= @book.name %></strong><small> Written By: <%= @book.author %></small> </h1>
+  <h4>Ranked: <%= @book.rank %> </h4>
+  <p> <%= @book.description %> </p>
+  <div style= "display: inline">
+    <%= button_to "Upvote", { action: "update", class: "upvote" },  method: :patch, class:"btn btn-primary" %>
+    <%= button_to "Edit #{@book.name}", { action: "edit", id: @book.id },  method: :get, class:"btn btn-default" %>
+    <%= button_to "Delete", {action: "destroy", id: @book.id}, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %>
+    <%= button_to "View All Books", books_path, method: :get, class:"btn btn-default"%>
+    <%= button_to "View All Media", root_path, method: :get, class:"btn btn-default" %>
+  </div>
+</div>
