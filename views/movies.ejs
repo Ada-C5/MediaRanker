@@ -16,7 +16,7 @@
         <% for (var movie of movies) { %>
   			<tr>
       		<td>Votes: <%= movie.upvotes %></td>
-        	<td><%= movie.title %></td>
+          <td><a href="/movies/<%= movie.id %>"><%= movie.title %></a></td>
           <td>
             <form action="/movies/<%=movie.id%>" method="post">
               <input type="hidden" name="media" value="movies"/>

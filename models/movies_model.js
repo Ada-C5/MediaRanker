@@ -16,7 +16,7 @@ Movie.all = function(callback) {
       callback(error || new Error("Could not retrieve movies"), undefined);
     } else {
       callback(null, movies.map(function(movie) {
-        return new Movie(movie.id, movie.title);
+        return new Movie(movie.id, movie.title, movie.upvotes);
       }))
     };
   })
