@@ -7,6 +7,10 @@ Rails.application.routes.draw do
 
   resources :movies
 
+  resources :books
+
+  resources :albums
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

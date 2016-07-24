@@ -11,15 +11,19 @@
 <div class="top-books">
   <h3>Top Books</h3>
   <ul>
-    <li>book 1</li>
-    <li>book 2</li>
+    <% @books.each do |book| %>
+      <li><%= link_to book.title, book_path(book.id) %> Ranked: <%= book.upvotes %></li>
+    <% end %>
   </ul>
+  <%= link_to "View More Books", books_path %>
 </div>
 
 <div class="top-albums">
   <h3>Top Albums</h3>
   <ul>
-    <li>album 1</li>
-    <li>album 2</li>
+    <% @albums.each do |album| %>
+      <li><%= link_to album.title, album_path(album.id) %> Ranked: <%= album.upvotes %></li>
+    <% end %>
   </ul>
+  <%= link_to "View More Albums", albums_path %>
 </div>

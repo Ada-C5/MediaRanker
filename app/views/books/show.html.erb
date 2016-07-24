@@ -1,0 +1,12 @@
+<%= @book.title %>
+Written by: <%= @book.author %>
+Ranked: <%= @book.upvotes %>
+<%= @book.description %>
+
+<%= link_to "Upvote", book_path(@book.id, book: {upvotes: @book.upvotes + 1}), method: :patch %>
+
+<br>
+<%= link_to "Edit #{@book.title}", edit_book_path %>
+<%= link_to "Delete", book_path(@book.id), method: :delete %>
+<%= link_to "View All Books", books_path %>
+<%= link_to "View All Media", root_path %>
