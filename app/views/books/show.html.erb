@@ -1,0 +1,9 @@
+<div class="title"><%= @book.name %></div> <div class=""> Written by: <%= @book.author %> </div>
+<div class=""> Description: <%= @book.description %> </div>
+
+<div class="">Votes: <%= @book.votes%></div>
+<div class=""><%= link_to "Upvote", upvote_book_path, method: :post %></div>
+<div class=""><%= link_to "Edit", edit_book_path(book_id: @book.id) %></div>
+<div class=""> <%= link_to "Delete", book_path(book_id: @book.id), method: :delete %></div>
+<div class=""><%= link_to "View All Books", books_path%></div>
+<div class=""><%= link_to "View All Media", root_path%></div>

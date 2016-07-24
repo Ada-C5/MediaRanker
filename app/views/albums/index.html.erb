@@ -1,0 +1,16 @@
+<h2>All Albums</h2>
+
+<table>
+  <tr>
+    <td>Votes</td>
+    <td>Title</td>
+  </tr>
+  <% @albums.each do |album| %>
+  <tr>
+    <td><%= album.votes %></td>
+    <td><%= link_to album.name, album_path(album.id) %></td>
+  </tr>
+  <% end %>
+</table>
+
+<%= link_to "Add New Album", new_album_path%>
