@@ -3,6 +3,9 @@ var router = express.Router();
 var Controller = require('../controllers/movies')
 var indexController = require('../controllers/index')
 
+
+router.get('/:id/edit', Controller.editMovie)
+router.get('/:id/update', Controller.updateMovie)
 router.get('/:id', Controller.getMovie)
 router.get('/', Controller.getMovies)
 router.post('/:id/delete', indexController.deleteMedia)
