@@ -32,6 +32,20 @@ class MoviesController < ApplicationController
     redirect_to movie_path
   end
 
+  def new
+    @movie = Movie.new
+  end
+
+  def create
+    @movie = Movie.new(movie_create_params[:movie])
+    @movie.votes = 0
+    if(@movie.save)
+      redirect_to movie_path(@movie.id)#redirect in case user tries to post another form - brings them to entered view
+    else
+      render :new
+    end
+  end
+
   private
 
   def movie_create_params  #tell rails which params are ok to be in the model

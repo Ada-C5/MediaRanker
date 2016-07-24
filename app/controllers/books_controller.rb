@@ -32,10 +32,24 @@ class BooksController < ApplicationController
     redirect_to book_path
   end
 
+  def new
+    @book = Book.new
+  end
+
+  def create
+    @book = Book.new(book_create_params[:book])
+    @book.votes = 0
+    if(@book.save)
+      redirect_to book_path(@book.id)#redirect in case user tries to post another form - brings them to entered view
+    else
+      render :new
+    end
+  end
+
   private
 
   def book_create_params  #tell rails which params are ok to be in the model
-    params.permit(book: [:name, :author, :description])
+    params.permit(book: [:name, :author, :description, :votes])
   end
 
   def book_update_params  #tell rails which params are ok to be in the model

@@ -32,6 +32,20 @@ class AlbumsController < ApplicationController
     redirect_to album_path
   end
 
+  def new
+    @album = Album.new
+  end
+
+  def create
+    @album = Album.new(album_create_params[:album])
+    @album.votes = 0
+    if(@album.save)
+      redirect_to album_path(@album.id)#redirect in case user tries to post another form - brings them to entered view
+    else
+      render :new
+    end
+  end
+
   private
 
   def album_create_params  #tell rails which params are ok to be in the model
