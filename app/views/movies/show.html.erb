@@ -4,6 +4,6 @@
 <%= @movie.description %>
 <%= link_to "Upvote", upvote_movie_path(@movie.id), method: :patch, class: "btn btn-default" %>
 <%= link_to "Edit", edit_movie_path(@movie.id), method: :get, class: "btn btn-primary" %>
-<%= link_to "Delete", delete_movie_path(@movie.id), method: :delete, class: "btn btn-danger" %>
+<%= link_to "Delete", delete_movie_path(@movie.id), method: :delete, class: "btn btn-danger",  data: {confirm: 'Are you sure?'} %>
 <%= link_to "View all movies", movies_path, method: :get, class: "btn btn-default" %>
 <%= link_to "View all media", root_path, method: :get, class: "btn btn-default" %>

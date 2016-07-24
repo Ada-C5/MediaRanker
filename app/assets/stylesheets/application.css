@@ -13,6 +13,11 @@
  *= require_tree .
  *= require_self
  */
-h1 {
+h1 a{
+  margin-left: 8%;
+}
+
+html {
   margin-left: 10%;
+  margin-right: 10%;
 }
