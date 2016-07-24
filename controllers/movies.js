@@ -69,6 +69,14 @@ var MoviesContoller = {
     })
   },
 
+  new: function (req, res, next) {
+    var locals = {}
+    locals.type = "movies"
+    locals.displayType = "Movie"
+    locals.madeBy = "Directed"
+    res.render ('new', { locals: locals })
+},
+
   update: function (req, res, next) {
     var movie_id = req.body.movies_id
     var name = req.body.name
@@ -82,6 +90,23 @@ var MoviesContoller = {
         next(err)
       } else {
         res.redirect (200, '/movies/' + movie_id)
+      }
+    })
+  },
+
+  add: function (req, res, next) {
+    var name = req.body.name
+    var description = req.body.description
+    var director = req.body.by
+
+    Movie.create([name, description, director], function(error, movie) {
+      console.log("boop: ", movie)
+      if(error) {
+        var err = new Error("Error retrieving movie list:\n" + error.message)
+        err.status = 500
+        next(err)
+      } else {
+        res.redirect (200, '/movies/' + movie.id)
       }
     })
   },

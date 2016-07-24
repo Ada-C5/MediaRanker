@@ -68,6 +68,17 @@ Movie.update = function (input, callback) {
   })
 }
 
+Movie.create = function (input, callback) {
+  db.movies.insert({ name: input[0], description: input[1], director: input[2], votes: 0 }, function (error, movie) {
+    if(error || !movie) {
+      callback(error || new Error("Could not retrieve movie"), undefined)
+    } else {
+      console.log("beep: ", movie)
+      callback(null, new Movie(movie))
+    }
+  })
+}
+
 Movie.delete = function (id, callback) {
   db.run("DELETE FROM movies WHERE id=$1;", [id], function (error, movie) {
     if(error || !movie) {

@@ -51,20 +51,11 @@ var AlbumsController = {
   },
 
   new: function (req, res, next) {
-
-    Album.find(album_id, function(error, albums) {
-      if(error) {
-        var err = new Error("Error retrieving album:\n" + error.message)
-        err.status = 500
-        next(err)
-      } else {
         var locals = {}
         locals.type = "albums"
+        locals.displayType = "Album"
         locals.madeBy = "Directed"
-        locals.media = albums[0]
         res.render ('edit', { locals: locals })
-      }
-    })
   },
 
   edit: function (req, res, next) {
