@@ -46,7 +46,7 @@ var AlbumsController = {
         err.status = 500
         next(err)
       } else {
-        res.redirect (200, '/albums/' + album_id)
+        return res.redirect ('/albums/' + album_id)
       }
     })
   },
@@ -89,7 +89,7 @@ var AlbumsController = {
         err.status = 500
         next(err)
       } else {
-        res.redirect (200, '/albums/' + album_id)
+        return res.redirect ('/albums/' + album_id)
       }
     })
   },
@@ -106,7 +106,7 @@ var AlbumsController = {
         err.status = 500
         next(err)
       } else {
-        res.redirect (200, '/albums/' + album.id)
+        return res.redirect ('/albums/' + album.id)
       }
     })
   },
@@ -120,7 +120,7 @@ var AlbumsController = {
         err.status = 500
         next(err)
       } else {
-        res.redirect (200, '/albums')
+        return res.redirect ('/albums')
       }
     })
   }

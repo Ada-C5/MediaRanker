@@ -47,7 +47,7 @@ var BooksController = {
         err.status = 500
         next(err)
       } else {
-        res.redirect (200, '/books/' + book_id)
+        return res.redirect ('/books/' + book_id)
       }
     })
   },
@@ -92,7 +92,7 @@ var BooksController = {
         err.status = 500
         next(err)
       } else {
-        res.redirect (200, '/books/' + book_id)
+        return res.redirect ('/books/' + book_id)
       }
     })
   },
@@ -108,7 +108,7 @@ var BooksController = {
         err.status = 500
         next(err)
       } else {
-        res.redirect (200, '/books/' + book.id)
+        return res.redirect ('/books/' + book.id)
       }
     })
   },
@@ -122,7 +122,7 @@ var BooksController = {
         err.status = 500
         next(err)
       } else {
-        res.redirect (200, '/books')
+        return res.redirect ('/books')
       }
     })
   }

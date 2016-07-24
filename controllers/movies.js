@@ -47,7 +47,7 @@ var MoviesContoller = {
         err.status = 500
         next(err)
       } else {
-        res.redirect (200, '/movies/' + movie_id)
+        return res.redirect ('/movies/' + movie_id)
       }
     })
   },
@@ -91,7 +91,7 @@ var MoviesContoller = {
         err.status = 500
         next(err)
       } else {
-        res.redirect (200, '/movies/' + movie_id)
+        return res.redirect ('/movies/' + movie_id)
       }
     })
   },
@@ -108,7 +108,7 @@ var MoviesContoller = {
         err.status = 500
         next(err)
       } else {
-        res.redirect (200, '/movies/' + movie.id)
+        return res.redirect ('/movies/' + movie.id)
       }
     })
   },
@@ -122,7 +122,7 @@ var MoviesContoller = {
         err.status = 500
         next(err)
       } else {
-        res.redirect (200, '/movies')
+        return res.redirect ('/movies')
       }
     })
   }
