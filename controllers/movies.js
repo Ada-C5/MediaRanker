@@ -30,6 +30,7 @@ var MoviesContoller = {
       } else {
         var locals = {}
         locals.type = "movies"
+        locals.displayType = "Movie"
         locals.madeBy = "Directed"
         locals.media = movies[0]
         res.render ('show', { locals: locals })
@@ -62,6 +63,7 @@ var MoviesContoller = {
       } else {
         var locals = {}
         locals.type = "movies"
+        locals.displayType = "Movie"
         locals.madeBy = "Directed"
         locals.media = movies[0]
         res.render ('edit', { locals: locals })
