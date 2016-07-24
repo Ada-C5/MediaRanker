@@ -68,6 +68,17 @@ Album.update = function (input, callback) {
   })
 }
 
+Album.create = function (input, callback) {
+  db.albums.insert({ name: input[0], description: input[1], artist: input[2], votes: 0 }, function (error, album) {
+    if(error || !album) {
+      callback(error || new Error("Could not retrieve album"), undefined)
+    } else {
+      console.log("beep: ", album)
+      callback(null, new Album(album))
+    }
+  })
+}
+
 Album.delete = function (id, callback) {
   db.run("DELETE FROM albums WHERE id=$1;", [id], function (error, album) {
     if(error || !album) {

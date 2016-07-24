@@ -68,6 +68,17 @@ Book.update = function (input, callback) {
   })
 }
 
+Book.create = function (input, callback) {
+  db.books.insert({ name: input[0], description: input[1], author: input[2], votes: 0 }, function (error, book) {
+    if(error || !book) {
+      callback(error || new Error("Could not retrieve book"), undefined)
+    } else {
+      console.log("beep: ", book)
+      callback(null, new Book(book))
+    }
+  })
+}
+
 Book.delete = function (id, callback) {
   db.run("DELETE FROM books WHERE id=$1;", [id], function (error, book) {
     if(error || !book) {

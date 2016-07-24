@@ -30,6 +30,7 @@ var BooksController = {
       } else {
         var locals = {}
         locals.type = "books"
+        locals.displayType = "Book"
         locals.madeBy = "Written"
         locals.media = books[0]
         res.render ('show', { locals: locals })
@@ -71,19 +72,43 @@ var BooksController = {
     })
   },
 
+  new: function (req, res, next) {
+    var locals = {}
+    locals.type = "books"
+    locals.displayType = "Book"
+    locals.madeBy = "Directed"
+    res.render ('new', { locals: locals })
+},
+
   update: function (req, res, next) {
     var book_id = req.body.books_id
     var name = req.body.name
     var description = req.body.description
-    var director = req.body.by
+    var author = req.body.by
 
-    Book.update([name, description, director, book_id], function(error, id) {
+    Book.update([name, description, author, book_id], function(error, id) {
       if(error) {
         var err = new Error("Error retrieving book list:\n" + error.message)
         err.status = 500
         next(err)
       } else {
         res.redirect (200, '/books/' + book_id)
+      }
+    })
+  },
+
+  add: function (req, res, next) {
+    var name = req.body.name
+    var description = req.body.description
+    var author = req.body.by
+
+    Book.create([name, description, author], function(error, book) {
+      if(error) {
+        var err = new Error("Error retrieving book list:\n" + error.message)
+        err.status = 500
+        next(err)
+      } else {
+        res.redirect (200, '/books/' + book.id)
       }
     })
   },
