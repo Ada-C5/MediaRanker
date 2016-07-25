@@ -4,7 +4,7 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movie = Movie.find(params[:movie_id])
+    @movie = Movie.find(params[:id])
   end
 
   def new
@@ -12,7 +12,7 @@ class MoviesController < ApplicationController
   end
 
   def create
-    @movie = Movie.new(movie_create_params)
+    @movie = Movie.new(movie_create_params[:movie])
 
     if @movie.save
       redirect_to movie_path(@movie.id)
@@ -22,11 +22,11 @@ class MoviesController < ApplicationController
   end
 
   def edit
-    @movie = Movie.find(params[:movie_id])
+    @movie = Movie.find(params[:id])
   end
 
   def update
-    @movie = Movie.update(params[:movie_id], movie_edit_params[:movie])
+    @movie = Movie.update(params[:id], movie_edit_params[:movie])
 
     if @movie.save
       redirect_to movie_path(@movie.id)
@@ -35,10 +35,16 @@ class MoviesController < ApplicationController
     end
   end
 
+  def destroy
+    @movie = Movie.delete(params[:id]) # need a private method?
+
+    redirect_to movies_path
+  end
+
   def upvote
     @movie = Movie.increment_counter(:upvote, params[:movie_id])
 
-    redirect_to movies_path
+    redirect_to movie_path(params[:movie_id])
   end
 
   private
