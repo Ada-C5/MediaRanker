@@ -1,0 +1,20 @@
+[
+  {
+    "name": "album1",
+    "artist": "artist1",
+    "description": "description1",
+    "votes": 0
+  },
+  {
+    "name": "album2",
+    "artist": "artist2",
+    "description": "description2",
+    "votes": 1
+  },
+  {
+    "name": "album3",
+    "artist": "artist3",
+    "description": "description3",
+    "votes": 2
+  }
+]

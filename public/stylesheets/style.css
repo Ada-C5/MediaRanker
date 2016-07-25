@@ -1,0 +1,41 @@
+body {
+  padding: 65px;
+  padding-top: 0;
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+/** Header **/
+.page-header {
+  background: url('../images/owl.jpg');
+  background-repeat: no-repeat;
+}
+
+.page-header h1 {
+  margin-left: 13%;
+}
+
+/** General Styling **/
+
+.container {
+  padding: 0;
+}
+
+.upvote-form {
+  margin-bottom: 1.5rem;
+}
+
+.delete-media {
+  display: inline;
+}
+
+.save-media {
+  margin-top: 2rem;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ./partials/head %>
+  </head>
+  <body class="container">
+    <div>
+      <header>
+        <% include ./partials/header %>
+      </header>
+
+      <div class="col-lg-12">
+        <h2>New <%= locals.displayType %></h2>
+
+        <form action=<%= "/" + locals.type %> method="post" class="edit-form">
+          <div class="form-group">
+          <label for="name" class="media-name">Name</label>
+          <input id="name" class="form-control media-name-textbox" type="text" name="name" value="">
+          <label for="by" class="media-by"><%= locals.madeBy %> by</label>
+          <input id="by" class="form-control media-by-textbox" type="text" name="by" value="">
+          <label for="description" class="media-description">Description</label>
+          <textarea id="description" class="form-control media-description-textbox" type="text" name="description"></textarea>
+
+          <input class="btn btn-default save-media" type="submit" value="Save">
+        </form>
+      </div>
+
+      <footer>
+        <% include ./partials/footer %>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ./partials/head %>
+  </head>
+  <body>
+    <header>
+      <% include ./partials/header %>
+    </header>
+
+
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Top Movies</h2>
+        <% for (movie of locals.movies) { %>
+          <h3>
+            <a href=<%= "/movies/" + movie.id %>><%= movie.name %></a>
+            <small>Ranked: <%= movie.votes %></small>
+          </h3>
+        <% } %>
+        <a href="/movies">View More Movies</a>
+      </div>
+      <div class="col-md-4">
+        <h2>Top Books</h2>
+        <% for (book of locals.books) { %>
+          <h3>
+            <a href=<%= "/books/" + book.id %>><%= book.name %></a>
+            <small>Ranked: <%= book.votes %></small>
+          </h3>
+        <% } %>
+        <a href="/books">View More Books</a>
+      </div>
+      <div class="col-md-4">
+        <h2>Top Albums</h2>
+        <% for (album of locals.albums) { %>
+          <h3>
+            <a href=<%= "/albums/" + album.id %>><%= album.name %></a>
+            <small>Ranked: <%= album.votes %></small>
+          </h3>
+        <% } %>
+        <a href="/albums">View More Albums</a>
+      </div>
+    </div>
+    
+    <footer>
+      <% include ./partials/footer %>
+    </footer>
+  </body>
+</html>
