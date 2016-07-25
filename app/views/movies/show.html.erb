@@ -1,15 +1,17 @@
 <div class= "result">
   <h2> <%= @movie.title %></h2>
   <p>Artist: <%= @movie.director %></p>
-  <p>Ranking: <%= @movie.rank %></p>
+  <p>Ranked: <%= @movie.rank %></p>
   <p>Description: <%= @movie.description %></p>
 
-  <%= button_to "Upvote", upvote_movie_path(@movie.id), method: :patch %>
-<div>
+  <%= button_to "Upvote", upvote_movie_path(@movie.id), method: :patch, class: "btn btn-primary" %>
 
-<div class="buttons">
-   <%= button_to "Edit Movie", edit_movie_path(@movie.id), method: :get %>
-   <%= button_to "DELETE", movie_path, method: :delete %>
-   <%= button_to "View All Movies", movies_path, method: :get %>
-   <%= button_to "View All Media", root_path, method: :get %>
- </div>
+
+  <ul>
+    <li><%= button_to "Edit Movie", edit_movie_path(@movie.id), method: :get, class: "btn btn-default" %></li>
+    <li><%= button_to "DELETE", movie_path, method: :delete, class: "btn btn-danger" %></li>
+    <li><%= button_to "View All Movies", movies_path, method: :get, class: "btn btn-default"  %></li>
+    <li><%= button_to "View All Media", root_path, method: :get, class: "btn btn-default"  %></li>
+  </ul>
+
+</div>

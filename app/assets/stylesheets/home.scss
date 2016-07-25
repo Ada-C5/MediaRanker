@@ -1,3 +1,35 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.results{
+   display: inline;
+   margin-right: -15px;
+    margin-left: -15px;
+}
+h2{
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+  display: block;
+}
+
+td{
+  vertical-align: text-top;
+  padding-top:0px;
+  width: 30%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+table{
+  padding-left: 5%;
+  padding-right:5%;
+}
+
+tr{
+  border-collapse: collapse;
+}
