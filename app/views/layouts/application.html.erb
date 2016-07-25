@@ -3,12 +3,20 @@
 <head>
   <title>MediaRanker</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+<%= image_tag("cat-reading-book.jpg", class: "header-img") %>
+<h1><%= link_to "MediaRanker", root_path %>
+  <small>Ranking the Best of Everything</small>
+</h1>
+</header>
+<hr>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>
