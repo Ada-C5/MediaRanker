@@ -1,0 +1,10 @@
+<h1> <%=@movie.name%> <small>Directed by: <%=@movie.director%></small></h1>
+<h4> Ranked: <%=@movie.upvote%> </h4>
+<p> <%=@movie.description%> </p>
+
+
+<%=link_to "Upvote", movie_upvote_path(@movie.id), class: "btn btn-primary", method: :put%><br>
+<%=link_to "Edit", edit_movie_path(@movie), class: "btn btn-default"%>
+<%=link_to "DELETE", movie_path(@movie.id), class: "btn btn-danger", method: :delete, data: {confirm: "Are you sure you"}%>
+<%=link_to "View All Movies", movies_path, class: "btn btn-default"%>
+<%=link_to "View All Media", root_path, class: "btn btn-default"%>

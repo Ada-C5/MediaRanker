@@ -1,0 +1,10 @@
+<h1> <%=@album.name%> <small>Directed by: <%=@album.artist%></small></h1>
+<h4> Ranked: <%=@album.upvote%> </h4>
+<p> <%=@album.description%> </p>
+
+
+<%=link_to "Upvote", album_upvote_path(@album.id), class: "btn btn-primary", method: :put%><br>
+<%=link_to "Edit", edit_album_path(@album), class: "btn btn-default"%>
+<%=link_to "DELETE", album_path(@album.id), class: "btn btn-danger", method: :delete, data: {confirm: "Are you sure you"}%>
+<%=link_to "View All Albums", albums_path, class: "btn btn-default"%>
+<%=link_to "View All Media", root_path, class: "btn btn-default"%>
