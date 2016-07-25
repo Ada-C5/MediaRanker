@@ -1,0 +1,10 @@
+<h1> <%=@book.name%> <small>Directed by: <%=@book.author%></small></h1>
+<h4> Ranked: <%=@book.upvote%> </h4>
+<p> <%=@book.description%> </p>
+
+
+<%=link_to "Upvote", book_upvote_path(@book.id), class: "btn btn-primary", method: :put%><br>
+<%=link_to "Edit", edit_book_path(@book), class: "btn btn-default"%>
+<%=link_to "DELETE", book_path(@book.id), class: "btn btn-danger", method: :delete, data: {confirm: "Are you sure you"}%>
+<%=link_to "View All Books", books_path, class: "btn btn-default"%>
+<%=link_to "View All Media", root_path, class: "btn btn-default"%>

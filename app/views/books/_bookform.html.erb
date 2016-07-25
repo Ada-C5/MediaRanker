@@ -1,0 +1,27 @@
+<% if @book.errors.any? %>
+  <ul class="errors">
+    <% @book.errors.each do |column, message| %>
+      <li>
+        <strong><%= column.capitalize %></strong> <%= message %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @book do |f| %>
+  <div class = "form-group">
+    <%= f.label :name%>
+    <%= f.text_field :name, class: "form-control"%>
+  </div>
+  <div class = "form-group">
+    <%= f.label :author%>
+    <%= f.text_field :author, class: "form-control" %>
+  </div>
+  <div class = "form-group">
+    <%= f.label :description%>
+    <%= f.text_area :description,class: "form-control"%>
+  </div>
+    <%= f.submit "Save", class: "btn btn-default" %>
+
+
+<% end %>
