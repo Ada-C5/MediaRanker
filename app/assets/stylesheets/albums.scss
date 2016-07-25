@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 li{
-  display: inline-block;
+  display: inline;
 }
 
 ul{
@@ -14,4 +14,8 @@ ul{
 .result{
   padding-left: 10%;
   padding-right: 10%;
+}
+
+.wtf{
+  display: inline;
 }

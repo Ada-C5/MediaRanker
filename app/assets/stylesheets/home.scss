@@ -21,15 +21,22 @@ td{
   vertical-align: text-top;
   padding-top:0px;
   width: 30%;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 table{
-  padding-left: 5%;
-  padding-right:5%;
+  padding-left: 15px;
+  padding-right:15px;
 }
 
 tr{
   border-collapse: collapse;
+  padding-left: 10px;
+  padding-right:10px;
+}
+
+tbody{
+  padding-left: 10px;
+  padding-right: 10px;
 }
