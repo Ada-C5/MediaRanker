@@ -1,0 +1,15 @@
+<% if @book.errors.any? %>
+  <ul>
+    <% @book.errors.each do |column, message| %>
+      <li>
+        <%= column.capitalize %> <%= message %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h1>
+  Add a Book
+</h1>
+
+<%= render partial: 'entryform', locals: { object: @book } %>

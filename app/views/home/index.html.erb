@@ -1,0 +1,49 @@
+<div class="col-md-4">
+  <h1>Top Books</h1>
+    <ul>
+      <% @books.each do |book| %>
+        <li>
+          <h2>
+            <%= link_to book.title, book_path(book.id) %>
+          <small>
+            Ranked: <%= book.rank %>
+          </small>
+          </h2>
+        </li>
+      <% end %>
+    <%= link_to 'more books', books_path %>
+  </ul>
+</div>
+<div class="col-md-4">
+  <h1>Top Albums</h1>
+    <ul>
+      <% @albums.each do |album| %>
+        <li>
+          <h2>
+            <%= link_to album.title, album_path(album.id) %>
+          <small>
+            Ranked: <%= album.rank %>
+          </small>
+          </h2>
+        </li>
+      <% end %>
+    <%= link_to 'more albums', albums_path %>
+  </ul>
+</div>
+<div class="col-md-4">
+  <h1>Top Movies</h1>
+    <ul>
+      <% @movies.each do |movie| %>
+      <li>
+        <h2>
+          <%= link_to movie.title, movie_path(movie.id) %>
+          <small>
+            Ranked: <%= movie.rank %>
+          </small>
+        </h2>
+      </li>
+      <% end %>
+      <%= link_to 'more movies', movies_path %>
+    </ul> 
+  </div>
+</div>

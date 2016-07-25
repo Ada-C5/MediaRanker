@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+first_book:
+  title: "Into the Wild"
+  author: "Jon Krakauer"
+  description: "Very good, very sad"
+  rank: 78
+second_book:
+  title: "You Are a Badass: How to Stop Doubting Your Greatness and Start Living an Awesome Life"
+  author: "Jen Sincero"
+  description: "Saw this in a shop in Queen Anne yesterday. Seems relevant to my interests."
+  rank: 1
