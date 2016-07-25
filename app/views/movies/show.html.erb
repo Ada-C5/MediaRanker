@@ -1,0 +1,12 @@
+<%= @movie.title %>
+Directed by: <%= @movie.director %>
+Ranked: <%= @movie.upvotes %>
+<%= @movie.description %>
+
+<%= link_to "Upvote", movie_path(@movie.id, movie: {upvotes: @movie.upvotes + 1}), method: :patch %>
+
+<br>
+<%= link_to "Edit #{@movie.title}", edit_movie_path %>
+<%= link_to "Delete", movie_path(@movie.id), method: :delete %>
+<%= link_to "View All Movies", movies_path %>
+<%= link_to "View All Media", root_path %>

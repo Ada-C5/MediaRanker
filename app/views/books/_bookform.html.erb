@@ -1,0 +1,6 @@
+<%= form_for @book do |f| %>
+  Title: <%= f.text_field :title %>
+  Author: <%= f.text_field :author %>
+  Description: <%= f.text_area :description %>
+  <%= f.submit "Save" %>
+<% end %>

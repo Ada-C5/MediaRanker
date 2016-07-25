@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MediaRanker</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <!-- owl image should go here -->
+    <h1>Media Ranker</h1>
+    Ranking the Best of Everything
+  </header>
+
+<%= yield %>
+
+</body>
+</html>
