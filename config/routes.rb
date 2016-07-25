@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   delete  'movies/:id'        => 'movies#delete',  as: :delete_movie
   get     'movies/:id/edit'   => 'movies#edit',    as: :edit_movie
   patch   'movies/:id/upvote' => 'movies#upvote',  as: :upvote_movie
-  patch   'movies/:id/update' => 'movies#update',  as: :update_movie
+  patch   'movies/:id'        => 'movies#update',  as: :update_movie
 
   get     'books'             => 'books#index'
   get     'books/new'         => 'books#new',      as: :new_book
@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   delete  'books/:id'         => 'books#delete',   as: :delete_book
   get     'books/:id/edit'    => 'books#edit',     as: :edit_book
   patch   'books/:id/upvote'  => 'books#upvote',   as: :upvote_book
-  patch   'books/:id/update'  => 'books#update',   as: :update_book
+  patch   'books/:id'         => 'books#update',   as: :update_book
 
   get     'albums'            => 'albums#index'
   get     'albums/new'        => 'albums#new',     as: :new_album
@@ -27,7 +27,7 @@ Rails.application.routes.draw do
   delete  'albums/:id'        => 'albums#delete',  as: :delete_album
   get     'albums/:id/edit'   => 'albums#edit',    as: :edit_album
   patch   'albums/:id/upvote' => 'albums#upvote',  as: :upvote_album
-  patch   'albums/:id/update' => 'albums#update',  as: :update_album
+  patch   'albums/:id'        => 'albums#update',  as: :update_album
 
 
 end
