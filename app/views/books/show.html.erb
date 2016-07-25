@@ -1,0 +1,17 @@
+<div class= "result">
+  <h2> <%= @book.title %></h2>
+  <p>Artist: <%= @book.author %></p>
+  <p>Ranked: <%= @book.rank %></p>
+  <p>Description: <%= @book.description %></p>
+
+  <%= button_to "Upvote", upvote_book_path(@book.id), method: :patch, class: "btn btn-primary" %>
+
+
+  <ul>
+    <li><%= button_to "Edit Book", edit_book_path(@book.id), method: :get, class: "btn btn-default" %></li>
+    <li><%= button_to "DELETE", book_path, method: :delete, class: "btn btn-danger" %></li>
+    <li><%= button_to "View All Books", books_path, method: :get, class: "btn btn-default"  %></li>
+    <li><%= button_to "View All Media", root_path, method: :get, class: "btn btn-default"  %></li>
+  </ul>
+
+</div>
