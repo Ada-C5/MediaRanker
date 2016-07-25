@@ -1,0 +1,11 @@
+<h1><%= @book.name %></h1>
+<h2>Written By: <%= @book.author %></h2>
+<h3>Ranked: <%= @book.rating %> </h3>
+<%= @book.description %>
+<br>
+<br>
+<%= link_to "Upvote", upvote_book_path(@book.id), method: :patch, class: "btn btn-default" %>
+<%= link_to "Edit", edit_book_path(@book.id), method: :get, class: "btn btn-primary" %>
+<%= link_to "Delete", delete_book_path(@book.id), method: :delete, class: "btn btn-danger" ,  data: {confirm: 'Are you sure?'}%>
+<%= link_to "View all books", books_path, method: :get, class: "btn btn-default" %>
+<%= link_to "View all media", root_path, method: :get, class: "btn btn-default" %>

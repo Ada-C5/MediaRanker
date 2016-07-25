@@ -1,0 +1,6 @@
+<h1> Add Album</h1>
+
+<%= form_for @album, method: :post, url: create_album_path(@album.id), :html => { :class => "form-horizontal center" } do |f| %>
+  <%=render partial: 'form' , :locals => { :f => f } %>
+  <%= f.submit class: 'btn btn-success'  %>
+<% end %>

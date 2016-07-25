@@ -1,0 +1,6 @@
+<h1> Edit Movie</h1>
+
+<%= form_for @movie, method: :patch, url: update_movie_path(@movie.id), :html => { :class => "form-horizontal center" } do |f| %>
+  <%= render partial: 'form' , :locals => { :f => f } %>
+  <%= f.submit class: 'btn btn-success'  %>
+<% end %>

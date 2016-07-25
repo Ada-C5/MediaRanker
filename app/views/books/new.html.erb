@@ -1,0 +1,6 @@
+<h1> Add Book</h1>
+
+<%= form_for @book, method: :post, url: create_book_path(@book.id), :html => { :class => "form-horizontal center" } do |f| %>
+  <%=render partial: 'form' , :locals => { :f => f } %>
+  <%= f.submit class: 'btn btn-success'  %>
+<% end %>
