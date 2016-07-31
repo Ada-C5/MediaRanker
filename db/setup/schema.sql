@@ -4,6 +4,7 @@ DROP TABLE IF EXISTS books;
 
 CREATE TABLE albums(
   id serial PRIMARY KEY,
+  type text,
   name text,
   artist text,
   description text,
@@ -12,6 +13,7 @@ CREATE TABLE albums(
 
 CREATE TABLE movies(
   id serial PRIMARY KEY,
+  type text,
   name text,
   director text,
   description text,
@@ -21,6 +23,7 @@ CREATE TABLE movies(
 
 CREATE TABLE books(
   id serial PRIMARY KEY,
+  type text,
   name text,
   author text,
   description text,

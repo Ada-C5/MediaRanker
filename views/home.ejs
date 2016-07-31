@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Media Ranker: a ranking of medias</h1>
+    <!-- <p>Welcome to <%= title %></p> -->
+      <table class="hometable">
+        <tr>
+          <th><h2>Top Movies</h2></th>
+          <th><h2>Top Books</h2></th>
+          <th><h2>Top Albums</h2></th>
+        </tr>
+
+        <%for(var i=0; i < 10; i++) {%>
+        <tr>
+          <td>
+            <% if (movies[i]) { %>
+              <h3><a href=<%="movies/"+movies[i].id%>><%= movies[i].name%></a></h3>  Votes: <%= movies[i].votes%>
+            <% } else {}%>
+          </td>
+
+
+          <td>
+            <% if (books[i]) { %>
+              <h3><a href=<%="books/"+books[i].id%>><%= books[i].name%></a></h3>  Votes: <%= books[i].votes%>
+            <% } else {}%>
+          </td>
+
+          <td>
+            <% if (albums[i]) { %>
+              <h3><a href=<%="albums/"+albums[i].id%>><%= albums[i].name%></a></h3>  Votes: <%= albums[i].votes%>
+            <% } else {}%>
+          </td>
+
+        </tr>
+        <% }%>
+
+        <tr>
+          <td>
+            <a href=<%="movies/"%>>View More Movies</a>
+          </td>
+
+          <td>
+            <a href=<%="books/"%>>View More Books</a>
+          </td>
+
+          <td>
+            <a href=<%="albums/"%>>View More Albums</a>
+          </td>
+        </tr>
+
+    </table>
+
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <h1>Edit <%= title %></h1>
+
+    <form action="" method="post">
+      <input type="hidden" name="id" value="<%=stuff[0].id%>">
+      Name:<br>
+      <input type="text" name="name" value="<%=stuff[0].name%>"><br><br>
+      <%=person%>:<br>
+      <input type="text" name="person" value="<%=stuff[0].person%>"><br><br>
+      Description:<br>
+      <input type="text" name="description" value="<%=stuff[0].description%>" ><br><br>
+
+      <input type="submit" value="Save">
+    </form>
+  </body>
+</html>

@@ -1,12 +1,14 @@
 [
   {
     "name": "Swiss Army Man",
+    "type": "movies",
     "director": "Some indie dude",
     "description": "flatulant corpse Daniel Radcliffe",
     "votes": 30
   },
   {
     "name": "Finding Dory",
+    "type": "movies",
     "director": "Pixar",
     "description": "Trying to find her",
     "votes": 29
