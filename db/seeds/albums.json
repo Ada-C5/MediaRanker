@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Dancing Queen",
+    "type": "albums",
+    "artist": "ABBA",
+    "description": "she dances like a queen",
+    "votes": 0
+  },
+
+  {
+    "name": "Howling for You",
+    "type": "albums",
+    "artist": "The Black Keys",
+    "description": "yep..",
+    "votes": 10
+  },
+
+  {
+    "name": "Timber",
+    "type": "albums",
+    "artist": "Kesha",
+    "description": "It's going down",
+    "votes": 10
+  },
+
+  {
+    "name": "Yellow Submarine",
+    "type": "albums",
+    "artist": "The Beatles",
+    "description": "We all live here",
+    "votes": 4
+  },
+  {
+    "name": "American Idiot",
+    "type": "albums",
+    "artist": "Greenday",
+    "description": "Don't wanna be",
+    "votes": 4
+  },
+  {
+    "name": "Beautiful Soul",
+    "type": "albums",
+    "artist": "Jesse McCartney",
+    "description": "I just want you",
+    "votes": 1
+  },
+  {
+    "name": "Perfect",
+    "type": "albums",
+    "artist": "One Direction",
+    "description": "I might never be",
+    "votes": 10
+  },
+  {
+    "name": "Blank Space",
+    "type": "albums",
+    "artist": "Taylor Swift",
+    "description": "She cray cray",
+    "votes": 9
+  },
+  {
+    "name": "The Luckiest",
+    "type": "albums",
+    "artist": "Ben Folds",
+    "description": "You are",
+    "votes": 7
+  },
+  {
+    "name": "I don't understand what albums are",
+    "type": "albums",
+    "artist": "someone",
+    "description": "lolz",
+    "votes": 0
+  },
+  {
+    "name": "Cello Suite",
+    "type": "albums",
+    "artist": "Bach",
+    "description": "music",
+    "votes": 5
+  }
+]

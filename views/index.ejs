@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <!-- <p>Welcome to <%= title %></p> -->
+      <table>
+        <tr>
+          <th>Votes</th>
+          <th>Name</th>
+          <th>Upvote</th>
+        </tr>
+      <%for(var i of stuff) {%>
+        <tr>
+          <td><%= i.votes%></td>
+          <td><a href=<%=i.type+"/"+i.id%>><%= i.name%></a></td>
+          <td>
+            <form action= <%=i.id%> method="post" >
+              <input type="submit" value="Upvote">
+            </form>
+          </td>
+
+        </tr>
+      <% }%>
+
+    </table>
+    <br />
+      <% var str = stuff[0].type %>
+      <form action= <%="/"+stuff[0].type+"/new"%> >
+        <input type="submit" value="<%= "Add a "+str.substring(0, str.length-1) %>">
+      </form>
+
+      <form action="/">
+        <input type="submit" value="View All Media">
+      </form>
+
+  </body>
+</html>

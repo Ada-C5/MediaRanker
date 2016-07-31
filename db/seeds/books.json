@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Space X",
+    "type": "books",
+    "author": "Some dude",
+    "description": "Elon Musk zomg",
+    "votes": 20
+  },
+
+  {
+    "name": "Bible",
+    "type": "books",
+    "author": "People",
+    "description": "life and stories and stuff",
+    "votes": 0
+  }
+]

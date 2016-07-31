@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <!-- <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p> -->
+      <h1><%= stuff[0].name %></h1>
+      <p><%=person+": "+stuff[0].person %></p>
+      <p>Description: <%= stuff[0].description %></p>
+      <p>Votes: <%= stuff[0].votes %></p>
+      <form action= <%=stuff[0].id%> method="post">
+        <input type="submit" value="Upvote">
+      </form>
+      <form action= <%=stuff[0].id+"/"+"edit"%> >
+        <input type="submit" value="Edit">
+      </form>
+      <form action= <%=stuff[0].id+"/delete"%> method="post" >
+        <input type="submit" value="Delete">
+      </form>
+      <form action= <%="/"+stuff[0].type%> >
+        <input type="submit" value="View All">
+      </form>
+  </body>
+</html>

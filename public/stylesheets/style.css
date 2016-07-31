@@ -1,0 +1,25 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+table, th, td {
+    border: 1px solid black;
+    /*width: 50%;*/
+}
+
+td {
+  width: 25%;
+}
+
+.hometable{
+  border: none;
+}
+
+.hometable td, .hometable th{
+  border-style: none;
+}
