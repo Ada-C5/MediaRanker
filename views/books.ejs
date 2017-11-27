@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <table>
+    	<tr>
+    		<th>Ranking</th>
+    		<th>Name</th>
+    		<th>Upvote</th>
+    	</tr>
+        <% for (var book of books) { %>
+  			<tr>
+      		<td>Votes: <%= book.upvotes %></td>
+          <td><a href="/books/<%= book.id %>"><%= book.title %></a></td>
+          <td>
+            <form action="/books/<%=book.id%>" method="post">
+              <input type="hidden" name="media" value="books"/>
+              <input class="btn btn-default" type="submit" value="Upvote"/>  
+            </form>
+          </td>
+				</tr>
+        <% } %>
+    </table>
+  </body>
+</html>

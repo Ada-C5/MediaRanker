@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <table>
+  			<tr>
+          <td>Director: <%= director %></td>
+      		<td>Votes: <%= upvotes %></td>
+        	<td>Title: <%= title %></td>
+          <td>Overview: <%= overview %></td>
+          <td>
+            <form action="/movies/<%=id%>" method="post">
+              <input type="hidden" name="media" value="movies"/>
+              <input class="btn btn-default" type="submit" value="Upvote"/>  
+            </form>
+          </td>
+          <td>
+            <form action="/movies/<%=id%>/delete" method="POST" onsubmit="return confirm('Are you sure you want to submit this form?');">
+              <input type="hidden" name="media" value="movies"/>
+              <input class="btn btn-default" type="submit" name="completeYes" value="Delete" />  
+            </form>
+          </td>
+				</tr>
+    </table>
+    <td><a href="/movies/<%=id %>/edit">Edit</a></td>
+    <a href="/movies">View all Movies</a>
+    <a href="/">View more Media"</a>
+  </body>
+</html>

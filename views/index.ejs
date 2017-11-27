@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <header>
+      <h1>Media Ranker</h1>
+      <p>Ranking the best of everything</p>
+    </header>
+
+    <div class="row">
+
+      <div class="col">
+        <h1>Top Movies</h1>
+        <div>
+          <% for (var movie in movies) { %>
+            <ul>
+              <li><a href="/movies/<%=movies[movie].id%>"><%= movies[movie].title %></a></li>
+              <li>Ranking: <%= (parseInt(movie)+1) %></li>
+              <li>Upvotes: <%= movies[movie].upvotes %></li>
+            </ul>
+          <% } %>
+          <a href="/movies">View more Movies"</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <h1>Top Books</h1>
+        <div>
+          <% for (var book in books) { %>
+            <ul>
+              <li><a href="/books/<%=books[book].id%>"><%= books[book].title %></a></li>
+              <li>Ranking: <%= (parseInt(book)+1) %></li>
+              <li>Upvotes: <%= books[book].upvotes %></li>
+            </ul>
+          <% } %>
+          <a href="/books">View more Books</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <h1>Top Albums</h1>
+        <div>
+          <% for (var album in albums) { %>
+            <ul>
+              <li><a href="/albums/<%=albums[album].id%>"><%= albums[album].title %></a></li>
+              <li>Ranking: <%= (parseInt(album)+1) %></li>
+              <li>Upvotes: <%= albums[album].upvotes %></li>
+            </ul>
+          <% } %>
+          <a href="/albums">View more Albums</a>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
+
+
+
+
+
